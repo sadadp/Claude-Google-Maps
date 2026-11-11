@@ -22,6 +22,7 @@ scraper ─► SQLite (dedupe) ─► Claude (index.html) ─► Vercel (URL pú
 ├── templates/
 │   ├── landing_system_prompt.md   # Prompt de sistema del diseñador web
 │   └── outreach_message.txt       # Plantilla del mensaje de WhatsApp
+├── .claude/skills/premium-web-design/  # Skill de diseño premium (Lucxar/premium-web-design-skill)
 ├── tests/                   # pytest con transportes HTTP simulados (sin red)
 ├── docker-compose.yml       # Evolution API v2 + PostgreSQL + Redis
 ├── setup.sh                 # Instala dependencias y verifica variables
@@ -96,6 +97,10 @@ python main.py --skip-scrape --limit 15
 | Vercel | Deploy de producción de un sitio estático; espera `readyState=READY` y devuelve el alias más corto (`https://<slug>.vercel.app`). |
 | WhatsApp | Verifica que el número tenga WhatsApp, espera de 60 a 180 s aleatorios entre envíos, respeta `DAILY_SEND_CAP` y añade una línea para darse de baja. |
 | Reintentos | 408/409/425/429/5xx y errores de red, con backoff exponencial y jitter (tenacity). |
+
+## Guía de diseño
+
+`src/builder.py` añade al prompt de sistema la skill [premium-web-design](https://github.com/Lucxar/premium-web-design-skill) (`SKILL.md` y `design-tokens.md`): variantes de hero, pares tipográficos por género, paletas, espaciado de 8px, animaciones con `prefers-reduced-motion` y reglas para evitar el aspecto "plantilla de IA". El contrato de `templates/landing_system_prompt.md` tiene prioridad. El prompt combinado se cachea, así que los negocios siguientes del lote lo leen a precio de caché. La misma carpeta funciona como skill de Claude Code dentro del repo.
 
 ## Uso responsable
 

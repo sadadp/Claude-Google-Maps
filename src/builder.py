@@ -10,12 +10,14 @@ from urllib.parse import quote_plus
 
 import anthropic
 
-from config import TEMPLATES_DIR, Settings
+from config import ROOT_DIR, TEMPLATES_DIR, Settings
 from src.models import Business
 
 log = logging.getLogger(__name__)
 
 SYSTEM_PROMPT_PATH = TEMPLATES_DIR / "landing_system_prompt.md"
+DESIGN_SKILL_DIR = ROOT_DIR / ".claude" / "skills" / "premium-web-design"
+DESIGN_SKILL_FILES = ("SKILL.md", "design-tokens.md")
 FALLBACK_BETA = "server-side-fallback-2026-07-01"
 _HTML_RE = re.compile(r"<!DOCTYPE html>.*</html>", re.IGNORECASE | re.DOTALL)
 
@@ -64,6 +66,33 @@ def validate_html(html: str, biz: Business) -> None:
         raise BuildError(f"HTML incompleto, falta: {', '.join(missing)}")
 
 
+def _strip_frontmatter(text: str) -> str:
+    if text.startswith("---"):
+        end = text.find("\n---", 3)
+        if end != -1:
+            return text[end + 4 :].lstrip()
+    return text
+
+
+def load_system_prompt() -> str:
+    """Contrato de la landing + guía de diseño premium (si la skill está instalada)."""
+    parts = [SYSTEM_PROMPT_PATH.read_text(encoding="utf-8")]
+    guides = [
+        _strip_frontmatter((DESIGN_SKILL_DIR / name).read_text(encoding="utf-8"))
+        for name in DESIGN_SKILL_FILES
+        if (DESIGN_SKILL_DIR / name).is_file()
+    ]
+    if guides:
+        parts.append(
+            "<design_guide>\nApply this design system to every visual and copy decision. "
+            "Where it conflicts with the output contract or required sections above, the contract wins "
+            "(e.g. skip logo bars, pricing tiers or FAQ the brief has no data for, and never invent testimonials).\n\n"
+            + "\n\n".join(guides)
+            + "\n</design_guide>"
+        )
+    return "\n\n".join(parts)
+
+
 class SiteBuilder:
     def __init__(self, settings: Settings, client: anthropic.Anthropic | None = None) -> None:
         self._settings = settings
@@ -71,7 +100,7 @@ class SiteBuilder:
         self._client = client or anthropic.Anthropic(
             api_key=settings.anthropic_api_key.get_secret_value(), max_retries=4
         )
-        self._system = SYSTEM_PROMPT_PATH.read_text(encoding="utf-8")
+        self._system = load_system_prompt()
 
     def generate(self, biz: Business, *, attempts: int = 2) -> str:
         brief = build_brief(biz, self._settings.places_language)
@@ -97,7 +126,8 @@ class SiteBuilder:
             with self._client.beta.messages.stream(
                 model=self._settings.anthropic_model,
                 max_tokens=self._settings.anthropic_max_tokens,
-                system=self._system,
+                # Prompt de sistema grande y estable: se cachea entre negocios del mismo lote.
+                system=[{"type": "text", "text": self._system, "cache_control": {"type": "ephemeral"}}],
                 messages=[{"role": "user", "content": user_msg}],
                 betas=[FALLBACK_BETA],
                 fallbacks="default",

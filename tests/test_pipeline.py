@@ -199,3 +199,6 @@ def test_builder_request_shape(settings: Settings) -> None:
     assert body["fallbacks"] == "default"
     assert "server-side-fallback" in str(seen["beta"])
     assert "wa.me/522221234567" in body["messages"][0]["content"]
+    system = body["system"][0]
+    assert system["cache_control"] == {"type": "ephemeral"}
+    assert "<design_guide>" in system["text"] and "The 10 Laws of Premium Web Design" in system["text"]
