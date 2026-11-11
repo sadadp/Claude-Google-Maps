@@ -1,0 +1,1 @@
+Hola {name}, vi que tienen excelentes opiniones de 5 estrellas en Google Maps pero ningún enlace web. Les diseñé una vista previa funcional para su negocio: {preview_url}. Si les gustaría conservarla o personalizarla con su propio dominio, me avisas.

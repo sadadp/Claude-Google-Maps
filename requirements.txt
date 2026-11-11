@@ -1,0 +1,8 @@
+anthropic>=2.8.0
+httpx>=0.28
+pydantic>=2.9
+pydantic-settings>=2.6
+tenacity>=9.0
+rich>=13.9
+# desarrollo / tests
+pytest>=8.3
