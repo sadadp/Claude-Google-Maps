@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Cloud Barber · Barbería en Puebla</title>
+<meta name="description" content="Corte, barba y facial en Av. 25 Ote. 1012, Puebla. 4.8 estrellas en 470 reseñas de Google. Agenda por WhatsApp.">
+<meta name="theme-color" content="#14130F">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@300;400;600;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: { display: ['"Bebas Neue"', 'Impact', 'sans-serif'], sans: ['Manrope', 'system-ui', 'sans-serif'] },
+        colors: {
+          ink: { 950: '#14130F', 900: '#1B1A16', 800: '#24221D', 700: '#2E2C26' },
+          bone: { 50: '#F7F4EE', 100: '#EFEAE1', 300: '#CFC7BA', 500: '#9A9284' },
+          sky: { 300: '#A9CBE6', 400: '#86B4DA' }
+        }
+      }
+    }
+  }
+</script>
+<style>
+  :root {
+    --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+    --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+    --section-md: clamp(5rem, 10vw, 7.5rem);
+    --section-lg: clamp(6rem, 14vw, 11rem);
+  }
+  html { scroll-behavior: smooth; }
+  body { font-family: Manrope, system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+  .section-md { padding-block: var(--section-md); }
+  .section-lg { padding-block: var(--section-lg); }
+  .hero-number { font-size: clamp(9rem, 26vw, 20rem); line-height: .8; letter-spacing: -0.02em; }
+  .pole {
+    background: repeating-linear-gradient(135deg, rgba(169,203,230,.07) 0 14px, transparent 14px 28px);
+  }
+  .btn { transition: transform 200ms var(--ease-out-quart), box-shadow 200ms var(--ease-out-quart), background-color 200ms var(--ease-out-quart); }
+  .btn:hover { transform: translateY(-2px); box-shadow: 0 10px 15px rgba(20,19,15,.18), 0 4px 6px rgba(20,19,15,.1); }
+  .btn:active { transform: translateY(0) scale(.98); transition-duration: 100ms; }
+  :focus-visible { outline: 2px solid #A9CBE6; outline-offset: 3px; }
+  [data-animate] { opacity: 0; transform: translateY(24px); transition: opacity .6s var(--ease-out-expo), transform .6s var(--ease-out-expo); }
+  [data-animate].is-visible { opacity: 1; transform: none; }
+  .reviews { scroll-snap-type: x mandatory; scrollbar-width: thin; }
+  .reviews > * { scroll-snap-align: start; }
+  .wa { transition: transform 200ms var(--ease-out-quart); }
+  .wa:hover { transform: translateY(-3px) scale(1.04); }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    [data-animate] { opacity: 1; transform: none; transition: none; }
+    .btn, .wa { transition: none; }
+  }
+</style>
+</head>
+<body class="bg-ink-950 text-bone-100">
+
+<a href="#contenido" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-50 bg-bone-50 text-ink-950 px-4 py-2 rounded">Saltar al contenido</a>
+
+<!-- 1. Header -->
+<header class="sticky top-0 z-40 bg-ink-950/85 backdrop-blur border-b border-white/5">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 h-16 flex items-center justify-between gap-4">
+    <a href="#inicio" class="font-display text-2xl tracking-wide text-bone-50">The Cloud Barber</a>
+    <nav class="flex items-center gap-2 sm:gap-3" aria-label="Acciones principales">
+      <a href="tel:+522226741153" class="btn hidden sm:inline-flex items-center rounded-full border border-bone-300/30 px-4 py-2 text-sm font-semibold text-bone-50 hover:border-bone-300/60">Llamar ahora</a>
+      <a href="https://wa.me/522226741153?text=Hola%2C%20quiero%20pedir%20cita" class="btn inline-flex items-center rounded-full bg-sky-300 px-4 py-2 text-sm font-extrabold text-ink-950 hover:bg-sky-400">Pedir cita</a>
+    </nav>
+  </div>
+</header>
+
+<main id="contenido">
+
+<!-- 2. Hero (asimétrico) -->
+<section id="inicio" class="relative overflow-hidden">
+  <div class="pole absolute inset-y-0 right-0 w-1/3 hidden lg:block" aria-hidden="true"></div>
+  <div class="relative max-w-6xl mx-auto px-5 sm:px-8 pt-16 pb-20 sm:pt-24 lg:pt-32 lg:pb-32 grid lg:grid-cols-12 gap-10 items-end">
+    <div class="lg:col-span-7" data-animate>
+      <p class="text-sm font-semibold uppercase tracking-[0.15em] text-sky-300">Barbería · Antigua Francisco Villa, Puebla</p>
+      <h1 class="mt-5 font-display text-[clamp(3.25rem,9vw,6.5rem)] leading-[0.92] text-bone-50">Corte, barba y facial.<br><span class="text-bone-500">Sin prisas.</span></h1>
+      <p class="mt-6 max-w-[46ch] text-lg leading-relaxed text-bone-300 font-light">Te reciben con algo de beber, escuchan lo que quieres y se toman su tiempo. Con cita o haciendo turno, de lunes a sábado.</p>
+      <div class="mt-9 flex flex-wrap gap-3">
+        <a href="https://wa.me/522226741153?text=Hola%2C%20quiero%20pedir%20cita" class="btn inline-flex items-center gap-2 rounded-full bg-sky-300 px-7 py-4 font-extrabold text-ink-950 hover:bg-sky-400">Pedir cita por WhatsApp</a>
+        <a href="tel:+522226741153" class="btn inline-flex items-center rounded-full border border-bone-300/30 px-7 py-4 font-semibold text-bone-50 hover:border-bone-300/60">Llamar al 222 674 1153</a>
+      </div>
+    </div>
+    <div class="lg:col-span-5 lg:justify-self-end" data-animate>
+      <div class="flex items-end gap-4 lg:flex-col lg:items-end">
+        <span class="hero-number font-display text-bone-50" aria-hidden="true">4.8</span>
+        <div class="pb-3 lg:pb-0 lg:text-right">
+          <div class="flex gap-1 text-sky-300 lg:justify-end" aria-hidden="true">
+            <svg class="w-5 h-5" viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.9L10 14.9l-5.2 2.8 1-5.9L1.5 7.7l5.9-.8z"/></svg>
+            <svg class="w-5 h-5" viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.9L10 14.9l-5.2 2.8 1-5.9L1.5 7.7l5.9-.8z"/></svg>
+            <svg class="w-5 h-5" viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.9L10 14.9l-5.2 2.8 1-5.9L1.5 7.7l5.9-.8z"/></svg>
+            <svg class="w-5 h-5" viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.9L10 14.9l-5.2 2.8 1-5.9L1.5 7.7l5.9-.8z"/></svg>
+            <svg class="w-5 h-5" viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.9L10 14.9l-5.2 2.8 1-5.9L1.5 7.7l5.9-.8z"/></svg>
+          </div>
+          <p class="mt-2 text-sm text-bone-300"><span class="sr-only">Calificación 4.8 de 5, </span><strong class="text-bone-50">470 reseñas</strong> en Google Maps</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Respiro -->
+<section class="bg-ink-900 border-y border-white/5">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 py-14 sm:py-16 grid sm:grid-cols-12 gap-6 items-center" data-animate>
+    <p class="sm:col-span-8 font-display text-[clamp(2rem,5vw,3.5rem)] leading-none text-bone-50">Agenda tu cita o llega y haz turno.</p>
+    <p class="sm:col-span-4 text-bone-300 sm:text-right">Lun a vie 10:00–20:00<br>Sáb 10:00–19:00</p>
+  </div>
+</section>
+
+<!-- 3. Servicios y precios -->
+<section id="servicios" class="section-lg bg-bone-50 text-ink-950">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8">
+    <div class="grid lg:grid-cols-12 gap-10">
+      <div class="lg:col-span-4" data-animate>
+        <p class="text-sm font-semibold uppercase tracking-[0.15em] text-ink-700/70">Servicios</p>
+        <h2 class="mt-4 font-display text-[clamp(2.5rem,6vw,4.25rem)] leading-[0.95]">Lo que pides, como lo pides.</h2>
+        <p class="mt-5 text-ink-700 leading-relaxed">Precios orientativos en pesos mexicanos. Confírmalos por WhatsApp antes de tu visita.</p>
+      </div>
+      <ol class="lg:col-span-8 divide-y divide-ink-950/10 border-y border-ink-950/10" data-animate>
+        <li class="py-6 flex items-baseline justify-between gap-6">
+          <div><h3 class="text-xl font-extrabold">Corte de cabello</h3><p class="mt-1 text-ink-700">Clásico, degradado o tijera, con lavado y peinado.</p></div>
+          <p class="shrink-0 text-right"><span class="block text-xs uppercase tracking-wider text-ink-700/70">Desde</span><span class="font-display text-3xl">$150</span></p>
+        </li>
+        <li class="py-6 flex items-baseline justify-between gap-6">
+          <div><h3 class="text-xl font-extrabold">Barba con toalla caliente</h3><p class="mt-1 text-ink-700">Perfilado a navaja, aceite y bálsamo.</p></div>
+          <p class="shrink-0 text-right"><span class="block text-xs uppercase tracking-wider text-ink-700/70">Desde</span><span class="font-display text-3xl">$120</span></p>
+        </li>
+        <li class="py-6 flex items-baseline justify-between gap-6">
+          <div><h3 class="text-xl font-extrabold">Corte + barba</h3><p class="mt-1 text-ink-700">El servicio completo para salir listo.</p></div>
+          <p class="shrink-0 text-right"><span class="block text-xs uppercase tracking-wider text-ink-700/70">Desde</span><span class="font-display text-3xl">$250</span></p>
+        </li>
+        <li class="py-6 flex items-baseline justify-between gap-6 bg-ink-950 text-bone-50 -mx-5 px-5 sm:mx-0 sm:px-6">
+          <div><h3 class="text-xl font-extrabold">Corte, barba y facial</h3><p class="mt-1 text-bone-300">El ritual completo. Un cliente lo pagó en $330.</p></div>
+          <p class="shrink-0 text-right"><span class="block text-xs uppercase tracking-wider text-sky-300">Aprox.</span><span class="font-display text-3xl">$330</span></p>
+        </li>
+        <li class="py-6 flex items-baseline justify-between gap-6">
+          <div><h3 class="text-xl font-extrabold">Facial</h3><p class="mt-1 text-ink-700">Limpieza, exfoliación y mascarilla.</p></div>
+          <p class="shrink-0 text-right"><span class="block text-xs uppercase tracking-wider text-ink-700/70">Desde</span><span class="font-display text-3xl">$120</span></p>
+        </li>
+      </ol>
+    </div>
+    <div class="mt-12 lg:ml-[33.333%]" data-animate>
+      <a href="https://wa.me/522226741153?text=Hola%2C%20quiero%20pedir%20cita" class="btn inline-flex items-center rounded-full bg-ink-950 px-7 py-4 font-extrabold text-bone-50 hover:bg-ink-800">Reservar mi servicio</a>
+    </div>
+  </div>
+</section>
+
+<!-- 4. Reseñas reales -->
+<section id="resenas" class="section-md bg-bone-100 text-ink-950">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8">
+    <div class="flex flex-wrap items-end justify-between gap-4" data-animate>
+      <h2 class="font-display text-[clamp(2.5rem,6vw,4.25rem)] leading-[0.95] max-w-[16ch]">Lo que dicen en Google Maps.</h2>
+      <p class="text-ink-700">4.8 de 5 · 470 reseñas</p>
+    </div>
+    <div class="reviews mt-10 -mx-5 px-5 sm:mx-0 sm:px-0 flex gap-5 overflow-x-auto pb-4" role="region" aria-label="Reseñas de clientes" tabindex="0">
+      <figure class="w-[85%] sm:w-[28rem] shrink-0 rounded-lg bg-white p-7 shadow-[0_1px_2px_rgba(46,44,38,.06),0_8px_24px_rgba(46,44,38,.06)]">
+        <div class="flex gap-1 text-ink-950" aria-label="5 estrellas">★★★★★</div>
+        <blockquote class="mt-4 leading-relaxed text-ink-800">“Me gustaría comenzar diciendo que la atención es excelente, los precios son accesibles. Yo me hice corte y barba y facial por 330, se tomó su tiempo e hizo caso a mi sugerencias, por supuesto, le pedí su opinión también e hizo tu aporte trabajan de lunes a sábado, recomiendo cita, pero de igual manera puedes llegar y hacer turno lo recomiendo ampliamente.”</blockquote>
+        <figcaption class="mt-5 text-sm"><strong>Rodney racnony</strong> <span class="text-ink-700/70">· Hace 10 meses</span></figcaption>
+      </figure>
+      <figure class="w-[85%] sm:w-[24rem] shrink-0 rounded-lg bg-ink-950 text-bone-100 p-7">
+        <div class="flex gap-1 text-sky-300" aria-label="5 estrellas">★★★★★</div>
+        <blockquote class="mt-4 leading-relaxed">“Un gran lugar, higiénico, cómodo, la atención muy buena y los barberos agradables y hacen un gran trabajo, desde que llegas te ofrecen de beber y ponen buena música de ambiente, te consienten mucho y dan ganas de volver”</blockquote>
+        <figcaption class="mt-5 text-sm"><strong class="text-bone-50">Francisco Madrid</strong> <span class="text-bone-500">· Hace 2 años</span></figcaption>
+      </figure>
+      <figure class="w-[85%] sm:w-[24rem] shrink-0 rounded-lg bg-white p-7 shadow-[0_1px_2px_rgba(46,44,38,.06),0_8px_24px_rgba(46,44,38,.06)]">
+        <div class="flex gap-1 text-ink-950" aria-label="5 estrellas">★★★★★</div>
+        <blockquote class="mt-4 leading-relaxed text-ink-800">“Acompañé a mi novio y sin duda la atención de el personal fue maravillosa, se preocupan porque el cliente se vaya satisfecho y feliz con lo que pide. No dudaré en recomendarlo con mis amigos y familia. Saludooos al equipo 👋🏼👋🏼”</blockquote>
+        <figcaption class="mt-5 text-sm"><strong>Jacqueline Contreras Jacinto</strong> <span class="text-ink-700/70">· Hace 3 meses</span></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- 5. Ubicación y horario -->
+<section id="ubicacion" class="section-md bg-ink-950">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 grid lg:grid-cols-12 gap-10 items-start">
+    <div class="lg:col-span-5" data-animate>
+      <p class="text-sm font-semibold uppercase tracking-[0.15em] text-sky-300">Visítanos</p>
+      <h2 class="mt-4 font-display text-[clamp(2.5rem,6vw,4.25rem)] leading-[0.95] text-bone-50">Av. 25 Oriente 1012.</h2>
+      <address class="mt-5 not-italic text-bone-300 leading-relaxed">Antigua Francisco Villa, 72500<br>Heroica Puebla de Zaragoza, Pue., México</address>
+      <dl class="mt-8 divide-y divide-white/10 border-y border-white/10 text-sm">
+        <div class="flex justify-between py-3"><dt class="text-bone-300">Lunes</dt><dd class="text-bone-50">10:00–20:00</dd></div>
+        <div class="flex justify-between py-3"><dt class="text-bone-300">Martes</dt><dd class="text-bone-50">10:00–20:00</dd></div>
+        <div class="flex justify-between py-3"><dt class="text-bone-300">Miércoles</dt><dd class="text-bone-50">10:00–20:00</dd></div>
+        <div class="flex justify-between py-3"><dt class="text-bone-300">Jueves</dt><dd class="text-bone-50">10:00–20:00</dd></div>
+        <div class="flex justify-between py-3"><dt class="text-bone-300">Viernes</dt><dd class="text-bone-50">10:00–20:00</dd></div>
+        <div class="flex justify-between py-3"><dt class="text-bone-300">Sábado</dt><dd class="text-bone-50">10:00–19:00</dd></div>
+        <div class="flex justify-between py-3"><dt class="text-bone-300">Domingo</dt><dd class="text-bone-500">Cerrado</dd></div>
+      </dl>
+      <a href="https://maps.google.com/?cid=14393611925472364290" target="_blank" rel="noopener" class="btn mt-8 inline-flex items-center rounded-full border border-bone-300/30 px-7 py-4 font-semibold text-bone-50 hover:border-bone-300/60">Cómo llegar</a>
+    </div>
+    <div class="lg:col-span-7" data-animate>
+      <iframe title="Mapa de The Cloud Barber" src="https://www.google.com/maps?q=The+Cloud+Barber%2C+Av.+25+Ote.+1012%2C+Antigua+Francisco+Villa%2C+72500+Heroica+Puebla+de+Zaragoza%2C+Pue.%2C+M%C3%A9xico&output=embed" class="w-full h-[22rem] sm:h-[30rem] rounded-lg border-0 grayscale-[35%]" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- CTA final -->
+<section class="bg-sky-300 text-ink-950">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 py-14 sm:py-16 flex flex-wrap items-center justify-between gap-6">
+    <p class="font-display text-[clamp(2rem,5vw,3.5rem)] leading-none">Tu próximo corte, a un mensaje.</p>
+    <a href="https://wa.me/522226741153?text=Hola%2C%20quiero%20pedir%20cita" class="btn inline-flex items-center rounded-full bg-ink-950 px-7 py-4 font-extrabold text-bone-50 hover:bg-ink-800">Pedir cita</a>
+  </div>
+</section>
+
+</main>
+
+<!-- 6. Footer -->
+<footer class="bg-ink-950 border-t border-white/5">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 py-12 grid sm:grid-cols-3 gap-8 text-sm text-bone-300">
+    <div>
+      <p class="font-display text-2xl text-bone-50">The Cloud Barber</p>
+      <p class="mt-2">Barbería en Puebla</p>
+    </div>
+    <address class="not-italic leading-relaxed">Av. 25 Ote. 1012, Antigua Francisco Villa, 72500 Heroica Puebla de Zaragoza, Pue.</address>
+    <p><a href="tel:+522226741153" class="text-bone-50 hover:text-sky-300">+52 222 674 1153</a></p>
+  </div>
+  <p class="max-w-6xl mx-auto px-5 sm:px-8 pb-24 text-xs text-bone-500">Vista previa diseñada como propuesta — no es el sitio oficial del negocio.</p>
+</footer>
+
+<!-- 7. WhatsApp flotante -->
+<a href="https://wa.me/522226741153?text=Hola%2C%20quiero%20pedir%20cita" class="wa fixed bottom-5 right-5 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-[0_10px_25px_rgba(0,0,0,.35)]" aria-label="Escribir por WhatsApp a The Cloud Barber">
+  <svg class="h-7 w-7" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.52 3.48A11.86 11.86 0 0 0 12.06 0C5.5 0 .16 5.34.16 11.9c0 2.1.55 4.14 1.6 5.95L0 24l6.3-1.65a11.9 11.9 0 0 0 5.75 1.47h.01c6.56 0 11.9-5.34 11.9-11.9 0-3.18-1.24-6.17-3.44-8.44zM12.06 21.8h-.01a9.9 9.9 0 0 1-5.04-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.27c0-5.46 4.44-9.9 9.9-9.9 2.64 0 5.13 1.03 7 2.9a9.84 9.84 0 0 1 2.9 7c0 5.46-4.44 9.9-9.9 9.9zm5.43-7.41c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.39-1.47-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.23 1.36.2 1.87.12.57-.08 1.76-.72 2-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35z"/></svg>
+</a>
+
+<script>
+  (function () {
+    var els = document.querySelectorAll('[data-animate]');
+    if (!('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      els.forEach(function (el) { el.classList.add('is-visible'); });
+      return;
+    }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add('is-visible'); io.unobserve(e.target); }
+      });
+    }, { rootMargin: '0px 0px -80px 0px', threshold: 0.1 });
+    els.forEach(function (el) { io.observe(el); });
+  })();
+</script>
+</body>
+</html>
