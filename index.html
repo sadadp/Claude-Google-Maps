@@ -6,28 +6,65 @@
 <meta name="robots" content="noindex, nofollow">
 <title>Panel de Ventas</title>
 <script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 </head>
 <body class="bg-stone-100 font-sans text-stone-900">
 <main class="mx-auto max-w-4xl px-4 py-8">
   <header class="mb-6">
     <h1 class="text-2xl font-bold sm:text-3xl">Panel de Ventas</h1>
-    <p class="mt-1 text-sm text-stone-600">12 prospectos · Landing con citas por WhatsApp · $3,000 MXN pago único · Entrega en 48 h</p>
+    <p class="mt-1 text-sm text-stone-600">12 prospectos · Página con citas por WhatsApp + QR · $700 MXN pago único · Lista en 48 h</p>
+    <p class="mt-2 text-sm text-stone-600">Manda los mensajes 1, 2 y 3 seguidos al mismo chat. El seguimiento va 48 h después si te dejan en visto.</p>
   </header>
-  <ol class="space-y-4">
+  <ol class="space-y-5">
     
     <li class="rounded-2xl bg-white p-5 shadow-sm">
       <div class="flex flex-wrap items-baseline justify-between gap-2">
         <h2 class="text-lg font-bold">1. Dra. Genesis Sanchez</h2>
         <span class="rounded-full px-3 py-1 text-xs font-bold bg-sky-100 text-sky-800">dentista</span>
       </div>
-      <p class="mt-1 text-sm text-stone-600">+52 221 271 6745 · ★ 4.8 (143 reseñas)</p>
-      <p id="m1" class="mt-3 whitespace-pre-line rounded-xl bg-stone-50 p-3 text-sm">Hola, Dra. Genesis, buen día. Vi que tiene 4.8 estrellas con 143 reseñas en Google, y eso en Tlaxcalancingo pesa mucho, pero no encontré una página suya donde un paciente nuevo pueda agendar.
-Le hice una de muestra con sus datos: https://sadadp.github.io/Claude-Google-Maps/demos/dra-genesis-sanchez/
-Si le gusta, se la dejo lista en 48 horas por $3,000 pesos en un solo pago. ¿La revisa y me dice?</p>
-      <div class="mt-3 grid grid-cols-1 gap-2 sm:grid-cols-3">
-        <a href="https://wa.me/5212212716745?text=Hola%2C%20Dra.%20Genesis%2C%20buen%20d%C3%ADa.%20Vi%20que%20tiene%204.8%20estrellas%20con%20143%20rese%C3%B1as%20en%20Google%2C%20y%20eso%20en%20Tlaxcalancingo%20pesa%20mucho%2C%20pero%20no%20encontr%C3%A9%20una%20p%C3%A1gina%20suya%20donde%20un%20paciente%20nuevo%20pueda%20agendar.%0ALe%20hice%20una%20de%20muestra%20con%20sus%20datos%3A%20https%3A//sadadp.github.io/Claude-Google-Maps/demos/dra-genesis-sanchez/%0ASi%20le%20gusta%2C%20se%20la%20dejo%20lista%20en%2048%20horas%20por%20%243%2C000%20pesos%20en%20un%20solo%20pago.%20%C2%BFLa%20revisa%20y%20me%20dice%3F" target="_blank" rel="noopener" class="rounded-full bg-[#25D366] px-4 py-3 text-center font-bold text-white">Abrir WhatsApp</a>
-        <button onclick="copiar(1, this)" class="rounded-full bg-stone-900 px-4 py-3 font-bold text-white">Copiar mensaje</button>
-        <a href="https://sadadp.github.io/Claude-Google-Maps/demos/dra-genesis-sanchez/" target="_blank" rel="noopener" class="rounded-full border border-stone-300 px-4 py-3 text-center font-bold">Ver demo</a>
+      <p class="mt-1 text-sm text-stone-600">+52 221 271 6745 · ★ 4.8 (143 reseñas) · <a href="https://sadadp.github.io/Claude-Google-Maps/demos/dra-genesis-sanchez/" target="_blank" rel="noopener" class="font-bold underline">Ver demo</a></p>
+      <div class="mt-4 space-y-3">
+        
+        <div class="rounded-xl bg-stone-50 p-3">
+          <p class="text-xs font-bold uppercase tracking-wide text-stone-500">Mensaje 1</p>
+          <p class="msg mt-1 text-sm">Hola, Dra. Genesis, ¿qué tal? ¿Cómo está? Oiga, estaba viendo su perfil en Google aquí por Tlaxcalancingo y qué buenas reseñas tiene, 4.8 con 143 opiniones.</p>
+          <div class="mt-2 grid grid-cols-2 gap-2">
+            <a href="https://wa.me/5212212716745?text=Hola%2C%20Dra.%20Genesis%2C%20%C2%BFqu%C3%A9%20tal%3F%20%C2%BFC%C3%B3mo%20est%C3%A1%3F%20Oiga%2C%20estaba%20viendo%20su%20perfil%20en%20Google%20aqu%C3%AD%20por%20Tlaxcalancingo%20y%20qu%C3%A9%20buenas%20rese%C3%B1as%20tiene%2C%204.8%20con%20143%20opiniones." target="_blank" rel="noopener" class="rounded-full bg-[#25D366] px-3 py-2 text-center text-sm font-bold text-white">Enviar</a>
+            <button onclick="copiar(this)" class="rounded-full bg-stone-900 px-3 py-2 text-sm font-bold text-white">Copiar</button>
+          </div>
+        </div>
+        
+        <div class="rounded-xl bg-stone-50 p-3">
+          <p class="text-xs font-bold uppercase tracking-wide text-stone-500">Mensaje 2</p>
+          <p class="msg mt-1 text-sm">Me tomé unos minutos y le armé una muestra de cómo se vería su página en el celular, con botón directo a su WhatsApp para que le agenden: https://sadadp.github.io/Claude-Google-Maps/demos/dra-genesis-sanchez/</p>
+          <div class="mt-2 grid grid-cols-2 gap-2">
+            <a href="https://wa.me/5212212716745?text=Me%20tom%C3%A9%20unos%20minutos%20y%20le%20arm%C3%A9%20una%20muestra%20de%20c%C3%B3mo%20se%20ver%C3%ADa%20su%20p%C3%A1gina%20en%20el%20celular%2C%20con%20bot%C3%B3n%20directo%20a%20su%20WhatsApp%20para%20que%20le%20agenden%3A%20https%3A//sadadp.github.io/Claude-Google-Maps/demos/dra-genesis-sanchez/" target="_blank" rel="noopener" class="rounded-full bg-[#25D366] px-3 py-2 text-center text-sm font-bold text-white">Enviar</a>
+            <button onclick="copiar(this)" class="rounded-full bg-stone-900 px-3 py-2 text-sm font-bold text-white">Copiar</button>
+          </div>
+        </div>
+        
+        <div class="rounded-xl bg-stone-50 p-3">
+          <p class="text-xs font-bold uppercase tracking-wide text-stone-500">Mensaje 3</p>
+          <p class="msg mt-1 text-sm">Si le late, se la dejo publicada con su código QR por $700 pago único, lista en 48 hrs. ¿Cómo la ve?</p>
+          <div class="mt-2 grid grid-cols-2 gap-2">
+            <a href="https://wa.me/5212212716745?text=Si%20le%20late%2C%20se%20la%20dejo%20publicada%20con%20su%20c%C3%B3digo%20QR%20por%20%24700%20pago%20%C3%BAnico%2C%20lista%20en%2048%20hrs.%20%C2%BFC%C3%B3mo%20la%20ve%3F" target="_blank" rel="noopener" class="rounded-full bg-[#25D366] px-3 py-2 text-center text-sm font-bold text-white">Enviar</a>
+            <button onclick="copiar(this)" class="rounded-full bg-stone-900 px-3 py-2 text-sm font-bold text-white">Copiar</button>
+          </div>
+        </div>
+        
+        <div class="rounded-xl bg-stone-50 p-3">
+          <p class="text-xs font-bold uppercase tracking-wide text-stone-500">Seguimiento (48 h)</p>
+          <p class="msg mt-1 text-sm">Hola, Dra., ¿pudo ver la página que le mandé? Si quiere le cambio colores o algo, sin compromiso.</p>
+          <div class="mt-2 grid grid-cols-2 gap-2">
+            <a href="https://wa.me/5212212716745?text=Hola%2C%20Dra.%2C%20%C2%BFpudo%20ver%20la%20p%C3%A1gina%20que%20le%20mand%C3%A9%3F%20Si%20quiere%20le%20cambio%20colores%20o%20algo%2C%20sin%20compromiso." target="_blank" rel="noopener" class="rounded-full bg-[#25D366] px-3 py-2 text-center text-sm font-bold text-white">Enviar</a>
+            <button onclick="copiar(this)" class="rounded-full bg-stone-900 px-3 py-2 text-sm font-bold text-white">Copiar</button>
+          </div>
+        </div>
+        
+      </div>
+      <div class="mt-4 flex flex-wrap items-center gap-3">
+        <button onclick="qr(this,'https://sadadp.github.io/Claude-Google-Maps/demos/dra-genesis-sanchez/','qr-dra-genesis-sanchez.png')" class="rounded-full border border-stone-300 px-4 py-2 text-sm font-bold">Generar QR de la demo</button>
+        <div class="qr hidden w-full flex-col items-start gap-2 sm:w-auto"><div class="code rounded-lg bg-white p-2 ring-1 ring-stone-200"></div><button class="dl rounded-full bg-stone-900 px-4 py-2 text-sm font-bold text-white">Descargar PNG</button></div>
       </div>
     </li>
     
@@ -36,14 +73,49 @@ Si le gusta, se la dejo lista en 48 horas por $3,000 pesos en un solo pago. ¿La
         <h2 class="text-lg font-bold">2. Dra. Saira Ortega | Dentista</h2>
         <span class="rounded-full px-3 py-1 text-xs font-bold bg-sky-100 text-sky-800">dentista</span>
       </div>
-      <p class="mt-1 text-sm text-stone-600">+52 222 492 6647 · ★ 5.0 (18 reseñas)</p>
-      <p id="m2" class="mt-3 whitespace-pre-line rounded-xl bg-stone-50 p-3 text-sm">Hola, Dra. Saira. Sus 18 reseñas en Google están en 5.0, algo que pocos consultorios de Tlaxcalancingo tienen, y me llamó la atención que todavía no tenga página propia.
-Le armé una de prueba con sus servicios y un botón para agendar por WhatsApp: https://sadadp.github.io/Claude-Google-Maps/demos/dra-saira-ortega/
-Queda lista en 48 horas por $3,000 pesos, pago único. ¿Qué le parece?</p>
-      <div class="mt-3 grid grid-cols-1 gap-2 sm:grid-cols-3">
-        <a href="https://wa.me/5212224926647?text=Hola%2C%20Dra.%20Saira.%20Sus%2018%20rese%C3%B1as%20en%20Google%20est%C3%A1n%20en%205.0%2C%20algo%20que%20pocos%20consultorios%20de%20Tlaxcalancingo%20tienen%2C%20y%20me%20llam%C3%B3%20la%20atenci%C3%B3n%20que%20todav%C3%ADa%20no%20tenga%20p%C3%A1gina%20propia.%0ALe%20arm%C3%A9%20una%20de%20prueba%20con%20sus%20servicios%20y%20un%20bot%C3%B3n%20para%20agendar%20por%20WhatsApp%3A%20https%3A//sadadp.github.io/Claude-Google-Maps/demos/dra-saira-ortega/%0AQueda%20lista%20en%2048%20horas%20por%20%243%2C000%20pesos%2C%20pago%20%C3%BAnico.%20%C2%BFQu%C3%A9%20le%20parece%3F" target="_blank" rel="noopener" class="rounded-full bg-[#25D366] px-4 py-3 text-center font-bold text-white">Abrir WhatsApp</a>
-        <button onclick="copiar(2, this)" class="rounded-full bg-stone-900 px-4 py-3 font-bold text-white">Copiar mensaje</button>
-        <a href="https://sadadp.github.io/Claude-Google-Maps/demos/dra-saira-ortega/" target="_blank" rel="noopener" class="rounded-full border border-stone-300 px-4 py-3 text-center font-bold">Ver demo</a>
+      <p class="mt-1 text-sm text-stone-600">+52 222 492 6647 · ★ 5.0 (18 reseñas) · <a href="https://sadadp.github.io/Claude-Google-Maps/demos/dra-saira-ortega/" target="_blank" rel="noopener" class="font-bold underline">Ver demo</a></p>
+      <div class="mt-4 space-y-3">
+        
+        <div class="rounded-xl bg-stone-50 p-3">
+          <p class="text-xs font-bold uppercase tracking-wide text-stone-500">Mensaje 1</p>
+          <p class="msg mt-1 text-sm">Hola, Dra. Saira, ¿qué tal? Estaba viendo perfiles de consultorios por Tlaxcalancingo y el suyo trae 5.0 en Google, se nota que sus pacientes salen contentos.</p>
+          <div class="mt-2 grid grid-cols-2 gap-2">
+            <a href="https://wa.me/5212224926647?text=Hola%2C%20Dra.%20Saira%2C%20%C2%BFqu%C3%A9%20tal%3F%20Estaba%20viendo%20perfiles%20de%20consultorios%20por%20Tlaxcalancingo%20y%20el%20suyo%20trae%205.0%20en%20Google%2C%20se%20nota%20que%20sus%20pacientes%20salen%20contentos." target="_blank" rel="noopener" class="rounded-full bg-[#25D366] px-3 py-2 text-center text-sm font-bold text-white">Enviar</a>
+            <button onclick="copiar(this)" class="rounded-full bg-stone-900 px-3 py-2 text-sm font-bold text-white">Copiar</button>
+          </div>
+        </div>
+        
+        <div class="rounded-xl bg-stone-50 p-3">
+          <p class="text-xs font-bold uppercase tracking-wide text-stone-500">Mensaje 2</p>
+          <p class="msg mt-1 text-sm">Le preparé una demo rápida de cómo se vería su página en celular, con sus servicios y un botón para que le escriban directo al WhatsApp: https://sadadp.github.io/Claude-Google-Maps/demos/dra-saira-ortega/</p>
+          <div class="mt-2 grid grid-cols-2 gap-2">
+            <a href="https://wa.me/5212224926647?text=Le%20prepar%C3%A9%20una%20demo%20r%C3%A1pida%20de%20c%C3%B3mo%20se%20ver%C3%ADa%20su%20p%C3%A1gina%20en%20celular%2C%20con%20sus%20servicios%20y%20un%20bot%C3%B3n%20para%20que%20le%20escriban%20directo%20al%20WhatsApp%3A%20https%3A//sadadp.github.io/Claude-Google-Maps/demos/dra-saira-ortega/" target="_blank" rel="noopener" class="rounded-full bg-[#25D366] px-3 py-2 text-center text-sm font-bold text-white">Enviar</a>
+            <button onclick="copiar(this)" class="rounded-full bg-stone-900 px-3 py-2 text-sm font-bold text-white">Copiar</button>
+          </div>
+        </div>
+        
+        <div class="rounded-xl bg-stone-50 p-3">
+          <p class="text-xs font-bold uppercase tracking-wide text-stone-500">Mensaje 3</p>
+          <p class="msg mt-1 text-sm">Si le gusta, se la publico con su código QR por $700 pago único y queda en 48 hrs. ¿Qué dice?</p>
+          <div class="mt-2 grid grid-cols-2 gap-2">
+            <a href="https://wa.me/5212224926647?text=Si%20le%20gusta%2C%20se%20la%20publico%20con%20su%20c%C3%B3digo%20QR%20por%20%24700%20pago%20%C3%BAnico%20y%20queda%20en%2048%20hrs.%20%C2%BFQu%C3%A9%20dice%3F" target="_blank" rel="noopener" class="rounded-full bg-[#25D366] px-3 py-2 text-center text-sm font-bold text-white">Enviar</a>
+            <button onclick="copiar(this)" class="rounded-full bg-stone-900 px-3 py-2 text-sm font-bold text-white">Copiar</button>
+          </div>
+        </div>
+        
+        <div class="rounded-xl bg-stone-50 p-3">
+          <p class="text-xs font-bold uppercase tracking-wide text-stone-500">Seguimiento (48 h)</p>
+          <p class="msg mt-1 text-sm">Dra. Saira, nomás para saber si alcanzó a ver la demo. Si algo no le late, lo cambio sin problema.</p>
+          <div class="mt-2 grid grid-cols-2 gap-2">
+            <a href="https://wa.me/5212224926647?text=Dra.%20Saira%2C%20nom%C3%A1s%20para%20saber%20si%20alcanz%C3%B3%20a%20ver%20la%20demo.%20Si%20algo%20no%20le%20late%2C%20lo%20cambio%20sin%20problema." target="_blank" rel="noopener" class="rounded-full bg-[#25D366] px-3 py-2 text-center text-sm font-bold text-white">Enviar</a>
+            <button onclick="copiar(this)" class="rounded-full bg-stone-900 px-3 py-2 text-sm font-bold text-white">Copiar</button>
+          </div>
+        </div>
+        
+      </div>
+      <div class="mt-4 flex flex-wrap items-center gap-3">
+        <button onclick="qr(this,'https://sadadp.github.io/Claude-Google-Maps/demos/dra-saira-ortega/','qr-dra-saira-ortega.png')" class="rounded-full border border-stone-300 px-4 py-2 text-sm font-bold">Generar QR de la demo</button>
+        <div class="qr hidden w-full flex-col items-start gap-2 sm:w-auto"><div class="code rounded-lg bg-white p-2 ring-1 ring-stone-200"></div><button class="dl rounded-full bg-stone-900 px-4 py-2 text-sm font-bold text-white">Descargar PNG</button></div>
       </div>
     </li>
     
@@ -52,14 +124,49 @@ Queda lista en 48 horas por $3,000 pesos, pago único. ¿Qué le parece?</p>
         <h2 class="text-lg font-bold">3. Dental Fix Puebla</h2>
         <span class="rounded-full px-3 py-1 text-xs font-bold bg-sky-100 text-sky-800">dentista</span>
       </div>
-      <p class="mt-1 text-sm text-stone-600">+52 220 157 7029 · ★ 5.0 (19 reseñas)</p>
-      <p id="m3" class="mt-3 whitespace-pre-line rounded-xl bg-stone-50 p-3 text-sm">Hola, equipo de Dental Fix. Vi su 5.0 en Google con 19 reseñas y no encontré una página donde la gente de San Andrés Cholula pueda pedirles cita sin buscarlos en Maps.
-Hice una muestra para ustedes: https://sadadp.github.io/Claude-Google-Maps/demos/dental-fix-puebla/
-Por $3,000 pesos en un solo pago se las entrego lista en 48 horas. ¿Les late?</p>
-      <div class="mt-3 grid grid-cols-1 gap-2 sm:grid-cols-3">
-        <a href="https://wa.me/5212201577029?text=Hola%2C%20equipo%20de%20Dental%20Fix.%20Vi%20su%205.0%20en%20Google%20con%2019%20rese%C3%B1as%20y%20no%20encontr%C3%A9%20una%20p%C3%A1gina%20donde%20la%20gente%20de%20San%20Andr%C3%A9s%20Cholula%20pueda%20pedirles%20cita%20sin%20buscarlos%20en%20Maps.%0AHice%20una%20muestra%20para%20ustedes%3A%20https%3A//sadadp.github.io/Claude-Google-Maps/demos/dental-fix-puebla/%0APor%20%243%2C000%20pesos%20en%20un%20solo%20pago%20se%20las%20entrego%20lista%20en%2048%20horas.%20%C2%BFLes%20late%3F" target="_blank" rel="noopener" class="rounded-full bg-[#25D366] px-4 py-3 text-center font-bold text-white">Abrir WhatsApp</a>
-        <button onclick="copiar(3, this)" class="rounded-full bg-stone-900 px-4 py-3 font-bold text-white">Copiar mensaje</button>
-        <a href="https://sadadp.github.io/Claude-Google-Maps/demos/dental-fix-puebla/" target="_blank" rel="noopener" class="rounded-full border border-stone-300 px-4 py-3 text-center font-bold">Ver demo</a>
+      <p class="mt-1 text-sm text-stone-600">+52 220 157 7029 · ★ 5.0 (19 reseñas) · <a href="https://sadadp.github.io/Claude-Google-Maps/demos/dental-fix-puebla/" target="_blank" rel="noopener" class="font-bold underline">Ver demo</a></p>
+      <div class="mt-4 space-y-3">
+        
+        <div class="rounded-xl bg-stone-50 p-3">
+          <p class="text-xs font-bold uppercase tracking-wide text-stone-500">Mensaje 1</p>
+          <p class="msg mt-1 text-sm">Hola, ¿qué tal? ¿Cómo están? Oigan, vi su perfil de Dental Fix aquí en San Andrés Cholula y traen 5.0 en Google, muy bien.</p>
+          <div class="mt-2 grid grid-cols-2 gap-2">
+            <a href="https://wa.me/5212201577029?text=Hola%2C%20%C2%BFqu%C3%A9%20tal%3F%20%C2%BFC%C3%B3mo%20est%C3%A1n%3F%20Oigan%2C%20vi%20su%20perfil%20de%20Dental%20Fix%20aqu%C3%AD%20en%20San%20Andr%C3%A9s%20Cholula%20y%20traen%205.0%20en%20Google%2C%20muy%20bien." target="_blank" rel="noopener" class="rounded-full bg-[#25D366] px-3 py-2 text-center text-sm font-bold text-white">Enviar</a>
+            <button onclick="copiar(this)" class="rounded-full bg-stone-900 px-3 py-2 text-sm font-bold text-white">Copiar</button>
+          </div>
+        </div>
+        
+        <div class="rounded-xl bg-stone-50 p-3">
+          <p class="text-xs font-bold uppercase tracking-wide text-stone-500">Mensaje 2</p>
+          <p class="msg mt-1 text-sm">Me tomé unos minutos y les armé una demo de cómo se vería su página en el celular, con botón directo a su WhatsApp: https://sadadp.github.io/Claude-Google-Maps/demos/dental-fix-puebla/</p>
+          <div class="mt-2 grid grid-cols-2 gap-2">
+            <a href="https://wa.me/5212201577029?text=Me%20tom%C3%A9%20unos%20minutos%20y%20les%20arm%C3%A9%20una%20demo%20de%20c%C3%B3mo%20se%20ver%C3%ADa%20su%20p%C3%A1gina%20en%20el%20celular%2C%20con%20bot%C3%B3n%20directo%20a%20su%20WhatsApp%3A%20https%3A//sadadp.github.io/Claude-Google-Maps/demos/dental-fix-puebla/" target="_blank" rel="noopener" class="rounded-full bg-[#25D366] px-3 py-2 text-center text-sm font-bold text-white">Enviar</a>
+            <button onclick="copiar(this)" class="rounded-full bg-stone-900 px-3 py-2 text-sm font-bold text-white">Copiar</button>
+          </div>
+        </div>
+        
+        <div class="rounded-xl bg-stone-50 p-3">
+          <p class="text-xs font-bold uppercase tracking-wide text-stone-500">Mensaje 3</p>
+          <p class="msg mt-1 text-sm">Si les late, se las dejo publicada con su código QR por $700 pago único, lista en 48 hrs. ¿Cómo la ven?</p>
+          <div class="mt-2 grid grid-cols-2 gap-2">
+            <a href="https://wa.me/5212201577029?text=Si%20les%20late%2C%20se%20las%20dejo%20publicada%20con%20su%20c%C3%B3digo%20QR%20por%20%24700%20pago%20%C3%BAnico%2C%20lista%20en%2048%20hrs.%20%C2%BFC%C3%B3mo%20la%20ven%3F" target="_blank" rel="noopener" class="rounded-full bg-[#25D366] px-3 py-2 text-center text-sm font-bold text-white">Enviar</a>
+            <button onclick="copiar(this)" class="rounded-full bg-stone-900 px-3 py-2 text-sm font-bold text-white">Copiar</button>
+          </div>
+        </div>
+        
+        <div class="rounded-xl bg-stone-50 p-3">
+          <p class="text-xs font-bold uppercase tracking-wide text-stone-500">Seguimiento (48 h)</p>
+          <p class="msg mt-1 text-sm">Hola de nuevo, ¿alcanzaron a ver la demo? Cualquier cambio que quieran se los hago, sin compromiso.</p>
+          <div class="mt-2 grid grid-cols-2 gap-2">
+            <a href="https://wa.me/5212201577029?text=Hola%20de%20nuevo%2C%20%C2%BFalcanzaron%20a%20ver%20la%20demo%3F%20Cualquier%20cambio%20que%20quieran%20se%20los%20hago%2C%20sin%20compromiso." target="_blank" rel="noopener" class="rounded-full bg-[#25D366] px-3 py-2 text-center text-sm font-bold text-white">Enviar</a>
+            <button onclick="copiar(this)" class="rounded-full bg-stone-900 px-3 py-2 text-sm font-bold text-white">Copiar</button>
+          </div>
+        </div>
+        
+      </div>
+      <div class="mt-4 flex flex-wrap items-center gap-3">
+        <button onclick="qr(this,'https://sadadp.github.io/Claude-Google-Maps/demos/dental-fix-puebla/','qr-dental-fix-puebla.png')" class="rounded-full border border-stone-300 px-4 py-2 text-sm font-bold">Generar QR de la demo</button>
+        <div class="qr hidden w-full flex-col items-start gap-2 sm:w-auto"><div class="code rounded-lg bg-white p-2 ring-1 ring-stone-200"></div><button class="dl rounded-full bg-stone-900 px-4 py-2 text-sm font-bold text-white">Descargar PNG</button></div>
       </div>
     </li>
     
@@ -68,14 +175,49 @@ Por $3,000 pesos en un solo pago se las entrego lista en 48 horas. ¿Les late?</
         <h2 class="text-lg font-bold">4. Dra. Rubí Arellano | Dentista</h2>
         <span class="rounded-full px-3 py-1 text-xs font-bold bg-sky-100 text-sky-800">dentista</span>
       </div>
-      <p class="mt-1 text-sm text-stone-600">+52 222 670 7474 · ★ 5.0 (26 reseñas)</p>
-      <p id="m4" class="mt-3 whitespace-pre-line rounded-xl bg-stone-50 p-3 text-sm">Hola, Dra. Rubí. Tiene 5.0 con 26 reseñas en Google, y en Torres Médicas de Tlaxcalancingo hay muchos consultorios, así que una página propia ayuda a que la elijan a usted.
-Le preparé una de muestra: https://sadadp.github.io/Claude-Google-Maps/demos/dra-rubi-arellano/
-Se la dejo funcionando en 48 horas por $3,000 pesos, un solo pago. ¿Le gustaría ajustarla a su gusto?</p>
-      <div class="mt-3 grid grid-cols-1 gap-2 sm:grid-cols-3">
-        <a href="https://wa.me/5212226707474?text=Hola%2C%20Dra.%20Rub%C3%AD.%20Tiene%205.0%20con%2026%20rese%C3%B1as%20en%20Google%2C%20y%20en%20Torres%20M%C3%A9dicas%20de%20Tlaxcalancingo%20hay%20muchos%20consultorios%2C%20as%C3%AD%20que%20una%20p%C3%A1gina%20propia%20ayuda%20a%20que%20la%20elijan%20a%20usted.%0ALe%20prepar%C3%A9%20una%20de%20muestra%3A%20https%3A//sadadp.github.io/Claude-Google-Maps/demos/dra-rubi-arellano/%0ASe%20la%20dejo%20funcionando%20en%2048%20horas%20por%20%243%2C000%20pesos%2C%20un%20solo%20pago.%20%C2%BFLe%20gustar%C3%ADa%20ajustarla%20a%20su%20gusto%3F" target="_blank" rel="noopener" class="rounded-full bg-[#25D366] px-4 py-3 text-center font-bold text-white">Abrir WhatsApp</a>
-        <button onclick="copiar(4, this)" class="rounded-full bg-stone-900 px-4 py-3 font-bold text-white">Copiar mensaje</button>
-        <a href="https://sadadp.github.io/Claude-Google-Maps/demos/dra-rubi-arellano/" target="_blank" rel="noopener" class="rounded-full border border-stone-300 px-4 py-3 text-center font-bold">Ver demo</a>
+      <p class="mt-1 text-sm text-stone-600">+52 222 670 7474 · ★ 5.0 (26 reseñas) · <a href="https://sadadp.github.io/Claude-Google-Maps/demos/dra-rubi-arellano/" target="_blank" rel="noopener" class="font-bold underline">Ver demo</a></p>
+      <div class="mt-4 space-y-3">
+        
+        <div class="rounded-xl bg-stone-50 p-3">
+          <p class="text-xs font-bold uppercase tracking-wide text-stone-500">Mensaje 1</p>
+          <p class="msg mt-1 text-sm">Hola, Dra. Rubí, ¿cómo está? Estaba viendo su perfil de Torres Médicas Angelópolis y tiene 5.0 con 26 reseñas, qué bien habla la gente de usted.</p>
+          <div class="mt-2 grid grid-cols-2 gap-2">
+            <a href="https://wa.me/5212226707474?text=Hola%2C%20Dra.%20Rub%C3%AD%2C%20%C2%BFc%C3%B3mo%20est%C3%A1%3F%20Estaba%20viendo%20su%20perfil%20de%20Torres%20M%C3%A9dicas%20Angel%C3%B3polis%20y%20tiene%205.0%20con%2026%20rese%C3%B1as%2C%20qu%C3%A9%20bien%20habla%20la%20gente%20de%20usted." target="_blank" rel="noopener" class="rounded-full bg-[#25D366] px-3 py-2 text-center text-sm font-bold text-white">Enviar</a>
+            <button onclick="copiar(this)" class="rounded-full bg-stone-900 px-3 py-2 text-sm font-bold text-white">Copiar</button>
+          </div>
+        </div>
+        
+        <div class="rounded-xl bg-stone-50 p-3">
+          <p class="text-xs font-bold uppercase tracking-wide text-stone-500">Mensaje 2</p>
+          <p class="msg mt-1 text-sm">Le hice una demo de cómo se vería su propia página en celular, con botón para que le agenden por WhatsApp: https://sadadp.github.io/Claude-Google-Maps/demos/dra-rubi-arellano/</p>
+          <div class="mt-2 grid grid-cols-2 gap-2">
+            <a href="https://wa.me/5212226707474?text=Le%20hice%20una%20demo%20de%20c%C3%B3mo%20se%20ver%C3%ADa%20su%20propia%20p%C3%A1gina%20en%20celular%2C%20con%20bot%C3%B3n%20para%20que%20le%20agenden%20por%20WhatsApp%3A%20https%3A//sadadp.github.io/Claude-Google-Maps/demos/dra-rubi-arellano/" target="_blank" rel="noopener" class="rounded-full bg-[#25D366] px-3 py-2 text-center text-sm font-bold text-white">Enviar</a>
+            <button onclick="copiar(this)" class="rounded-full bg-stone-900 px-3 py-2 text-sm font-bold text-white">Copiar</button>
+          </div>
+        </div>
+        
+        <div class="rounded-xl bg-stone-50 p-3">
+          <p class="text-xs font-bold uppercase tracking-wide text-stone-500">Mensaje 3</p>
+          <p class="msg mt-1 text-sm">Si le late, se la dejo publicada con su código QR por $700 pago único, en 48 hrs. ¿Cómo la ve?</p>
+          <div class="mt-2 grid grid-cols-2 gap-2">
+            <a href="https://wa.me/5212226707474?text=Si%20le%20late%2C%20se%20la%20dejo%20publicada%20con%20su%20c%C3%B3digo%20QR%20por%20%24700%20pago%20%C3%BAnico%2C%20en%2048%20hrs.%20%C2%BFC%C3%B3mo%20la%20ve%3F" target="_blank" rel="noopener" class="rounded-full bg-[#25D366] px-3 py-2 text-center text-sm font-bold text-white">Enviar</a>
+            <button onclick="copiar(this)" class="rounded-full bg-stone-900 px-3 py-2 text-sm font-bold text-white">Copiar</button>
+          </div>
+        </div>
+        
+        <div class="rounded-xl bg-stone-50 p-3">
+          <p class="text-xs font-bold uppercase tracking-wide text-stone-500">Seguimiento (48 h)</p>
+          <p class="msg mt-1 text-sm">Dra. Rubí, ¿pudo verla? Si prefiere otros colores o quitar algo, me dice y lo ajusto.</p>
+          <div class="mt-2 grid grid-cols-2 gap-2">
+            <a href="https://wa.me/5212226707474?text=Dra.%20Rub%C3%AD%2C%20%C2%BFpudo%20verla%3F%20Si%20prefiere%20otros%20colores%20o%20quitar%20algo%2C%20me%20dice%20y%20lo%20ajusto." target="_blank" rel="noopener" class="rounded-full bg-[#25D366] px-3 py-2 text-center text-sm font-bold text-white">Enviar</a>
+            <button onclick="copiar(this)" class="rounded-full bg-stone-900 px-3 py-2 text-sm font-bold text-white">Copiar</button>
+          </div>
+        </div>
+        
+      </div>
+      <div class="mt-4 flex flex-wrap items-center gap-3">
+        <button onclick="qr(this,'https://sadadp.github.io/Claude-Google-Maps/demos/dra-rubi-arellano/','qr-dra-rubi-arellano.png')" class="rounded-full border border-stone-300 px-4 py-2 text-sm font-bold">Generar QR de la demo</button>
+        <div class="qr hidden w-full flex-col items-start gap-2 sm:w-auto"><div class="code rounded-lg bg-white p-2 ring-1 ring-stone-200"></div><button class="dl rounded-full bg-stone-900 px-4 py-2 text-sm font-bold text-white">Descargar PNG</button></div>
       </div>
     </li>
     
@@ -84,14 +226,49 @@ Se la dejo funcionando en 48 horas por $3,000 pesos, un solo pago. ¿Le gustarí
         <h2 class="text-lg font-bold">5. Consultorio Dentista Valeria Victoria</h2>
         <span class="rounded-full px-3 py-1 text-xs font-bold bg-sky-100 text-sky-800">dentista</span>
       </div>
-      <p class="mt-1 text-sm text-stone-600">+52 222 402 2806 · ★ 5.0 (78 reseñas)</p>
-      <p id="m5" class="mt-3 whitespace-pre-line rounded-xl bg-stone-50 p-3 text-sm">Hola, Dra. Valeria. 78 reseñas con promedio de 5.0 en Google no se ven seguido en San Andrés Cholula. Lo que no encontré fue una página suya.
-Le hice una de muestra con botón para agendar por WhatsApp: https://sadadp.github.io/Claude-Google-Maps/demos/dentista-valeria-victoria/
-La dejo lista en 48 horas por $3,000 pesos en un solo pago. ¿Qué opina?</p>
-      <div class="mt-3 grid grid-cols-1 gap-2 sm:grid-cols-3">
-        <a href="https://wa.me/5212224022806?text=Hola%2C%20Dra.%20Valeria.%2078%20rese%C3%B1as%20con%20promedio%20de%205.0%20en%20Google%20no%20se%20ven%20seguido%20en%20San%20Andr%C3%A9s%20Cholula.%20Lo%20que%20no%20encontr%C3%A9%20fue%20una%20p%C3%A1gina%20suya.%0ALe%20hice%20una%20de%20muestra%20con%20bot%C3%B3n%20para%20agendar%20por%20WhatsApp%3A%20https%3A//sadadp.github.io/Claude-Google-Maps/demos/dentista-valeria-victoria/%0ALa%20dejo%20lista%20en%2048%20horas%20por%20%243%2C000%20pesos%20en%20un%20solo%20pago.%20%C2%BFQu%C3%A9%20opina%3F" target="_blank" rel="noopener" class="rounded-full bg-[#25D366] px-4 py-3 text-center font-bold text-white">Abrir WhatsApp</a>
-        <button onclick="copiar(5, this)" class="rounded-full bg-stone-900 px-4 py-3 font-bold text-white">Copiar mensaje</button>
-        <a href="https://sadadp.github.io/Claude-Google-Maps/demos/dentista-valeria-victoria/" target="_blank" rel="noopener" class="rounded-full border border-stone-300 px-4 py-3 text-center font-bold">Ver demo</a>
+      <p class="mt-1 text-sm text-stone-600">+52 222 402 2806 · ★ 5.0 (78 reseñas) · <a href="https://sadadp.github.io/Claude-Google-Maps/demos/dentista-valeria-victoria/" target="_blank" rel="noopener" class="font-bold underline">Ver demo</a></p>
+      <div class="mt-4 space-y-3">
+        
+        <div class="rounded-xl bg-stone-50 p-3">
+          <p class="text-xs font-bold uppercase tracking-wide text-stone-500">Mensaje 1</p>
+          <p class="msg mt-1 text-sm">Hola, Dra. Valeria, ¿qué tal? Oiga, vi su consultorio en Google aquí en San Andrés Cholula, 78 reseñas y promedio de 5.0, eso no se ve diario.</p>
+          <div class="mt-2 grid grid-cols-2 gap-2">
+            <a href="https://wa.me/5212224022806?text=Hola%2C%20Dra.%20Valeria%2C%20%C2%BFqu%C3%A9%20tal%3F%20Oiga%2C%20vi%20su%20consultorio%20en%20Google%20aqu%C3%AD%20en%20San%20Andr%C3%A9s%20Cholula%2C%2078%20rese%C3%B1as%20y%20promedio%20de%205.0%2C%20eso%20no%20se%20ve%20diario." target="_blank" rel="noopener" class="rounded-full bg-[#25D366] px-3 py-2 text-center text-sm font-bold text-white">Enviar</a>
+            <button onclick="copiar(this)" class="rounded-full bg-stone-900 px-3 py-2 text-sm font-bold text-white">Copiar</button>
+          </div>
+        </div>
+        
+        <div class="rounded-xl bg-stone-50 p-3">
+          <p class="text-xs font-bold uppercase tracking-wide text-stone-500">Mensaje 2</p>
+          <p class="msg mt-1 text-sm">Me tomé unos minutos para armarle una muestra de su página en celular, con botón directo a su WhatsApp para citas: https://sadadp.github.io/Claude-Google-Maps/demos/dentista-valeria-victoria/</p>
+          <div class="mt-2 grid grid-cols-2 gap-2">
+            <a href="https://wa.me/5212224022806?text=Me%20tom%C3%A9%20unos%20minutos%20para%20armarle%20una%20muestra%20de%20su%20p%C3%A1gina%20en%20celular%2C%20con%20bot%C3%B3n%20directo%20a%20su%20WhatsApp%20para%20citas%3A%20https%3A//sadadp.github.io/Claude-Google-Maps/demos/dentista-valeria-victoria/" target="_blank" rel="noopener" class="rounded-full bg-[#25D366] px-3 py-2 text-center text-sm font-bold text-white">Enviar</a>
+            <button onclick="copiar(this)" class="rounded-full bg-stone-900 px-3 py-2 text-sm font-bold text-white">Copiar</button>
+          </div>
+        </div>
+        
+        <div class="rounded-xl bg-stone-50 p-3">
+          <p class="text-xs font-bold uppercase tracking-wide text-stone-500">Mensaje 3</p>
+          <p class="msg mt-1 text-sm">Si le gusta, se la publico con su código QR por $700 pago único, lista en 48 hrs. ¿Qué le parece?</p>
+          <div class="mt-2 grid grid-cols-2 gap-2">
+            <a href="https://wa.me/5212224022806?text=Si%20le%20gusta%2C%20se%20la%20publico%20con%20su%20c%C3%B3digo%20QR%20por%20%24700%20pago%20%C3%BAnico%2C%20lista%20en%2048%20hrs.%20%C2%BFQu%C3%A9%20le%20parece%3F" target="_blank" rel="noopener" class="rounded-full bg-[#25D366] px-3 py-2 text-center text-sm font-bold text-white">Enviar</a>
+            <button onclick="copiar(this)" class="rounded-full bg-stone-900 px-3 py-2 text-sm font-bold text-white">Copiar</button>
+          </div>
+        </div>
+        
+        <div class="rounded-xl bg-stone-50 p-3">
+          <p class="text-xs font-bold uppercase tracking-wide text-stone-500">Seguimiento (48 h)</p>
+          <p class="msg mt-1 text-sm">Hola, Dra., ¿alcanzó a ver la página? Sin presión, nomás quería saber qué le pareció.</p>
+          <div class="mt-2 grid grid-cols-2 gap-2">
+            <a href="https://wa.me/5212224022806?text=Hola%2C%20Dra.%2C%20%C2%BFalcanz%C3%B3%20a%20ver%20la%20p%C3%A1gina%3F%20Sin%20presi%C3%B3n%2C%20nom%C3%A1s%20quer%C3%ADa%20saber%20qu%C3%A9%20le%20pareci%C3%B3." target="_blank" rel="noopener" class="rounded-full bg-[#25D366] px-3 py-2 text-center text-sm font-bold text-white">Enviar</a>
+            <button onclick="copiar(this)" class="rounded-full bg-stone-900 px-3 py-2 text-sm font-bold text-white">Copiar</button>
+          </div>
+        </div>
+        
+      </div>
+      <div class="mt-4 flex flex-wrap items-center gap-3">
+        <button onclick="qr(this,'https://sadadp.github.io/Claude-Google-Maps/demos/dentista-valeria-victoria/','qr-dentista-valeria-victoria.png')" class="rounded-full border border-stone-300 px-4 py-2 text-sm font-bold">Generar QR de la demo</button>
+        <div class="qr hidden w-full flex-col items-start gap-2 sm:w-auto"><div class="code rounded-lg bg-white p-2 ring-1 ring-stone-200"></div><button class="dl rounded-full bg-stone-900 px-4 py-2 text-sm font-bold text-white">Descargar PNG</button></div>
       </div>
     </li>
     
@@ -100,14 +277,49 @@ La dejo lista en 48 horas por $3,000 pesos en un solo pago. ¿Qué opina?</p>
         <h2 class="text-lg font-bold">6. Consultorio Dental DEZA</h2>
         <span class="rounded-full px-3 py-1 text-xs font-bold bg-sky-100 text-sky-800">dentista</span>
       </div>
-      <p class="mt-1 text-sm text-stone-600">+52 222 599 7535 · ★ 4.9 (45 reseñas)</p>
-      <p id="m6" class="mt-3 whitespace-pre-line rounded-xl bg-stone-50 p-3 text-sm">Hola, buen día, equipo de Consultorio Dental DEZA. Con 4.9 y 45 reseñas en Google ya tienen lo más difícil, que es la confianza de sus pacientes en Tlaxcalancingo.
-Les falta una página donde la gente nueva pueda agendar, y les armé una de prueba: https://sadadp.github.io/Claude-Google-Maps/demos/consultorio-dental-deza/
-Cuesta $3,000 pesos en un solo pago y queda lista en 48 horas. ¿La revisan y me dicen?</p>
-      <div class="mt-3 grid grid-cols-1 gap-2 sm:grid-cols-3">
-        <a href="https://wa.me/5212225997535?text=Hola%2C%20buen%20d%C3%ADa%2C%20equipo%20de%20Consultorio%20Dental%20DEZA.%20Con%204.9%20y%2045%20rese%C3%B1as%20en%20Google%20ya%20tienen%20lo%20m%C3%A1s%20dif%C3%ADcil%2C%20que%20es%20la%20confianza%20de%20sus%20pacientes%20en%20Tlaxcalancingo.%0ALes%20falta%20una%20p%C3%A1gina%20donde%20la%20gente%20nueva%20pueda%20agendar%2C%20y%20les%20arm%C3%A9%20una%20de%20prueba%3A%20https%3A//sadadp.github.io/Claude-Google-Maps/demos/consultorio-dental-deza/%0ACuesta%20%243%2C000%20pesos%20en%20un%20solo%20pago%20y%20queda%20lista%20en%2048%20horas.%20%C2%BFLa%20revisan%20y%20me%20dicen%3F" target="_blank" rel="noopener" class="rounded-full bg-[#25D366] px-4 py-3 text-center font-bold text-white">Abrir WhatsApp</a>
-        <button onclick="copiar(6, this)" class="rounded-full bg-stone-900 px-4 py-3 font-bold text-white">Copiar mensaje</button>
-        <a href="https://sadadp.github.io/Claude-Google-Maps/demos/consultorio-dental-deza/" target="_blank" rel="noopener" class="rounded-full border border-stone-300 px-4 py-3 text-center font-bold">Ver demo</a>
+      <p class="mt-1 text-sm text-stone-600">+52 222 599 7535 · ★ 4.9 (45 reseñas) · <a href="https://sadadp.github.io/Claude-Google-Maps/demos/consultorio-dental-deza/" target="_blank" rel="noopener" class="font-bold underline">Ver demo</a></p>
+      <div class="mt-4 space-y-3">
+        
+        <div class="rounded-xl bg-stone-50 p-3">
+          <p class="text-xs font-bold uppercase tracking-wide text-stone-500">Mensaje 1</p>
+          <p class="msg mt-1 text-sm">Hola, ¿cómo están? Oigan, vi el perfil de Consultorio Dental DEZA aquí en Tlaxcalancingo, 4.9 con 45 reseñas, se ve que tratan bien a la gente.</p>
+          <div class="mt-2 grid grid-cols-2 gap-2">
+            <a href="https://wa.me/5212225997535?text=Hola%2C%20%C2%BFc%C3%B3mo%20est%C3%A1n%3F%20Oigan%2C%20vi%20el%20perfil%20de%20Consultorio%20Dental%20DEZA%20aqu%C3%AD%20en%20Tlaxcalancingo%2C%204.9%20con%2045%20rese%C3%B1as%2C%20se%20ve%20que%20tratan%20bien%20a%20la%20gente." target="_blank" rel="noopener" class="rounded-full bg-[#25D366] px-3 py-2 text-center text-sm font-bold text-white">Enviar</a>
+            <button onclick="copiar(this)" class="rounded-full bg-stone-900 px-3 py-2 text-sm font-bold text-white">Copiar</button>
+          </div>
+        </div>
+        
+        <div class="rounded-xl bg-stone-50 p-3">
+          <p class="text-xs font-bold uppercase tracking-wide text-stone-500">Mensaje 2</p>
+          <p class="msg mt-1 text-sm">Les armé una demo de cómo se vería su página en el celular, con botón para que les agenden directo por WhatsApp: https://sadadp.github.io/Claude-Google-Maps/demos/consultorio-dental-deza/</p>
+          <div class="mt-2 grid grid-cols-2 gap-2">
+            <a href="https://wa.me/5212225997535?text=Les%20arm%C3%A9%20una%20demo%20de%20c%C3%B3mo%20se%20ver%C3%ADa%20su%20p%C3%A1gina%20en%20el%20celular%2C%20con%20bot%C3%B3n%20para%20que%20les%20agenden%20directo%20por%20WhatsApp%3A%20https%3A//sadadp.github.io/Claude-Google-Maps/demos/consultorio-dental-deza/" target="_blank" rel="noopener" class="rounded-full bg-[#25D366] px-3 py-2 text-center text-sm font-bold text-white">Enviar</a>
+            <button onclick="copiar(this)" class="rounded-full bg-stone-900 px-3 py-2 text-sm font-bold text-white">Copiar</button>
+          </div>
+        </div>
+        
+        <div class="rounded-xl bg-stone-50 p-3">
+          <p class="text-xs font-bold uppercase tracking-wide text-stone-500">Mensaje 3</p>
+          <p class="msg mt-1 text-sm">Si les late, se las dejo publicada con su código QR por $700 pago único y queda en 48 hrs. ¿Cómo la ven?</p>
+          <div class="mt-2 grid grid-cols-2 gap-2">
+            <a href="https://wa.me/5212225997535?text=Si%20les%20late%2C%20se%20las%20dejo%20publicada%20con%20su%20c%C3%B3digo%20QR%20por%20%24700%20pago%20%C3%BAnico%20y%20queda%20en%2048%20hrs.%20%C2%BFC%C3%B3mo%20la%20ven%3F" target="_blank" rel="noopener" class="rounded-full bg-[#25D366] px-3 py-2 text-center text-sm font-bold text-white">Enviar</a>
+            <button onclick="copiar(this)" class="rounded-full bg-stone-900 px-3 py-2 text-sm font-bold text-white">Copiar</button>
+          </div>
+        </div>
+        
+        <div class="rounded-xl bg-stone-50 p-3">
+          <p class="text-xs font-bold uppercase tracking-wide text-stone-500">Seguimiento (48 h)</p>
+          <p class="msg mt-1 text-sm">¿Qué tal? ¿Pudieron ver la demo que les mandé? Si quieren algún cambio, me dicen.</p>
+          <div class="mt-2 grid grid-cols-2 gap-2">
+            <a href="https://wa.me/5212225997535?text=%C2%BFQu%C3%A9%20tal%3F%20%C2%BFPudieron%20ver%20la%20demo%20que%20les%20mand%C3%A9%3F%20Si%20quieren%20alg%C3%BAn%20cambio%2C%20me%20dicen." target="_blank" rel="noopener" class="rounded-full bg-[#25D366] px-3 py-2 text-center text-sm font-bold text-white">Enviar</a>
+            <button onclick="copiar(this)" class="rounded-full bg-stone-900 px-3 py-2 text-sm font-bold text-white">Copiar</button>
+          </div>
+        </div>
+        
+      </div>
+      <div class="mt-4 flex flex-wrap items-center gap-3">
+        <button onclick="qr(this,'https://sadadp.github.io/Claude-Google-Maps/demos/consultorio-dental-deza/','qr-consultorio-dental-deza.png')" class="rounded-full border border-stone-300 px-4 py-2 text-sm font-bold">Generar QR de la demo</button>
+        <div class="qr hidden w-full flex-col items-start gap-2 sm:w-auto"><div class="code rounded-lg bg-white p-2 ring-1 ring-stone-200"></div><button class="dl rounded-full bg-stone-900 px-4 py-2 text-sm font-bold text-white">Descargar PNG</button></div>
       </div>
     </li>
     
@@ -116,14 +328,49 @@ Cuesta $3,000 pesos en un solo pago y queda lista en 48 horas. ¿La revisan y me
         <h2 class="text-lg font-bold">7. SmileXperts</h2>
         <span class="rounded-full px-3 py-1 text-xs font-bold bg-sky-100 text-sky-800">dentista</span>
       </div>
-      <p class="mt-1 text-sm text-stone-600">+52 227 182 1480 · ★ 4.9 (37 reseñas)</p>
-      <p id="m7" class="mt-3 whitespace-pre-line rounded-xl bg-stone-50 p-3 text-sm">Hola, equipo de SmileXperts. Vi que tienen 4.9 con 37 reseñas en Google y servicios como ortodoncia, implantes y periodoncia, pero no encontré una página en Tlaxcalancingo donde el paciente vea todo eso y agende.
-Les hice una muestra: https://sadadp.github.io/Claude-Google-Maps/demos/smilexperts-puebla/
-Queda lista en 48 horas por $3,000 pesos, pago único. ¿Les interesa?</p>
-      <div class="mt-3 grid grid-cols-1 gap-2 sm:grid-cols-3">
-        <a href="https://wa.me/5212271821480?text=Hola%2C%20equipo%20de%20SmileXperts.%20Vi%20que%20tienen%204.9%20con%2037%20rese%C3%B1as%20en%20Google%20y%20servicios%20como%20ortodoncia%2C%20implantes%20y%20periodoncia%2C%20pero%20no%20encontr%C3%A9%20una%20p%C3%A1gina%20en%20Tlaxcalancingo%20donde%20el%20paciente%20vea%20todo%20eso%20y%20agende.%0ALes%20hice%20una%20muestra%3A%20https%3A//sadadp.github.io/Claude-Google-Maps/demos/smilexperts-puebla/%0AQueda%20lista%20en%2048%20horas%20por%20%243%2C000%20pesos%2C%20pago%20%C3%BAnico.%20%C2%BFLes%20interesa%3F" target="_blank" rel="noopener" class="rounded-full bg-[#25D366] px-4 py-3 text-center font-bold text-white">Abrir WhatsApp</a>
-        <button onclick="copiar(7, this)" class="rounded-full bg-stone-900 px-4 py-3 font-bold text-white">Copiar mensaje</button>
-        <a href="https://sadadp.github.io/Claude-Google-Maps/demos/smilexperts-puebla/" target="_blank" rel="noopener" class="rounded-full border border-stone-300 px-4 py-3 text-center font-bold">Ver demo</a>
+      <p class="mt-1 text-sm text-stone-600">+52 227 182 1480 · ★ 4.9 (37 reseñas) · <a href="https://sadadp.github.io/Claude-Google-Maps/demos/smilexperts-puebla/" target="_blank" rel="noopener" class="font-bold underline">Ver demo</a></p>
+      <div class="mt-4 space-y-3">
+        
+        <div class="rounded-xl bg-stone-50 p-3">
+          <p class="text-xs font-bold uppercase tracking-wide text-stone-500">Mensaje 1</p>
+          <p class="msg mt-1 text-sm">Hola, ¿qué tal? Estaba viendo su perfil de SmileXperts aquí en Tlaxcalancingo, 4.9 en Google y un montón de servicios, de ortodoncia a implantes.</p>
+          <div class="mt-2 grid grid-cols-2 gap-2">
+            <a href="https://wa.me/5212271821480?text=Hola%2C%20%C2%BFqu%C3%A9%20tal%3F%20Estaba%20viendo%20su%20perfil%20de%20SmileXperts%20aqu%C3%AD%20en%20Tlaxcalancingo%2C%204.9%20en%20Google%20y%20un%20mont%C3%B3n%20de%20servicios%2C%20de%20ortodoncia%20a%20implantes." target="_blank" rel="noopener" class="rounded-full bg-[#25D366] px-3 py-2 text-center text-sm font-bold text-white">Enviar</a>
+            <button onclick="copiar(this)" class="rounded-full bg-stone-900 px-3 py-2 text-sm font-bold text-white">Copiar</button>
+          </div>
+        </div>
+        
+        <div class="rounded-xl bg-stone-50 p-3">
+          <p class="text-xs font-bold uppercase tracking-wide text-stone-500">Mensaje 2</p>
+          <p class="msg mt-1 text-sm">Me tomé unos minutos y les armé una demo de su página en celular, con sus servicios y botón directo a WhatsApp: https://sadadp.github.io/Claude-Google-Maps/demos/smilexperts-puebla/</p>
+          <div class="mt-2 grid grid-cols-2 gap-2">
+            <a href="https://wa.me/5212271821480?text=Me%20tom%C3%A9%20unos%20minutos%20y%20les%20arm%C3%A9%20una%20demo%20de%20su%20p%C3%A1gina%20en%20celular%2C%20con%20sus%20servicios%20y%20bot%C3%B3n%20directo%20a%20WhatsApp%3A%20https%3A//sadadp.github.io/Claude-Google-Maps/demos/smilexperts-puebla/" target="_blank" rel="noopener" class="rounded-full bg-[#25D366] px-3 py-2 text-center text-sm font-bold text-white">Enviar</a>
+            <button onclick="copiar(this)" class="rounded-full bg-stone-900 px-3 py-2 text-sm font-bold text-white">Copiar</button>
+          </div>
+        </div>
+        
+        <div class="rounded-xl bg-stone-50 p-3">
+          <p class="text-xs font-bold uppercase tracking-wide text-stone-500">Mensaje 3</p>
+          <p class="msg mt-1 text-sm">Si les gusta, se las publico con su código QR por $700 pago único, lista en 48 hrs. ¿Cómo la ven?</p>
+          <div class="mt-2 grid grid-cols-2 gap-2">
+            <a href="https://wa.me/5212271821480?text=Si%20les%20gusta%2C%20se%20las%20publico%20con%20su%20c%C3%B3digo%20QR%20por%20%24700%20pago%20%C3%BAnico%2C%20lista%20en%2048%20hrs.%20%C2%BFC%C3%B3mo%20la%20ven%3F" target="_blank" rel="noopener" class="rounded-full bg-[#25D366] px-3 py-2 text-center text-sm font-bold text-white">Enviar</a>
+            <button onclick="copiar(this)" class="rounded-full bg-stone-900 px-3 py-2 text-sm font-bold text-white">Copiar</button>
+          </div>
+        </div>
+        
+        <div class="rounded-xl bg-stone-50 p-3">
+          <p class="text-xs font-bold uppercase tracking-wide text-stone-500">Seguimiento (48 h)</p>
+          <p class="msg mt-1 text-sm">Hola, nomás para saber si alcanzaron a ver la demo. Si algo no les convence, lo cambio.</p>
+          <div class="mt-2 grid grid-cols-2 gap-2">
+            <a href="https://wa.me/5212271821480?text=Hola%2C%20nom%C3%A1s%20para%20saber%20si%20alcanzaron%20a%20ver%20la%20demo.%20Si%20algo%20no%20les%20convence%2C%20lo%20cambio." target="_blank" rel="noopener" class="rounded-full bg-[#25D366] px-3 py-2 text-center text-sm font-bold text-white">Enviar</a>
+            <button onclick="copiar(this)" class="rounded-full bg-stone-900 px-3 py-2 text-sm font-bold text-white">Copiar</button>
+          </div>
+        </div>
+        
+      </div>
+      <div class="mt-4 flex flex-wrap items-center gap-3">
+        <button onclick="qr(this,'https://sadadp.github.io/Claude-Google-Maps/demos/smilexperts-puebla/','qr-smilexperts-puebla.png')" class="rounded-full border border-stone-300 px-4 py-2 text-sm font-bold">Generar QR de la demo</button>
+        <div class="qr hidden w-full flex-col items-start gap-2 sm:w-auto"><div class="code rounded-lg bg-white p-2 ring-1 ring-stone-200"></div><button class="dl rounded-full bg-stone-900 px-4 py-2 text-sm font-bold text-white">Descargar PNG</button></div>
       </div>
     </li>
     
@@ -132,14 +379,49 @@ Queda lista en 48 horas por $3,000 pesos, pago único. ¿Les interesa?</p>
         <h2 class="text-lg font-bold">8. NUSA Centro Médico Veterinario</h2>
         <span class="rounded-full px-3 py-1 text-xs font-bold bg-emerald-100 text-emerald-800">veterinaria</span>
       </div>
-      <p class="mt-1 text-sm text-stone-600">+52 221 564 2208 · ★ 4.5 (164 reseñas)</p>
-      <p id="m8" class="mt-3 whitespace-pre-line rounded-xl bg-stone-50 p-3 text-sm">Hola, equipo de NUSA. Con 4.5 y 164 reseñas en Google, y abiertos 24 horas entre semana, tienen algo que pocas veterinarias de San Andrés Cholula ofrecen.
-Les armé una página de muestra donde el dueño de la mascota les escribe por WhatsApp en un toque: https://sadadp.github.io/Claude-Google-Maps/demos/nusa-veterinaria/
-La dejo lista en 48 horas por $3,000 pesos en un solo pago. ¿Le echan un ojo?</p>
-      <div class="mt-3 grid grid-cols-1 gap-2 sm:grid-cols-3">
-        <a href="https://wa.me/5212215642208?text=Hola%2C%20equipo%20de%20NUSA.%20Con%204.5%20y%20164%20rese%C3%B1as%20en%20Google%2C%20y%20abiertos%2024%20horas%20entre%20semana%2C%20tienen%20algo%20que%20pocas%20veterinarias%20de%20San%20Andr%C3%A9s%20Cholula%20ofrecen.%0ALes%20arm%C3%A9%20una%20p%C3%A1gina%20de%20muestra%20donde%20el%20due%C3%B1o%20de%20la%20mascota%20les%20escribe%20por%20WhatsApp%20en%20un%20toque%3A%20https%3A//sadadp.github.io/Claude-Google-Maps/demos/nusa-veterinaria/%0ALa%20dejo%20lista%20en%2048%20horas%20por%20%243%2C000%20pesos%20en%20un%20solo%20pago.%20%C2%BFLe%20echan%20un%20ojo%3F" target="_blank" rel="noopener" class="rounded-full bg-[#25D366] px-4 py-3 text-center font-bold text-white">Abrir WhatsApp</a>
-        <button onclick="copiar(8, this)" class="rounded-full bg-stone-900 px-4 py-3 font-bold text-white">Copiar mensaje</button>
-        <a href="https://sadadp.github.io/Claude-Google-Maps/demos/nusa-veterinaria/" target="_blank" rel="noopener" class="rounded-full border border-stone-300 px-4 py-3 text-center font-bold">Ver demo</a>
+      <p class="mt-1 text-sm text-stone-600">+52 221 564 2208 · ★ 4.5 (164 reseñas) · <a href="https://sadadp.github.io/Claude-Google-Maps/demos/nusa-veterinaria/" target="_blank" rel="noopener" class="font-bold underline">Ver demo</a></p>
+      <div class="mt-4 space-y-3">
+        
+        <div class="rounded-xl bg-stone-50 p-3">
+          <p class="text-xs font-bold uppercase tracking-wide text-stone-500">Mensaje 1</p>
+          <p class="msg mt-1 text-sm">Hola, ¿cómo están? Oigan, vi su perfil de NUSA aquí en San Andrés Cholula, 164 reseñas y abiertos 24 horas entre semana, eso la gente lo agradece mucho.</p>
+          <div class="mt-2 grid grid-cols-2 gap-2">
+            <a href="https://wa.me/5212215642208?text=Hola%2C%20%C2%BFc%C3%B3mo%20est%C3%A1n%3F%20Oigan%2C%20vi%20su%20perfil%20de%20NUSA%20aqu%C3%AD%20en%20San%20Andr%C3%A9s%20Cholula%2C%20164%20rese%C3%B1as%20y%20abiertos%2024%20horas%20entre%20semana%2C%20eso%20la%20gente%20lo%20agradece%20mucho." target="_blank" rel="noopener" class="rounded-full bg-[#25D366] px-3 py-2 text-center text-sm font-bold text-white">Enviar</a>
+            <button onclick="copiar(this)" class="rounded-full bg-stone-900 px-3 py-2 text-sm font-bold text-white">Copiar</button>
+          </div>
+        </div>
+        
+        <div class="rounded-xl bg-stone-50 p-3">
+          <p class="text-xs font-bold uppercase tracking-wide text-stone-500">Mensaje 2</p>
+          <p class="msg mt-1 text-sm">Les armé una demo de cómo se vería su página en celular, con botón para que los dueños de mascotas les escriban directo por WhatsApp: https://sadadp.github.io/Claude-Google-Maps/demos/nusa-veterinaria/</p>
+          <div class="mt-2 grid grid-cols-2 gap-2">
+            <a href="https://wa.me/5212215642208?text=Les%20arm%C3%A9%20una%20demo%20de%20c%C3%B3mo%20se%20ver%C3%ADa%20su%20p%C3%A1gina%20en%20celular%2C%20con%20bot%C3%B3n%20para%20que%20los%20due%C3%B1os%20de%20mascotas%20les%20escriban%20directo%20por%20WhatsApp%3A%20https%3A//sadadp.github.io/Claude-Google-Maps/demos/nusa-veterinaria/" target="_blank" rel="noopener" class="rounded-full bg-[#25D366] px-3 py-2 text-center text-sm font-bold text-white">Enviar</a>
+            <button onclick="copiar(this)" class="rounded-full bg-stone-900 px-3 py-2 text-sm font-bold text-white">Copiar</button>
+          </div>
+        </div>
+        
+        <div class="rounded-xl bg-stone-50 p-3">
+          <p class="text-xs font-bold uppercase tracking-wide text-stone-500">Mensaje 3</p>
+          <p class="msg mt-1 text-sm">Si les late, se las dejo publicada con su código QR por $700 pago único, en 48 hrs. ¿Cómo la ven?</p>
+          <div class="mt-2 grid grid-cols-2 gap-2">
+            <a href="https://wa.me/5212215642208?text=Si%20les%20late%2C%20se%20las%20dejo%20publicada%20con%20su%20c%C3%B3digo%20QR%20por%20%24700%20pago%20%C3%BAnico%2C%20en%2048%20hrs.%20%C2%BFC%C3%B3mo%20la%20ven%3F" target="_blank" rel="noopener" class="rounded-full bg-[#25D366] px-3 py-2 text-center text-sm font-bold text-white">Enviar</a>
+            <button onclick="copiar(this)" class="rounded-full bg-stone-900 px-3 py-2 text-sm font-bold text-white">Copiar</button>
+          </div>
+        </div>
+        
+        <div class="rounded-xl bg-stone-50 p-3">
+          <p class="text-xs font-bold uppercase tracking-wide text-stone-500">Seguimiento (48 h)</p>
+          <p class="msg mt-1 text-sm">¿Qué tal? ¿Alcanzaron a ver la página de NUSA? Si quieren le muevo algo, sin compromiso.</p>
+          <div class="mt-2 grid grid-cols-2 gap-2">
+            <a href="https://wa.me/5212215642208?text=%C2%BFQu%C3%A9%20tal%3F%20%C2%BFAlcanzaron%20a%20ver%20la%20p%C3%A1gina%20de%20NUSA%3F%20Si%20quieren%20le%20muevo%20algo%2C%20sin%20compromiso." target="_blank" rel="noopener" class="rounded-full bg-[#25D366] px-3 py-2 text-center text-sm font-bold text-white">Enviar</a>
+            <button onclick="copiar(this)" class="rounded-full bg-stone-900 px-3 py-2 text-sm font-bold text-white">Copiar</button>
+          </div>
+        </div>
+        
+      </div>
+      <div class="mt-4 flex flex-wrap items-center gap-3">
+        <button onclick="qr(this,'https://sadadp.github.io/Claude-Google-Maps/demos/nusa-veterinaria/','qr-nusa-veterinaria.png')" class="rounded-full border border-stone-300 px-4 py-2 text-sm font-bold">Generar QR de la demo</button>
+        <div class="qr hidden w-full flex-col items-start gap-2 sm:w-auto"><div class="code rounded-lg bg-white p-2 ring-1 ring-stone-200"></div><button class="dl rounded-full bg-stone-900 px-4 py-2 text-sm font-bold text-white">Descargar PNG</button></div>
       </div>
     </li>
     
@@ -148,14 +430,49 @@ La dejo lista en 48 horas por $3,000 pesos en un solo pago. ¿Le echan un ojo?</
         <h2 class="text-lg font-bold">9. Hospital Veterinario Koala</h2>
         <span class="rounded-full px-3 py-1 text-xs font-bold bg-emerald-100 text-emerald-800">veterinaria</span>
       </div>
-      <p class="mt-1 text-sm text-stone-600">+52 221 109 7480 · ★ 4.2 (296 reseñas)</p>
-      <p id="m9" class="mt-3 whitespace-pre-line rounded-xl bg-stone-50 p-3 text-sm">Hola, equipo del Hospital Veterinario Koala. 296 reseñas y 4.2 en Google es mucha gente de Tlaxcalancingo que ya los conoce, y no encontré una página propia a donde lleguen los clientes nuevos.
-Les preparé una de muestra: https://sadadp.github.io/Claude-Google-Maps/demos/hospital-veterinario-koala/
-Por $3,000 pesos, pago único, se las dejo lista en 48 horas. ¿Qué les parece?</p>
-      <div class="mt-3 grid grid-cols-1 gap-2 sm:grid-cols-3">
-        <a href="https://wa.me/5212211097480?text=Hola%2C%20equipo%20del%20Hospital%20Veterinario%20Koala.%20296%20rese%C3%B1as%20y%204.2%20en%20Google%20es%20mucha%20gente%20de%20Tlaxcalancingo%20que%20ya%20los%20conoce%2C%20y%20no%20encontr%C3%A9%20una%20p%C3%A1gina%20propia%20a%20donde%20lleguen%20los%20clientes%20nuevos.%0ALes%20prepar%C3%A9%20una%20de%20muestra%3A%20https%3A//sadadp.github.io/Claude-Google-Maps/demos/hospital-veterinario-koala/%0APor%20%243%2C000%20pesos%2C%20pago%20%C3%BAnico%2C%20se%20las%20dejo%20lista%20en%2048%20horas.%20%C2%BFQu%C3%A9%20les%20parece%3F" target="_blank" rel="noopener" class="rounded-full bg-[#25D366] px-4 py-3 text-center font-bold text-white">Abrir WhatsApp</a>
-        <button onclick="copiar(9, this)" class="rounded-full bg-stone-900 px-4 py-3 font-bold text-white">Copiar mensaje</button>
-        <a href="https://sadadp.github.io/Claude-Google-Maps/demos/hospital-veterinario-koala/" target="_blank" rel="noopener" class="rounded-full border border-stone-300 px-4 py-3 text-center font-bold">Ver demo</a>
+      <p class="mt-1 text-sm text-stone-600">+52 221 109 7480 · ★ 4.2 (296 reseñas) · <a href="https://sadadp.github.io/Claude-Google-Maps/demos/hospital-veterinario-koala/" target="_blank" rel="noopener" class="font-bold underline">Ver demo</a></p>
+      <div class="mt-4 space-y-3">
+        
+        <div class="rounded-xl bg-stone-50 p-3">
+          <p class="text-xs font-bold uppercase tracking-wide text-stone-500">Mensaje 1</p>
+          <p class="msg mt-1 text-sm">Hola, ¿qué tal? Vi su perfil del Hospital Veterinario Koala aquí en Tlaxcalancingo, 296 reseñas en Google, mucha gente los conoce.</p>
+          <div class="mt-2 grid grid-cols-2 gap-2">
+            <a href="https://wa.me/5212211097480?text=Hola%2C%20%C2%BFqu%C3%A9%20tal%3F%20Vi%20su%20perfil%20del%20Hospital%20Veterinario%20Koala%20aqu%C3%AD%20en%20Tlaxcalancingo%2C%20296%20rese%C3%B1as%20en%20Google%2C%20mucha%20gente%20los%20conoce." target="_blank" rel="noopener" class="rounded-full bg-[#25D366] px-3 py-2 text-center text-sm font-bold text-white">Enviar</a>
+            <button onclick="copiar(this)" class="rounded-full bg-stone-900 px-3 py-2 text-sm font-bold text-white">Copiar</button>
+          </div>
+        </div>
+        
+        <div class="rounded-xl bg-stone-50 p-3">
+          <p class="text-xs font-bold uppercase tracking-wide text-stone-500">Mensaje 2</p>
+          <p class="msg mt-1 text-sm">Me tomé unos minutos para armarles una demo de su página en celular, con botón directo a su WhatsApp para citas: https://sadadp.github.io/Claude-Google-Maps/demos/hospital-veterinario-koala/</p>
+          <div class="mt-2 grid grid-cols-2 gap-2">
+            <a href="https://wa.me/5212211097480?text=Me%20tom%C3%A9%20unos%20minutos%20para%20armarles%20una%20demo%20de%20su%20p%C3%A1gina%20en%20celular%2C%20con%20bot%C3%B3n%20directo%20a%20su%20WhatsApp%20para%20citas%3A%20https%3A//sadadp.github.io/Claude-Google-Maps/demos/hospital-veterinario-koala/" target="_blank" rel="noopener" class="rounded-full bg-[#25D366] px-3 py-2 text-center text-sm font-bold text-white">Enviar</a>
+            <button onclick="copiar(this)" class="rounded-full bg-stone-900 px-3 py-2 text-sm font-bold text-white">Copiar</button>
+          </div>
+        </div>
+        
+        <div class="rounded-xl bg-stone-50 p-3">
+          <p class="text-xs font-bold uppercase tracking-wide text-stone-500">Mensaje 3</p>
+          <p class="msg mt-1 text-sm">Si les gusta, se las dejo publicada con su código QR por $700 pago único, lista en 48 hrs. ¿Cómo la ven?</p>
+          <div class="mt-2 grid grid-cols-2 gap-2">
+            <a href="https://wa.me/5212211097480?text=Si%20les%20gusta%2C%20se%20las%20dejo%20publicada%20con%20su%20c%C3%B3digo%20QR%20por%20%24700%20pago%20%C3%BAnico%2C%20lista%20en%2048%20hrs.%20%C2%BFC%C3%B3mo%20la%20ven%3F" target="_blank" rel="noopener" class="rounded-full bg-[#25D366] px-3 py-2 text-center text-sm font-bold text-white">Enviar</a>
+            <button onclick="copiar(this)" class="rounded-full bg-stone-900 px-3 py-2 text-sm font-bold text-white">Copiar</button>
+          </div>
+        </div>
+        
+        <div class="rounded-xl bg-stone-50 p-3">
+          <p class="text-xs font-bold uppercase tracking-wide text-stone-500">Seguimiento (48 h)</p>
+          <p class="msg mt-1 text-sm">Hola, ¿pudieron ver la demo de Koala? Cualquier cosa que quieran cambiar, me avisan.</p>
+          <div class="mt-2 grid grid-cols-2 gap-2">
+            <a href="https://wa.me/5212211097480?text=Hola%2C%20%C2%BFpudieron%20ver%20la%20demo%20de%20Koala%3F%20Cualquier%20cosa%20que%20quieran%20cambiar%2C%20me%20avisan." target="_blank" rel="noopener" class="rounded-full bg-[#25D366] px-3 py-2 text-center text-sm font-bold text-white">Enviar</a>
+            <button onclick="copiar(this)" class="rounded-full bg-stone-900 px-3 py-2 text-sm font-bold text-white">Copiar</button>
+          </div>
+        </div>
+        
+      </div>
+      <div class="mt-4 flex flex-wrap items-center gap-3">
+        <button onclick="qr(this,'https://sadadp.github.io/Claude-Google-Maps/demos/hospital-veterinario-koala/','qr-hospital-veterinario-koala.png')" class="rounded-full border border-stone-300 px-4 py-2 text-sm font-bold">Generar QR de la demo</button>
+        <div class="qr hidden w-full flex-col items-start gap-2 sm:w-auto"><div class="code rounded-lg bg-white p-2 ring-1 ring-stone-200"></div><button class="dl rounded-full bg-stone-900 px-4 py-2 text-sm font-bold text-white">Descargar PNG</button></div>
       </div>
     </li>
     
@@ -164,14 +481,49 @@ Por $3,000 pesos, pago único, se las dejo lista en 48 horas. ¿Qué les parece?
         <h2 class="text-lg font-bold">10. Hospital Veterinario Paraíso Animal</h2>
         <span class="rounded-full px-3 py-1 text-xs font-bold bg-emerald-100 text-emerald-800">veterinaria</span>
       </div>
-      <p class="mt-1 text-sm text-stone-600">+52 222 227 7522 · ★ 4.6 (288 reseñas)</p>
-      <p id="m10" class="mt-3 whitespace-pre-line rounded-xl bg-stone-50 p-3 text-sm">Hola, equipo de Paraíso Animal. Con 4.6 y 288 reseñas en Google ya son referencia en Tlaxcalancingo, pero hoy quien los busca solo encuentra la ficha de Maps.
-Les hice una página de muestra con botón directo a su WhatsApp: https://sadadp.github.io/Claude-Google-Maps/demos/paraiso-animal-veterinaria/
-Se las entrego lista en 48 horas por $3,000 pesos, un solo pago. ¿Les interesa?</p>
-      <div class="mt-3 grid grid-cols-1 gap-2 sm:grid-cols-3">
-        <a href="https://wa.me/5212222277522?text=Hola%2C%20equipo%20de%20Para%C3%ADso%20Animal.%20Con%204.6%20y%20288%20rese%C3%B1as%20en%20Google%20ya%20son%20referencia%20en%20Tlaxcalancingo%2C%20pero%20hoy%20quien%20los%20busca%20solo%20encuentra%20la%20ficha%20de%20Maps.%0ALes%20hice%20una%20p%C3%A1gina%20de%20muestra%20con%20bot%C3%B3n%20directo%20a%20su%20WhatsApp%3A%20https%3A//sadadp.github.io/Claude-Google-Maps/demos/paraiso-animal-veterinaria/%0ASe%20las%20entrego%20lista%20en%2048%20horas%20por%20%243%2C000%20pesos%2C%20un%20solo%20pago.%20%C2%BFLes%20interesa%3F" target="_blank" rel="noopener" class="rounded-full bg-[#25D366] px-4 py-3 text-center font-bold text-white">Abrir WhatsApp</a>
-        <button onclick="copiar(10, this)" class="rounded-full bg-stone-900 px-4 py-3 font-bold text-white">Copiar mensaje</button>
-        <a href="https://sadadp.github.io/Claude-Google-Maps/demos/paraiso-animal-veterinaria/" target="_blank" rel="noopener" class="rounded-full border border-stone-300 px-4 py-3 text-center font-bold">Ver demo</a>
+      <p class="mt-1 text-sm text-stone-600">+52 222 227 7522 · ★ 4.6 (288 reseñas) · <a href="https://sadadp.github.io/Claude-Google-Maps/demos/paraiso-animal-veterinaria/" target="_blank" rel="noopener" class="font-bold underline">Ver demo</a></p>
+      <div class="mt-4 space-y-3">
+        
+        <div class="rounded-xl bg-stone-50 p-3">
+          <p class="text-xs font-bold uppercase tracking-wide text-stone-500">Mensaje 1</p>
+          <p class="msg mt-1 text-sm">Hola, ¿cómo están? Oigan, estaba viendo su perfil de Paraíso Animal aquí en Tlaxcalancingo, 4.6 con 288 reseñas, qué buena fama tienen.</p>
+          <div class="mt-2 grid grid-cols-2 gap-2">
+            <a href="https://wa.me/5212222277522?text=Hola%2C%20%C2%BFc%C3%B3mo%20est%C3%A1n%3F%20Oigan%2C%20estaba%20viendo%20su%20perfil%20de%20Para%C3%ADso%20Animal%20aqu%C3%AD%20en%20Tlaxcalancingo%2C%204.6%20con%20288%20rese%C3%B1as%2C%20qu%C3%A9%20buena%20fama%20tienen." target="_blank" rel="noopener" class="rounded-full bg-[#25D366] px-3 py-2 text-center text-sm font-bold text-white">Enviar</a>
+            <button onclick="copiar(this)" class="rounded-full bg-stone-900 px-3 py-2 text-sm font-bold text-white">Copiar</button>
+          </div>
+        </div>
+        
+        <div class="rounded-xl bg-stone-50 p-3">
+          <p class="text-xs font-bold uppercase tracking-wide text-stone-500">Mensaje 2</p>
+          <p class="msg mt-1 text-sm">Les armé una muestra de cómo se vería su página en el celular, con botón directo a su WhatsApp: https://sadadp.github.io/Claude-Google-Maps/demos/paraiso-animal-veterinaria/</p>
+          <div class="mt-2 grid grid-cols-2 gap-2">
+            <a href="https://wa.me/5212222277522?text=Les%20arm%C3%A9%20una%20muestra%20de%20c%C3%B3mo%20se%20ver%C3%ADa%20su%20p%C3%A1gina%20en%20el%20celular%2C%20con%20bot%C3%B3n%20directo%20a%20su%20WhatsApp%3A%20https%3A//sadadp.github.io/Claude-Google-Maps/demos/paraiso-animal-veterinaria/" target="_blank" rel="noopener" class="rounded-full bg-[#25D366] px-3 py-2 text-center text-sm font-bold text-white">Enviar</a>
+            <button onclick="copiar(this)" class="rounded-full bg-stone-900 px-3 py-2 text-sm font-bold text-white">Copiar</button>
+          </div>
+        </div>
+        
+        <div class="rounded-xl bg-stone-50 p-3">
+          <p class="text-xs font-bold uppercase tracking-wide text-stone-500">Mensaje 3</p>
+          <p class="msg mt-1 text-sm">Si les late, se las publico con su código QR por $700 pago único y queda en 48 hrs. ¿Cómo la ven?</p>
+          <div class="mt-2 grid grid-cols-2 gap-2">
+            <a href="https://wa.me/5212222277522?text=Si%20les%20late%2C%20se%20las%20publico%20con%20su%20c%C3%B3digo%20QR%20por%20%24700%20pago%20%C3%BAnico%20y%20queda%20en%2048%20hrs.%20%C2%BFC%C3%B3mo%20la%20ven%3F" target="_blank" rel="noopener" class="rounded-full bg-[#25D366] px-3 py-2 text-center text-sm font-bold text-white">Enviar</a>
+            <button onclick="copiar(this)" class="rounded-full bg-stone-900 px-3 py-2 text-sm font-bold text-white">Copiar</button>
+          </div>
+        </div>
+        
+        <div class="rounded-xl bg-stone-50 p-3">
+          <p class="text-xs font-bold uppercase tracking-wide text-stone-500">Seguimiento (48 h)</p>
+          <p class="msg mt-1 text-sm">¿Qué tal? Nomás para saber si vieron la demo. Si quieren otro color o texto, lo cambio.</p>
+          <div class="mt-2 grid grid-cols-2 gap-2">
+            <a href="https://wa.me/5212222277522?text=%C2%BFQu%C3%A9%20tal%3F%20Nom%C3%A1s%20para%20saber%20si%20vieron%20la%20demo.%20Si%20quieren%20otro%20color%20o%20texto%2C%20lo%20cambio." target="_blank" rel="noopener" class="rounded-full bg-[#25D366] px-3 py-2 text-center text-sm font-bold text-white">Enviar</a>
+            <button onclick="copiar(this)" class="rounded-full bg-stone-900 px-3 py-2 text-sm font-bold text-white">Copiar</button>
+          </div>
+        </div>
+        
+      </div>
+      <div class="mt-4 flex flex-wrap items-center gap-3">
+        <button onclick="qr(this,'https://sadadp.github.io/Claude-Google-Maps/demos/paraiso-animal-veterinaria/','qr-paraiso-animal-veterinaria.png')" class="rounded-full border border-stone-300 px-4 py-2 text-sm font-bold">Generar QR de la demo</button>
+        <div class="qr hidden w-full flex-col items-start gap-2 sm:w-auto"><div class="code rounded-lg bg-white p-2 ring-1 ring-stone-200"></div><button class="dl rounded-full bg-stone-900 px-4 py-2 text-sm font-bold text-white">Descargar PNG</button></div>
       </div>
     </li>
     
@@ -180,14 +532,49 @@ Se las entrego lista en 48 horas por $3,000 pesos, un solo pago. ¿Les interesa?
         <h2 class="text-lg font-bold">11. Reino Animal</h2>
         <span class="rounded-full px-3 py-1 text-xs font-bold bg-emerald-100 text-emerald-800">veterinaria</span>
       </div>
-      <p class="mt-1 text-sm text-stone-600">+52 222 225 1705 · ★ 4.4 (267 reseñas)</p>
-      <p id="m11" class="mt-3 whitespace-pre-line rounded-xl bg-stone-50 p-3 text-sm">Hola, equipo de Reino Animal. Vi sus 267 reseñas con 4.4 en Google y que también dan estética canina, algo que mucha gente en San Andrés Cholula busca en internet.
-Les armé una página de muestra para que les agenden por WhatsApp: https://sadadp.github.io/Claude-Google-Maps/demos/reino-animal-cholula/
-La dejo lista en 48 horas por $3,000 pesos en un solo pago. ¿Me dicen qué tal?</p>
-      <div class="mt-3 grid grid-cols-1 gap-2 sm:grid-cols-3">
-        <a href="https://wa.me/5212222251705?text=Hola%2C%20equipo%20de%20Reino%20Animal.%20Vi%20sus%20267%20rese%C3%B1as%20con%204.4%20en%20Google%20y%20que%20tambi%C3%A9n%20dan%20est%C3%A9tica%20canina%2C%20algo%20que%20mucha%20gente%20en%20San%20Andr%C3%A9s%20Cholula%20busca%20en%20internet.%0ALes%20arm%C3%A9%20una%20p%C3%A1gina%20de%20muestra%20para%20que%20les%20agenden%20por%20WhatsApp%3A%20https%3A//sadadp.github.io/Claude-Google-Maps/demos/reino-animal-cholula/%0ALa%20dejo%20lista%20en%2048%20horas%20por%20%243%2C000%20pesos%20en%20un%20solo%20pago.%20%C2%BFMe%20dicen%20qu%C3%A9%20tal%3F" target="_blank" rel="noopener" class="rounded-full bg-[#25D366] px-4 py-3 text-center font-bold text-white">Abrir WhatsApp</a>
-        <button onclick="copiar(11, this)" class="rounded-full bg-stone-900 px-4 py-3 font-bold text-white">Copiar mensaje</button>
-        <a href="https://sadadp.github.io/Claude-Google-Maps/demos/reino-animal-cholula/" target="_blank" rel="noopener" class="rounded-full border border-stone-300 px-4 py-3 text-center font-bold">Ver demo</a>
+      <p class="mt-1 text-sm text-stone-600">+52 222 225 1705 · ★ 4.4 (267 reseñas) · <a href="https://sadadp.github.io/Claude-Google-Maps/demos/reino-animal-cholula/" target="_blank" rel="noopener" class="font-bold underline">Ver demo</a></p>
+      <div class="mt-4 space-y-3">
+        
+        <div class="rounded-xl bg-stone-50 p-3">
+          <p class="text-xs font-bold uppercase tracking-wide text-stone-500">Mensaje 1</p>
+          <p class="msg mt-1 text-sm">Hola, ¿qué tal? Vi su perfil de Reino Animal aquí en San Andrés Cholula, 267 reseñas y además tienen estética canina, qué completo.</p>
+          <div class="mt-2 grid grid-cols-2 gap-2">
+            <a href="https://wa.me/5212222251705?text=Hola%2C%20%C2%BFqu%C3%A9%20tal%3F%20Vi%20su%20perfil%20de%20Reino%20Animal%20aqu%C3%AD%20en%20San%20Andr%C3%A9s%20Cholula%2C%20267%20rese%C3%B1as%20y%20adem%C3%A1s%20tienen%20est%C3%A9tica%20canina%2C%20qu%C3%A9%20completo." target="_blank" rel="noopener" class="rounded-full bg-[#25D366] px-3 py-2 text-center text-sm font-bold text-white">Enviar</a>
+            <button onclick="copiar(this)" class="rounded-full bg-stone-900 px-3 py-2 text-sm font-bold text-white">Copiar</button>
+          </div>
+        </div>
+        
+        <div class="rounded-xl bg-stone-50 p-3">
+          <p class="text-xs font-bold uppercase tracking-wide text-stone-500">Mensaje 2</p>
+          <p class="msg mt-1 text-sm">Me tomé unos minutos y les armé una demo de su página en celular, con botón para que les agenden por WhatsApp: https://sadadp.github.io/Claude-Google-Maps/demos/reino-animal-cholula/</p>
+          <div class="mt-2 grid grid-cols-2 gap-2">
+            <a href="https://wa.me/5212222251705?text=Me%20tom%C3%A9%20unos%20minutos%20y%20les%20arm%C3%A9%20una%20demo%20de%20su%20p%C3%A1gina%20en%20celular%2C%20con%20bot%C3%B3n%20para%20que%20les%20agenden%20por%20WhatsApp%3A%20https%3A//sadadp.github.io/Claude-Google-Maps/demos/reino-animal-cholula/" target="_blank" rel="noopener" class="rounded-full bg-[#25D366] px-3 py-2 text-center text-sm font-bold text-white">Enviar</a>
+            <button onclick="copiar(this)" class="rounded-full bg-stone-900 px-3 py-2 text-sm font-bold text-white">Copiar</button>
+          </div>
+        </div>
+        
+        <div class="rounded-xl bg-stone-50 p-3">
+          <p class="text-xs font-bold uppercase tracking-wide text-stone-500">Mensaje 3</p>
+          <p class="msg mt-1 text-sm">Si les gusta, se las dejo publicada con su código QR por $700 pago único, lista en 48 hrs. ¿Cómo la ven?</p>
+          <div class="mt-2 grid grid-cols-2 gap-2">
+            <a href="https://wa.me/5212222251705?text=Si%20les%20gusta%2C%20se%20las%20dejo%20publicada%20con%20su%20c%C3%B3digo%20QR%20por%20%24700%20pago%20%C3%BAnico%2C%20lista%20en%2048%20hrs.%20%C2%BFC%C3%B3mo%20la%20ven%3F" target="_blank" rel="noopener" class="rounded-full bg-[#25D366] px-3 py-2 text-center text-sm font-bold text-white">Enviar</a>
+            <button onclick="copiar(this)" class="rounded-full bg-stone-900 px-3 py-2 text-sm font-bold text-white">Copiar</button>
+          </div>
+        </div>
+        
+        <div class="rounded-xl bg-stone-50 p-3">
+          <p class="text-xs font-bold uppercase tracking-wide text-stone-500">Seguimiento (48 h)</p>
+          <p class="msg mt-1 text-sm">Hola, ¿alcanzaron a ver la demo? Sin presión, me dicen si les sirve.</p>
+          <div class="mt-2 grid grid-cols-2 gap-2">
+            <a href="https://wa.me/5212222251705?text=Hola%2C%20%C2%BFalcanzaron%20a%20ver%20la%20demo%3F%20Sin%20presi%C3%B3n%2C%20me%20dicen%20si%20les%20sirve." target="_blank" rel="noopener" class="rounded-full bg-[#25D366] px-3 py-2 text-center text-sm font-bold text-white">Enviar</a>
+            <button onclick="copiar(this)" class="rounded-full bg-stone-900 px-3 py-2 text-sm font-bold text-white">Copiar</button>
+          </div>
+        </div>
+        
+      </div>
+      <div class="mt-4 flex flex-wrap items-center gap-3">
+        <button onclick="qr(this,'https://sadadp.github.io/Claude-Google-Maps/demos/reino-animal-cholula/','qr-reino-animal-cholula.png')" class="rounded-full border border-stone-300 px-4 py-2 text-sm font-bold">Generar QR de la demo</button>
+        <div class="qr hidden w-full flex-col items-start gap-2 sm:w-auto"><div class="code rounded-lg bg-white p-2 ring-1 ring-stone-200"></div><button class="dl rounded-full bg-stone-900 px-4 py-2 text-sm font-bold text-white">Descargar PNG</button></div>
       </div>
     </li>
     
@@ -196,22 +583,66 @@ La dejo lista en 48 horas por $3,000 pesos en un solo pago. ¿Me dicen qué tal?
         <h2 class="text-lg font-bold">12. Pirsch Veterinaria Las Torres</h2>
         <span class="rounded-full px-3 py-1 text-xs font-bold bg-emerald-100 text-emerald-800">veterinaria</span>
       </div>
-      <p class="mt-1 text-sm text-stone-600">+52 222 242 7197 · ★ 4.5 (95 reseñas)</p>
-      <p id="m12" class="mt-3 whitespace-pre-line rounded-xl bg-stone-50 p-3 text-sm">Hola, equipo de Pirsch Las Torres. Tienen 4.5 con 95 reseñas en Google y abren toda la semana, pero no encontré una página donde la gente de San Andrés Cholula vea sus servicios y les escriba.
-Les preparé una de muestra: https://sadadp.github.io/Claude-Google-Maps/demos/pirsch-veterinaria-las-torres/
-Queda lista en 48 horas por $3,000 pesos, pago único. ¿Les late?</p>
-      <div class="mt-3 grid grid-cols-1 gap-2 sm:grid-cols-3">
-        <a href="https://wa.me/5212222427197?text=Hola%2C%20equipo%20de%20Pirsch%20Las%20Torres.%20Tienen%204.5%20con%2095%20rese%C3%B1as%20en%20Google%20y%20abren%20toda%20la%20semana%2C%20pero%20no%20encontr%C3%A9%20una%20p%C3%A1gina%20donde%20la%20gente%20de%20San%20Andr%C3%A9s%20Cholula%20vea%20sus%20servicios%20y%20les%20escriba.%0ALes%20prepar%C3%A9%20una%20de%20muestra%3A%20https%3A//sadadp.github.io/Claude-Google-Maps/demos/pirsch-veterinaria-las-torres/%0AQueda%20lista%20en%2048%20horas%20por%20%243%2C000%20pesos%2C%20pago%20%C3%BAnico.%20%C2%BFLes%20late%3F" target="_blank" rel="noopener" class="rounded-full bg-[#25D366] px-4 py-3 text-center font-bold text-white">Abrir WhatsApp</a>
-        <button onclick="copiar(12, this)" class="rounded-full bg-stone-900 px-4 py-3 font-bold text-white">Copiar mensaje</button>
-        <a href="https://sadadp.github.io/Claude-Google-Maps/demos/pirsch-veterinaria-las-torres/" target="_blank" rel="noopener" class="rounded-full border border-stone-300 px-4 py-3 text-center font-bold">Ver demo</a>
+      <p class="mt-1 text-sm text-stone-600">+52 222 242 7197 · ★ 4.5 (95 reseñas) · <a href="https://sadadp.github.io/Claude-Google-Maps/demos/pirsch-veterinaria-las-torres/" target="_blank" rel="noopener" class="font-bold underline">Ver demo</a></p>
+      <div class="mt-4 space-y-3">
+        
+        <div class="rounded-xl bg-stone-50 p-3">
+          <p class="text-xs font-bold uppercase tracking-wide text-stone-500">Mensaje 1</p>
+          <p class="msg mt-1 text-sm">Hola, ¿cómo están? Oigan, vi su perfil de Pirsch Las Torres aquí en San Andrés Cholula, 4.5 en Google y abren hasta en domingo, eso se agradece.</p>
+          <div class="mt-2 grid grid-cols-2 gap-2">
+            <a href="https://wa.me/5212222427197?text=Hola%2C%20%C2%BFc%C3%B3mo%20est%C3%A1n%3F%20Oigan%2C%20vi%20su%20perfil%20de%20Pirsch%20Las%20Torres%20aqu%C3%AD%20en%20San%20Andr%C3%A9s%20Cholula%2C%204.5%20en%20Google%20y%20abren%20hasta%20en%20domingo%2C%20eso%20se%20agradece." target="_blank" rel="noopener" class="rounded-full bg-[#25D366] px-3 py-2 text-center text-sm font-bold text-white">Enviar</a>
+            <button onclick="copiar(this)" class="rounded-full bg-stone-900 px-3 py-2 text-sm font-bold text-white">Copiar</button>
+          </div>
+        </div>
+        
+        <div class="rounded-xl bg-stone-50 p-3">
+          <p class="text-xs font-bold uppercase tracking-wide text-stone-500">Mensaje 2</p>
+          <p class="msg mt-1 text-sm">Les armé una demo de cómo se vería su página en el celular, con botón directo a su WhatsApp: https://sadadp.github.io/Claude-Google-Maps/demos/pirsch-veterinaria-las-torres/</p>
+          <div class="mt-2 grid grid-cols-2 gap-2">
+            <a href="https://wa.me/5212222427197?text=Les%20arm%C3%A9%20una%20demo%20de%20c%C3%B3mo%20se%20ver%C3%ADa%20su%20p%C3%A1gina%20en%20el%20celular%2C%20con%20bot%C3%B3n%20directo%20a%20su%20WhatsApp%3A%20https%3A//sadadp.github.io/Claude-Google-Maps/demos/pirsch-veterinaria-las-torres/" target="_blank" rel="noopener" class="rounded-full bg-[#25D366] px-3 py-2 text-center text-sm font-bold text-white">Enviar</a>
+            <button onclick="copiar(this)" class="rounded-full bg-stone-900 px-3 py-2 text-sm font-bold text-white">Copiar</button>
+          </div>
+        </div>
+        
+        <div class="rounded-xl bg-stone-50 p-3">
+          <p class="text-xs font-bold uppercase tracking-wide text-stone-500">Mensaje 3</p>
+          <p class="msg mt-1 text-sm">Si les late, se las publico con su código QR por $700 pago único, lista en 48 hrs. ¿Cómo la ven?</p>
+          <div class="mt-2 grid grid-cols-2 gap-2">
+            <a href="https://wa.me/5212222427197?text=Si%20les%20late%2C%20se%20las%20publico%20con%20su%20c%C3%B3digo%20QR%20por%20%24700%20pago%20%C3%BAnico%2C%20lista%20en%2048%20hrs.%20%C2%BFC%C3%B3mo%20la%20ven%3F" target="_blank" rel="noopener" class="rounded-full bg-[#25D366] px-3 py-2 text-center text-sm font-bold text-white">Enviar</a>
+            <button onclick="copiar(this)" class="rounded-full bg-stone-900 px-3 py-2 text-sm font-bold text-white">Copiar</button>
+          </div>
+        </div>
+        
+        <div class="rounded-xl bg-stone-50 p-3">
+          <p class="text-xs font-bold uppercase tracking-wide text-stone-500">Seguimiento (48 h)</p>
+          <p class="msg mt-1 text-sm">¿Qué tal? ¿Pudieron ver la página que les mandé? Si quieren algún cambio, con gusto.</p>
+          <div class="mt-2 grid grid-cols-2 gap-2">
+            <a href="https://wa.me/5212222427197?text=%C2%BFQu%C3%A9%20tal%3F%20%C2%BFPudieron%20ver%20la%20p%C3%A1gina%20que%20les%20mand%C3%A9%3F%20Si%20quieren%20alg%C3%BAn%20cambio%2C%20con%20gusto." target="_blank" rel="noopener" class="rounded-full bg-[#25D366] px-3 py-2 text-center text-sm font-bold text-white">Enviar</a>
+            <button onclick="copiar(this)" class="rounded-full bg-stone-900 px-3 py-2 text-sm font-bold text-white">Copiar</button>
+          </div>
+        </div>
+        
+      </div>
+      <div class="mt-4 flex flex-wrap items-center gap-3">
+        <button onclick="qr(this,'https://sadadp.github.io/Claude-Google-Maps/demos/pirsch-veterinaria-las-torres/','qr-pirsch-veterinaria-las-torres.png')" class="rounded-full border border-stone-300 px-4 py-2 text-sm font-bold">Generar QR de la demo</button>
+        <div class="qr hidden w-full flex-col items-start gap-2 sm:w-auto"><div class="code rounded-lg bg-white p-2 ring-1 ring-stone-200"></div><button class="dl rounded-full bg-stone-900 px-4 py-2 text-sm font-bold text-white">Descargar PNG</button></div>
       </div>
     </li>
     
   </ol>
 </main>
 <script>
-function copiar(n, b){
-  navigator.clipboard.writeText(document.getElementById('m'+n).innerText).then(()=>{b.textContent='Copiado';setTimeout(()=>b.textContent='Copiar mensaje',1500)});
+function copiar(b){
+  const t=b.closest('div.rounded-xl').querySelector('.msg').innerText;
+  navigator.clipboard.writeText(t).then(()=>{b.textContent='Copiado';setTimeout(()=>b.textContent='Copiar',1500)});
+}
+function qr(b,url,nombre){
+  const box=b.nextElementSibling, code=box.querySelector('.code');
+  box.classList.replace('hidden','flex');
+  if(!code.firstChild) new QRCode(code,{text:url,width:220,height:220,correctLevel:QRCode.CorrectLevel.M});
+  box.querySelector('.dl').onclick=()=>{
+    const a=document.createElement('a');a.download=nombre;a.href=code.querySelector('canvas').toDataURL('image/png');a.click();
+  };
 }
 </script>
 </body>

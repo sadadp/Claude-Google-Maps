@@ -6,34 +6,55 @@
 <meta name="robots" content="noindex, nofollow">
 <title>Panel de Ventas</title>
 <script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 </head>
 <body class="bg-stone-100 font-sans text-stone-900">
 <main class="mx-auto max-w-4xl px-4 py-8">
   <header class="mb-6">
     <h1 class="text-2xl font-bold sm:text-3xl">Panel de Ventas</h1>
-    <p class="mt-1 text-sm text-stone-600">{{ filas|length }} prospectos · Landing con citas por WhatsApp · $3,000 MXN pago único · Entrega en 48 h</p>
+    <p class="mt-1 text-sm text-stone-600">{{ filas|length }} prospectos · Página con citas por WhatsApp + QR · $700 MXN pago único · Lista en 48 h</p>
+    <p class="mt-2 text-sm text-stone-600">Manda los mensajes 1, 2 y 3 seguidos al mismo chat. El seguimiento va 48 h después si te dejan en visto.</p>
   </header>
-  <ol class="space-y-4">
+  <ol class="space-y-5">
     {% for f in filas %}
     <li class="rounded-2xl bg-white p-5 shadow-sm">
       <div class="flex flex-wrap items-baseline justify-between gap-2">
         <h2 class="text-lg font-bold">{{ f.n }}. {{ f.nombre }}</h2>
         <span class="rounded-full px-3 py-1 text-xs font-bold {{ 'bg-sky-100 text-sky-800' if f.giro == 'dentista' else 'bg-emerald-100 text-emerald-800' }}">{{ f.giro }}</span>
       </div>
-      <p class="mt-1 text-sm text-stone-600">{{ f.telefono_display }} · ★ {{ f.calificacion }} ({{ f.resenas }} reseñas)</p>
-      <p id="m{{ f.n }}" class="mt-3 whitespace-pre-line rounded-xl bg-stone-50 p-3 text-sm">{{ f.msg }}</p>
-      <div class="mt-3 grid grid-cols-1 gap-2 sm:grid-cols-3">
-        <a href="{{ f.wa }}" target="_blank" rel="noopener" class="rounded-full bg-[#25D366] px-4 py-3 text-center font-bold text-white">Abrir WhatsApp</a>
-        <button onclick="copiar({{ f.n }}, this)" class="rounded-full bg-stone-900 px-4 py-3 font-bold text-white">Copiar mensaje</button>
-        <a href="{{ f.demo }}" target="_blank" rel="noopener" class="rounded-full border border-stone-300 px-4 py-3 text-center font-bold">Ver demo</a>
+      <p class="mt-1 text-sm text-stone-600">{{ f.telefono_display }} · ★ {{ f.calificacion }} ({{ f.resenas }} reseñas) · <a href="{{ f.demo }}" target="_blank" rel="noopener" class="font-bold underline">Ver demo</a></p>
+      <div class="mt-4 space-y-3">
+        {% for et, m, link in f.msgs %}
+        <div class="rounded-xl bg-stone-50 p-3">
+          <p class="text-xs font-bold uppercase tracking-wide text-stone-500">{{ et }}</p>
+          <p class="msg mt-1 text-sm">{{ m }}</p>
+          <div class="mt-2 grid grid-cols-2 gap-2">
+            <a href="{{ link }}" target="_blank" rel="noopener" class="rounded-full bg-[#25D366] px-3 py-2 text-center text-sm font-bold text-white">Enviar</a>
+            <button onclick="copiar(this)" class="rounded-full bg-stone-900 px-3 py-2 text-sm font-bold text-white">Copiar</button>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+      <div class="mt-4 flex flex-wrap items-center gap-3">
+        <button onclick="qr(this,'{{ f.demo }}','qr-{{ f.slug }}.png')" class="rounded-full border border-stone-300 px-4 py-2 text-sm font-bold">Generar QR de la demo</button>
+        <div class="qr hidden w-full flex-col items-start gap-2 sm:w-auto"><div class="code rounded-lg bg-white p-2 ring-1 ring-stone-200"></div><button class="dl rounded-full bg-stone-900 px-4 py-2 text-sm font-bold text-white">Descargar PNG</button></div>
       </div>
     </li>
     {% endfor %}
   </ol>
 </main>
 <script>
-function copiar(n, b){
-  navigator.clipboard.writeText(document.getElementById('m'+n).innerText).then(()=>{b.textContent='Copiado';setTimeout(()=>b.textContent='Copiar mensaje',1500)});
+function copiar(b){
+  const t=b.closest('div.rounded-xl').querySelector('.msg').innerText;
+  navigator.clipboard.writeText(t).then(()=>{b.textContent='Copiado';setTimeout(()=>b.textContent='Copiar',1500)});
+}
+function qr(b,url,nombre){
+  const box=b.nextElementSibling, code=box.querySelector('.code');
+  box.classList.replace('hidden','flex');
+  if(!code.firstChild) new QRCode(code,{text:url,width:220,height:220,correctLevel:QRCode.CorrectLevel.M});
+  box.querySelector('.dl').onclick=()=>{
+    const a=document.createElement('a');a.download=nombre;a.href=code.querySelector('canvas').toDataURL('image/png');a.click();
+  };
 }
 </script>
 </body>

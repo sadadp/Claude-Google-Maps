@@ -43,6 +43,7 @@ landing = env.get_template("landing.html")
 prospectos = json.loads((ROOT / "prospectos.json").read_text(encoding="utf-8"))
 mensajes = json.loads((ROOT / "mensajes.json").read_text(encoding="utf-8"))
 
+ETIQUETAS = [("m1", "Mensaje 1"), ("m2", "Mensaje 2"), ("m3", "Mensaje 3"), ("seg", "Seguimiento (48 h)")]
 filas, txt = [], []
 for i, p in enumerate(prospectos, 1):
     zona = "San Andrés Cholula" if "San Andrés Cholula" in p["direccion"] else "Tlaxcalancingo"
@@ -60,10 +61,11 @@ for i, p in enumerate(prospectos, 1):
     out.write_text(html, encoding="utf-8")
 
     demo = f"{BASE_URL}/demos/{p['slug']}/"
-    msg = mensajes[p["slug"]].format(link=demo)
-    wa = f"https://wa.me/{p['whatsapp_num']}?text={quote(msg)}"
-    filas.append({**p, "n": i, "demo": demo, "msg": msg, "wa": wa})
-    txt.append(f"{i}. {p['nombre']} | {p['telefono_display']}\n{msg}\n{wa}\n")
+    wa = f"https://wa.me/{p['whatsapp_num']}"
+    msgs = [(et, mensajes[p["slug"]][k].format(link=demo)) for k, et in ETIQUETAS]
+    msgs = [(et, m, f"{wa}?text={quote(m)}") for et, m in msgs]
+    filas.append({**p, "n": i, "demo": demo, "wa": wa, "msgs": msgs})
+    txt.append(f"{i}. {p['nombre']} | {p['telefono_display']} | {wa}\n" + "".join(f"{et}: {m}\n" for et, m, _ in msgs))
 
 (ROOT / "index.html").write_text(env.get_template("panel.html").render(filas=filas, base=BASE_URL), encoding="utf-8")
 (ROOT / "MENSAJES_PARA_ENVIAR.txt").write_text("\n".join(txt), encoding="utf-8")
