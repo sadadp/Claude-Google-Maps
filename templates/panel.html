@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Panel de Ventas</title>
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-stone-100 font-sans text-stone-900">
+<main class="mx-auto max-w-4xl px-4 py-8">
+  <header class="mb-6">
+    <h1 class="text-2xl font-bold sm:text-3xl">Panel de Ventas</h1>
+    <p class="mt-1 text-sm text-stone-600">{{ filas|length }} prospectos · Landing con citas por WhatsApp · $3,000 MXN pago único · Entrega en 48 h</p>
+  </header>
+  <ol class="space-y-4">
+    {% for f in filas %}
+    <li class="rounded-2xl bg-white p-5 shadow-sm">
+      <div class="flex flex-wrap items-baseline justify-between gap-2">
+        <h2 class="text-lg font-bold">{{ f.n }}. {{ f.nombre }}</h2>
+        <span class="rounded-full px-3 py-1 text-xs font-bold {{ 'bg-sky-100 text-sky-800' if f.giro == 'dentista' else 'bg-emerald-100 text-emerald-800' }}">{{ f.giro }}</span>
+      </div>
+      <p class="mt-1 text-sm text-stone-600">{{ f.telefono_display }} · ★ {{ f.calificacion }} ({{ f.resenas }} reseñas)</p>
+      <p id="m{{ f.n }}" class="mt-3 whitespace-pre-line rounded-xl bg-stone-50 p-3 text-sm">{{ f.msg }}</p>
+      <div class="mt-3 grid grid-cols-1 gap-2 sm:grid-cols-3">
+        <a href="{{ f.wa }}" target="_blank" rel="noopener" class="rounded-full bg-[#25D366] px-4 py-3 text-center font-bold text-white">Abrir WhatsApp</a>
+        <button onclick="copiar({{ f.n }}, this)" class="rounded-full bg-stone-900 px-4 py-3 font-bold text-white">Copiar mensaje</button>
+        <a href="{{ f.demo }}" target="_blank" rel="noopener" class="rounded-full border border-stone-300 px-4 py-3 text-center font-bold">Ver demo</a>
+      </div>
+    </li>
+    {% endfor %}
+  </ol>
+</main>
+<script>
+function copiar(n, b){
+  navigator.clipboard.writeText(document.getElementById('m'+n).innerText).then(()=>{b.textContent='Copiado';setTimeout(()=>b.textContent='Copiar mensaje',1500)});
+}
+</script>
+</body>
+</html>
