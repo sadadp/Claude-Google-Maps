@@ -4,147 +4,80 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
-<title>Consultorio Dentista Valeria Victoria | Dentista en San Andrés Cholula</title>
-<meta name="description" content="Consultorio Dentista Valeria Victoria: Prevención bucal, Restauración dental, Estética dental, Atención infantil y urgencias. 5.0 estrellas en Google. Agenda por WhatsApp.">
+<title>Consultorio Dentista Valeria Victoria</title>
+<meta name="description" content="Consultorio Dentista Valeria Victoria. Prevención bucal, Restauración dental, Estética dental, Atención infantil y urgencias. Citas por WhatsApp.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;700&display=swap" rel="stylesheet">
-<script src="https://cdn.tailwindcss.com"></script>
-<script>
-tailwind.config={theme:{extend:{
-  fontFamily:{display:['Fraunces','serif'],sans:['"Plus Jakarta Sans"','system-ui','sans-serif']},
-  colors:{brand:{"100": "#e1ecf8", "200": "#bcd6f0", "300": "#88b6e3", "400": "#4d8fd1", "50": "#f2f7fc", "700": "#1d5ea8", "800": "#194e8a", "900": "#163f6e", "950": "#0d2645"}}
-}}}
-</script>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F6F6F2;--ink:#16201C;--acc:#3E6B5E;--d:'Fraunces',Georgia,serif;--s:'Inter',system-ui,sans-serif;
+--line:color-mix(in srgb,var(--ink) 14%,transparent);--mute:color-mix(in srgb,var(--ink) 60%,transparent)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--ink);font:400 16px/1.6 var(--s);-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{width:calc(100% - 44px);max-width:1088px;margin-left:auto;margin-right:auto}
+@media(min-width:768px){.wrap{width:calc(100% - 112px)}}
+.lab{font:500 11px/1.2 var(--s);letter-spacing:.16em;text-transform:uppercase;color:var(--mute)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--acc);color:var(--bg);text-decoration:none;font:600 15px/1 var(--s);padding:17px 24px;transition:opacity .2s}
+.btn:hover{opacity:.88}.btn svg{width:18px;height:18px;flex:none}
+.lnk{font-weight:600;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:5px}
+.lnk:hover{color:var(--acc)}
+.svc{list-style:none;counter-reset:s}
+.svc li{display:flex;gap:22px;align-items:baseline;padding:22px 0;border-top:1px solid var(--line)}
+.svc li:last-child{border-bottom:1px solid var(--line)}
+.svc li::before{counter-increment:s;content:counter(s,decimal-leading-zero);font:500 12px var(--s);color:var(--acc);min-width:22px}
+.hours{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+.hours td{padding:15px 0;border-top:1px solid var(--line);vertical-align:top}
+.hours tr:last-child td{border-bottom:1px solid var(--line)}
+.hours td+td{text-align:right}
+.foot{padding:40px 0 120px;font-size:13px;color:var(--mute)}
+@media(min-width:768px){.foot{padding-bottom:48px}}
+.bar{position:fixed;left:14px;right:14px;bottom:14px;z-index:9;box-shadow:0 10px 30px -12px rgba(0,0,0,.45)}
+.bar .btn{width:100%}
+@media(min-width:768px){.bar{display:none}}
+
+.top{display:flex;justify-content:space-between;align-items:center;padding:22px 0;border-bottom:1px solid var(--line)}
+.top b{font-weight:600;font-size:15px}
+.hero{padding:72px 0 64px}
+.hero h1{font:400 clamp(52px,10vw,132px)/.95 var(--d);letter-spacing:-.02em;margin-top:20px;max-width:11ch}
+.hero h1 em{color:var(--acc)}
+.meta{display:grid;gap:36px;margin-top:56px;padding-top:28px;border-top:1px solid var(--line)}
+.meta p{max-width:34ch;font-size:18px}
+.rate{font:400 64px/1 var(--d)}
+.rate small{display:block;font:400 14px/1.4 var(--s);color:var(--mute);margin-top:8px}
+.sec{display:grid;gap:28px;padding:72px 0;border-top:1px solid var(--line)}
+.sec h2{font:400 clamp(34px,4.5vw,52px)/1.05 var(--d)}
+.svc li{font:400 clamp(22px,2.6vw,30px)/1.2 var(--d)}
+.addr{font-size:18px;max-width:30ch;margin:18px 0 20px}
+@media(min-width:900px){.meta{grid-template-columns:1.2fr 1fr auto;align-items:end}.sec{grid-template-columns:1fr 2fr;gap:56px}}
+
+</style>
 </head>
-<body class="bg-brand-50 font-sans text-slate-800 antialiased">
+<body>
 
-<div class="bg-slate-900 px-4 py-2 text-center text-xs text-slate-300">Vista previa creada para Consultorio Dentista Valeria Victoria. Los datos son públicos de Google Maps.</div>
-
-<header class="sticky top-0 z-30 border-b border-brand-100 bg-white/90 backdrop-blur">
-  <div class="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-3">
-    <a href="#" class="font-display text-lg font-bold leading-tight text-brand-900 sm:text-xl">Consultorio Dentista Valeria Victoria</a>
-    <a href="https://wa.me/5212224022806?text=Hola%2C%20me%20gustar%C3%ADa%20agendar%20una%20cita%20dental." class="hidden shrink-0 rounded-full bg-brand-700 px-4 py-2 text-sm font-bold text-white hover:bg-brand-800 sm:inline-block">Agendar cita</a>
-  </div>
-</header>
-
-<main>
-  <section class="relative overflow-hidden">
-    <div class="absolute -right-24 -top-24 h-72 w-72 rounded-full bg-brand-200/60 blur-3xl"></div>
-    <div class="relative mx-auto grid max-w-6xl gap-10 px-4 py-14 md:grid-cols-5 md:py-20">
-      <div class="md:col-span-3">
-        <a href="https://www.google.com/maps/search/?api=1&amp;query=Consultorio%20Dentista%20Valeria%20Victoria%2C%20Av.%20Perif%C3%A9rico%20Ecol%C3%B3gico%203505%2C%20San%20Andr%C3%A9s%20Cholula%2C%20Pue." target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-full border border-brand-200 bg-white px-3 py-1.5 text-sm shadow-sm">
-          <span class="text-amber-500">★</span>
-          <b>5.0</b><span class="text-slate-500">· 78 reseñas en Google Maps</span>
-        </a>
-        <h1 class="mt-6 font-display text-4xl font-bold leading-[1.05] text-brand-950 sm:text-5xl md:text-6xl">Tu cita dental en San Andrés Cholula, a un mensaje de distancia</h1>
-        <p class="mt-5 max-w-xl text-lg text-slate-600">Prevención bucal, restauración dental y más. Escríbenos por WhatsApp y te damos horario el mismo día.</p>
-        <div class="mt-8 flex flex-col gap-3 sm:flex-row">
-          <a href="https://wa.me/5212224022806?text=Hola%2C%20me%20gustar%C3%ADa%20agendar%20una%20cita%20dental." class="inline-flex items-center justify-center gap-2 rounded-full bg-brand-700 px-7 py-4 text-base font-bold text-white shadow-lg shadow-brand-700/25 hover:bg-brand-800">
-            <svg width="20" height="20" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3 2.4.9 2.9.8 3.4.7.5-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg> Agendar por WhatsApp
-          </a>
-          <a href="#horario" class="inline-flex items-center justify-center rounded-full border border-brand-300 bg-white px-7 py-4 font-bold text-brand-800 hover:bg-brand-100">Ver horario y ubicación</a>
-        </div>
-        <p class="mt-4 text-sm text-slate-500">Hablas directo con el equipo, sin formularios.</p>
-      </div>
-      <aside class="self-end rounded-3xl bg-brand-900 p-7 text-brand-50 md:col-span-2">
-        <p class="text-sm uppercase tracking-widest text-brand-300">Calificación en Google</p>
-        <p class="mt-2 font-display text-7xl font-bold">5.0</p>
-        <p class="text-brand-200">de 5, con 78 reseñas de pacientes</p>
-        <hr class="my-6 border-brand-700">
-        <p class="text-sm text-brand-200">Av. Periférico Ecológico 3505, San Andrés Cholula, Pue.</p>
-        <a href="tel:+522224022806" class="mt-3 inline-block font-bold text-white underline decoration-brand-400 underline-offset-4">+52 222 402 2806</a>
-      </aside>
+<header class="wrap top"><b>Consultorio Dentista Valeria Victoria</b><a class="lnk" href="https://wa.me/5212224022806?text=Hola%2C%20me%20gustar%C3%ADa%20agendar%20una%20cita.">Agendar cita</a></header>
+<main class="wrap">
+  <section class="hero">
+    <p class="lab">Consultorio dental</p>
+    <h1>Consultorio Dentista Valeria <em>Victoria</em></h1>
+    <div class="meta">
+      <p>Prevención bucal, restauración dental y más. Escríbenos por WhatsApp y te damos tu cita.</p>
+      <div class="rate">5.0<small>78 reseñas en Google Maps</small></div>
+      <a class="btn" href="https://wa.me/5212224022806?text=Hola%2C%20me%20gustar%C3%ADa%20agendar%20una%20cita."><svg width="20" height="20" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3 2.4.9 2.9.8 3.4.7.5-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>Agendar por WhatsApp</a>
     </div>
   </section>
-
-  <section class="bg-white py-16">
-    <div class="mx-auto max-w-6xl px-4">
-      <h2 class="font-display text-3xl font-bold text-brand-950 sm:text-4xl">Lo que podemos hacer por tu sonrisa</h2>
-      <div class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-        
-        <a href="https://wa.me/5212224022806?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20prevenci%C3%B3n%20bucal." class="group rounded-2xl border border-brand-100 bg-brand-50 p-6 transition hover:-translate-y-1 hover:border-brand-300 hover:shadow-lg">
-          <span class="font-display text-2xl text-brand-400">01</span>
-          <h3 class="mt-3 text-lg font-bold text-brand-950">Prevención bucal</h3>
-          <p class="mt-2 text-sm text-brand-700 group-hover:underline">Preguntar por WhatsApp →</p>
-        </a>
-        
-        <a href="https://wa.me/5212224022806?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20restauraci%C3%B3n%20dental." class="group rounded-2xl border border-brand-100 bg-brand-50 p-6 transition hover:-translate-y-1 hover:border-brand-300 hover:shadow-lg">
-          <span class="font-display text-2xl text-brand-400">02</span>
-          <h3 class="mt-3 text-lg font-bold text-brand-950">Restauración dental</h3>
-          <p class="mt-2 text-sm text-brand-700 group-hover:underline">Preguntar por WhatsApp →</p>
-        </a>
-        
-        <a href="https://wa.me/5212224022806?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20est%C3%A9tica%20dental." class="group rounded-2xl border border-brand-100 bg-brand-50 p-6 transition hover:-translate-y-1 hover:border-brand-300 hover:shadow-lg">
-          <span class="font-display text-2xl text-brand-400">03</span>
-          <h3 class="mt-3 text-lg font-bold text-brand-950">Estética dental</h3>
-          <p class="mt-2 text-sm text-brand-700 group-hover:underline">Preguntar por WhatsApp →</p>
-        </a>
-        
-        <a href="https://wa.me/5212224022806?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20atenci%C3%B3n%20infantil%20y%20urgencias." class="group rounded-2xl border border-brand-100 bg-brand-50 p-6 transition hover:-translate-y-1 hover:border-brand-300 hover:shadow-lg">
-          <span class="font-display text-2xl text-brand-400">04</span>
-          <h3 class="mt-3 text-lg font-bold text-brand-950">Atención infantil y urgencias</h3>
-          <p class="mt-2 text-sm text-brand-700 group-hover:underline">Preguntar por WhatsApp →</p>
-        </a>
-        
-      </div>
-    </div>
-  </section>
-
-  <section class="py-16">
-    <div class="mx-auto max-w-6xl px-4">
-      <h2 class="font-display text-3xl font-bold text-brand-950 sm:text-4xl">Agendar toma un minuto</h2>
-      <ol class="mt-8 grid gap-6 md:grid-cols-3">
-        
-        <li class="rounded-2xl bg-white p-6 shadow-sm">
-          <span class="grid h-10 w-10 place-items-center rounded-full bg-brand-700 font-bold text-white">1</span>
-          <p class="mt-4 font-bold text-brand-950">Escríbenos por WhatsApp</p>
-          <p class="mt-1 text-sm text-slate-600">Cuéntanos qué necesitas o si es urgencia.</p>
-        </li>
-        
-        <li class="rounded-2xl bg-white p-6 shadow-sm">
-          <span class="grid h-10 w-10 place-items-center rounded-full bg-brand-700 font-bold text-white">2</span>
-          <p class="mt-4 font-bold text-brand-950">Elige tu horario</p>
-          <p class="mt-1 text-sm text-slate-600">Te proponemos el espacio más cercano disponible.</p>
-        </li>
-        
-        <li class="rounded-2xl bg-white p-6 shadow-sm">
-          <span class="grid h-10 w-10 place-items-center rounded-full bg-brand-700 font-bold text-white">3</span>
-          <p class="mt-4 font-bold text-brand-950">Llega a tu cita</p>
-          <p class="mt-1 text-sm text-slate-600">Te esperamos con tu valoración lista.</p>
-        </li>
-        
-      </ol>
-    </div>
-  </section>
-
-  <section id="horario" class="bg-white py-16">
-    <div class="mx-auto grid max-w-6xl gap-8 px-4 md:grid-cols-2">
-      <div>
-        <h2 class="font-display text-3xl font-bold text-brand-950 sm:text-4xl">Horario y ubicación</h2>
-        <ul class="mt-6 divide-y divide-brand-100 rounded-2xl border border-brand-100">
-          <li class="px-5 py-3">Lun-Vie 8:00-20:00</li><li class="px-5 py-3">Sáb 8:00-15:00</li><li class="px-5 py-3">Dom 11:00-14:00</li>
-        </ul>
-        <p class="mt-6 text-slate-600">Av. Periférico Ecológico 3505, San Andrés Cholula, Pue.</p>
-        <a href="https://www.google.com/maps/search/?api=1&amp;query=Consultorio%20Dentista%20Valeria%20Victoria%2C%20Av.%20Perif%C3%A9rico%20Ecol%C3%B3gico%203505%2C%20San%20Andr%C3%A9s%20Cholula%2C%20Pue." target="_blank" rel="noopener" class="mt-3 inline-block font-bold text-brand-700 underline underline-offset-4">Cómo llegar en Google Maps</a>
-      </div>
-      <iframe title="Mapa de Consultorio Dentista Valeria Victoria" src="https://www.google.com/maps?q=Consultorio%20Dentista%20Valeria%20Victoria%2C%20Av.%20Perif%C3%A9rico%20Ecol%C3%B3gico%203505%2C%20San%20Andr%C3%A9s%20Cholula%2C%20Pue.&output=embed" class="h-80 w-full rounded-2xl border-0 md:h-full" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </div>
-  </section>
-
-  <section class="bg-brand-900 py-16 text-center text-white">
-    <div class="mx-auto max-w-2xl px-4">
-      <h2 class="font-display text-3xl font-bold sm:text-4xl">¿Te duele algo o ya toca tu limpieza? Agenda hoy.</h2>
-      <a href="https://wa.me/5212224022806?text=Hola%2C%20me%20gustar%C3%ADa%20agendar%20una%20cita%20dental." class="mt-8 inline-flex items-center gap-2 rounded-full bg-white px-8 py-4 font-bold text-brand-900 hover:bg-brand-100"><svg width="20" height="20" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3 2.4.9 2.9.8 3.4.7.5-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg> Escribir por WhatsApp</a>
+  <section class="sec"><div><p class="lab">Servicios</p><h2>Lo que atendemos</h2></div><ol class="svc "><li>Prevención bucal</li><li>Restauración dental</li><li>Estética dental</li><li>Atención infantil y urgencias</li></ol></section>
+  <section class="sec">
+    <div><p class="lab">Horario</p><h2>Cuándo venir</h2></div>
+    <div><table class="hours"><tr><td>Lun-Vie</td><td>8:00-20:00</td></tr><tr><td>Sáb</td><td>8:00-15:00</td></tr><tr><td>Dom</td><td>11:00-14:00</td></tr></table>
+      <p class="addr">Av. Periférico Ecológico 3505, San Andrés Cholula, Pue.</p>
+      <a class="lnk" href="https://www.google.com/maps/search/?api=1&amp;query=Consultorio%20Dentista%20Valeria%20Victoria%2C%20Av.%20Perif%C3%A9rico%20Ecol%C3%B3gico%203505%2C%20San%20Andr%C3%A9s%20Cholula%2C%20Pue." target="_blank" rel="noopener">Abrir en Google Maps</a> &nbsp;·&nbsp; <a class="lnk" href="tel:+522224022806">+52 222 402 2806</a>
     </div>
   </section>
 </main>
+<footer class="wrap foot">Consultorio Dentista Valeria Victoria · +52 222 402 2806<br>Vista previa de diseño. Datos públicos de Google Maps.</footer>
 
-<footer class="px-4 py-8 pb-28 text-center text-sm text-slate-500">
-  Consultorio Dentista Valeria Victoria · Av. Periférico Ecológico 3505, San Andrés Cholula, Pue. · +52 222 402 2806
-</footer>
-
-<a href="https://wa.me/5212224022806?text=Hola%2C%20me%20gustar%C3%ADa%20agendar%20una%20cita%20dental." aria-label="Agendar por WhatsApp" class="fixed bottom-5 right-5 z-40 grid h-16 w-16 place-items-center rounded-full bg-[#25D366] text-white shadow-xl ring-4 ring-white hover:scale-105">
-  <span class="scale-150"><svg width="20" height="20" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3 2.4.9 2.9.8 3.4.7.5-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg></span>
-</a>
+<div class="bar"><a class="btn" href="https://wa.me/5212224022806?text=Hola%2C%20me%20gustar%C3%ADa%20agendar%20una%20cita."><svg width="20" height="20" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3 2.4.9 2.9.8 3.4.7.5-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>Agendar por WhatsApp</a></div>
 </body>
 </html>

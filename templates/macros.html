@@ -1,0 +1,3 @@
+{% macro servicios(p, cls='') %}<ol class="svc {{ cls }}">{% for s in p.servicios %}<li>{{ s }}</li>{% endfor %}</ol>{% endmacro %}
+{% macro horario(horas) %}<table class="hours">{% for d, h in horas %}<tr><td>{{ d }}</td><td>{{ h }}</td></tr>{% endfor %}</table>{% endmacro %}
+{% macro pie(p) %}<footer class="wrap foot">{{ p.nombre }} · {{ p.telefono_display }}<br>Vista previa de diseño. Datos públicos de Google Maps.</footer>{% endmacro %}

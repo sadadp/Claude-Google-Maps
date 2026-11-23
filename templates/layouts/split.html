@@ -1,0 +1,40 @@
+{% extends 'base.html' %}{% import 'macros.html' as k %}
+{% block css %}
+.side{background:var(--acc);color:var(--bg);padding:28px 22px 44px;display:flex;flex-direction:column;justify-content:space-between;gap:56px}
+.side .lab{color:inherit;opacity:.75}
+.side h1{font:500 clamp(46px,7vw,96px)/.98 var(--d);letter-spacing:-.02em;margin-top:14px}
+.side .rate{font:500 15px/1.5 var(--s);border-top:1px solid color-mix(in srgb,var(--bg) 35%,transparent);padding-top:18px;display:flex;justify-content:space-between;gap:16px}
+.side .btn{background:var(--bg);color:var(--acc);margin-top:22px;width:100%}
+.main{padding:56px 22px}.main .foot{width:auto}
+.main>section{padding:0 0 64px}
+.main>section+section{padding-top:48px;border-top:1px solid var(--line)}
+.lead{font:400 clamp(26px,3vw,38px)/1.25 var(--d);max-width:22ch}
+.main h2{margin-bottom:22px}
+.svc li{font-size:19px}
+.addr{font-size:18px;margin-bottom:16px;max-width:32ch}
+@media(min-width:960px){
+ .page{display:grid;grid-template-columns:5fr 6fr;min-height:100vh}
+ .side{position:sticky;top:0;height:100vh;padding:44px 56px}
+ .main{padding:96px 72px 40px}
+ .main .foot{width:auto}
+}
+{% endblock %}
+{% block body %}
+<div class="page">
+  <aside class="side">
+    <div><p class="lab">{{ giro_label }}</p><h1>{{ p.nombre }}</h1></div>
+    <div>
+      <div class="rate"><span>★ {{ p.calificacion }} en Google</span><span>{{ p.resenas }} reseñas</span></div>
+      <a class="btn" href="{{ wa }}">{% include 'wa.svg' %}Agendar por WhatsApp</a>
+    </div>
+  </aside>
+  <main class="main">
+    <section><p class="lead">{{ intro }}</p></section>
+    <section><h2 class="lab">Servicios</h2>{{ k.servicios(p) }}</section>
+    <section><h2 class="lab">Horario</h2>{{ k.horario(horas) }}</section>
+    <section><h2 class="lab">Ubicación</h2><p class="addr">{{ p.direccion }}</p>
+      <a class="lnk" href="{{ maps }}" target="_blank" rel="noopener">Abrir en Google Maps</a> &nbsp;·&nbsp; <a class="lnk" href="{{ tel }}">{{ p.telefono_display }}</a></section>
+    {{ k.pie(p) }}
+  </main>
+</div>
+{% endblock %}

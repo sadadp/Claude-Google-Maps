@@ -1,0 +1,40 @@
+{% extends 'base.html' %}{% import 'macros.html' as k %}
+{% block css %}
+.top{display:flex;justify-content:space-between;align-items:center;padding:22px 0;border-bottom:1px solid var(--line)}
+.top b{font-weight:600;font-size:15px}
+.hero{padding:72px 0 64px}
+.hero h1{font:400 clamp(52px,10vw,132px)/.95 var(--d);letter-spacing:-.02em;margin-top:20px;max-width:11ch}
+.hero h1 em{color:var(--acc)}
+.meta{display:grid;gap:36px;margin-top:56px;padding-top:28px;border-top:1px solid var(--line)}
+.meta p{max-width:34ch;font-size:18px}
+.rate{font:400 64px/1 var(--d)}
+.rate small{display:block;font:400 14px/1.4 var(--s);color:var(--mute);margin-top:8px}
+.sec{display:grid;gap:28px;padding:72px 0;border-top:1px solid var(--line)}
+.sec h2{font:400 clamp(34px,4.5vw,52px)/1.05 var(--d)}
+.svc li{font:400 clamp(22px,2.6vw,30px)/1.2 var(--d)}
+.addr{font-size:18px;max-width:30ch;margin:18px 0 20px}
+@media(min-width:900px){.meta{grid-template-columns:1.2fr 1fr auto;align-items:end}.sec{grid-template-columns:1fr 2fr;gap:56px}}
+{% endblock %}
+{% block body %}
+<header class="wrap top"><b>{{ p.nombre }}</b><a class="lnk" href="{{ wa }}">Agendar cita</a></header>
+<main class="wrap">
+  <section class="hero">
+    <p class="lab">{{ giro_label }}</p>
+    <h1>{{ titulo|safe }}</h1>
+    <div class="meta">
+      <p>{{ intro }}</p>
+      <div class="rate">{{ p.calificacion }}<small>{{ p.resenas }} reseñas en Google Maps</small></div>
+      <a class="btn" href="{{ wa }}">{% include 'wa.svg' %}Agendar por WhatsApp</a>
+    </div>
+  </section>
+  <section class="sec"><div><p class="lab">Servicios</p><h2>Lo que atendemos</h2></div>{{ k.servicios(p) }}</section>
+  <section class="sec">
+    <div><p class="lab">Horario</p><h2>Cuándo venir</h2></div>
+    <div>{{ k.horario(horas) }}
+      <p class="addr">{{ p.direccion }}</p>
+      <a class="lnk" href="{{ maps }}" target="_blank" rel="noopener">Abrir en Google Maps</a> &nbsp;·&nbsp; <a class="lnk" href="{{ tel }}">{{ p.telefono_display }}</a>
+    </div>
+  </section>
+</main>
+{{ k.pie(p) }}
+{% endblock %}

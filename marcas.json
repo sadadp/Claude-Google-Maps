@@ -1,0 +1,14 @@
+{
+  "dra-genesis-sanchez":          {"layout":"editorial","bg":"#FBFAF7","ink":"#14181F","acc":"#2F5D8A","display":"Instrument Serif","sans":"Inter"},
+  "dra-saira-ortega":             {"layout":"split","bg":"#F6F3EF","ink":"#1E1A18","acc":"#9B5F4E","display":"Playfair Display","sans":"DM Sans"},
+  "dental-fix-puebla":            {"layout":"swiss","bg":"#FFFFFF","ink":"#0B0B0C","acc":"#1546D1","display":"Space Grotesk","sans":"DM Sans"},
+  "dra-rubi-arellano":            {"layout":"carta","bg":"#FAF7F2","ink":"#1C1416","acc":"#8C1D2F","display":"Cormorant Garamond","sans":"Inter"},
+  "dentista-valeria-victoria":    {"layout":"editorial","bg":"#F6F6F2","ink":"#16201C","acc":"#3E6B5E","display":"Fraunces","sans":"Inter"},
+  "consultorio-dental-deza":      {"layout":"swiss","bg":"#F1F0EB","ink":"#101010","acc":"#0F766E","display":"Syne","sans":"DM Sans"},
+  "smilexperts-puebla":           {"layout":"split","bg":"#FFFFFF","ink":"#0D1B1E","acc":"#008C95","display":"Space Grotesk","sans":"Inter"},
+  "nusa-veterinaria":             {"layout":"swiss","bg":"#111613","ink":"#ECEDE6","acc":"#B8E04A","display":"Space Grotesk","sans":"DM Sans"},
+  "hospital-veterinario-koala":   {"layout":"editorial","bg":"#F2F0EA","ink":"#1B211D","acc":"#56765F","display":"Instrument Serif","sans":"Plus Jakarta Sans"},
+  "paraiso-animal-veterinaria":   {"layout":"carta","bg":"#FBF5EC","ink":"#231A14","acc":"#B4512A","display":"Playfair Display","sans":"Plus Jakarta Sans"},
+  "reino-animal-cholula":         {"layout":"split","bg":"#F4EFE4","ink":"#1D1912","acc":"#9A7210","display":"Fraunces","sans":"DM Sans"},
+  "pirsch-veterinaria-las-torres":{"layout":"swiss","bg":"#FFFFFF","ink":"#111111","acc":"#E0522B","display":"Syne","sans":"DM Sans"}
+}

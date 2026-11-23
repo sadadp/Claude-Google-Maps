@@ -9,52 +9,53 @@ url = subprocess.run(["git", "remote", "get-url", "origin"], capture_output=True
 user, repo = re.findall(r"[^/:]+", url.removesuffix(".git"))[-2:]
 BASE_URL = f"https://{user.lower()}.github.io/{repo}"
 
-TEMAS = {
-    "dentista": {
-        "titulo": "Dentista", "quienes": "pacientes",
-        "colores": {"50": "#f2f7fc", "100": "#e1ecf8", "200": "#bcd6f0", "300": "#88b6e3", "400": "#4d8fd1",
-                    "700": "#1d5ea8", "800": "#194e8a", "900": "#163f6e", "950": "#0d2645"},
-        "h1": "Tu cita dental en {zona}, a un mensaje de distancia",
-        "sub": "{servicios} y más. Escríbenos por WhatsApp y te damos horario el mismo día.",
-        "h2_servicios": "Lo que podemos hacer por tu sonrisa",
-        "cita": "Hola, me gustaría agendar una cita dental.",
-        "pasos": [("Escríbenos por WhatsApp", "Cuéntanos qué necesitas o si es urgencia."),
-                  ("Elige tu horario", "Te proponemos el espacio más cercano disponible."),
-                  ("Llega a tu cita", "Te esperamos con tu valoración lista.")],
-        "cierre": "¿Te duele algo o ya toca tu limpieza? Agenda hoy.",
-    },
-    "veterinaria": {
-        "titulo": "Veterinaria", "quienes": "dueños de mascotas",
-        "colores": {"50": "#f0faf6", "100": "#d9f2e7", "200": "#b0e3cd", "300": "#79ccab", "400": "#3fae86",
-                    "700": "#047857", "800": "#065f46", "900": "#064e3b", "950": "#022c22"},
-        "h1": "Tu mascota, atendida en {zona} por gente que la cuida como suya",
-        "sub": "{servicios} y más. Escríbenos por WhatsApp y te decimos cuándo pasar.",
-        "h2_servicios": "Servicios para tu mascota",
-        "cita": "Hola, quiero agendar una cita para mi mascota.",
-        "pasos": [("Escríbenos por WhatsApp", "Dinos qué le pasa a tu mascota o qué servicio buscas."),
-                  ("Te damos horario", "Te confirmamos el espacio disponible más cercano."),
-                  ("Tráela a consulta", "La atendemos y te explicamos todo con calma.")],
-        "cierre": "¿Le toca vacuna, baño o revisión? Agenda hoy.",
-    },
+FUENTES = {  # parámetros de Google Fonts por familia
+    "Instrument Serif": "Instrument+Serif:ital@0;1",
+    "Playfair Display": "Playfair+Display:ital,wght@0,400;0,500;0,700;1,400",
+    "Cormorant Garamond": "Cormorant+Garamond:ital,wght@0,500;0,700;1,500",
+    "Fraunces": "Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400",
+    "Space Grotesk": "Space+Grotesk:wght@400;500;700",
+    "Syne": "Syne:wght@500;700;800",
+    "Inter": "Inter:wght@400;500;600",
+    "DM Sans": "DM+Sans:wght@400;500;700",
+    "Plus Jakarta Sans": "Plus+Jakarta+Sans:wght@400;500;600",
 }
+CITA = {"dentista": "Hola, me gustaría agendar una cita.", "veterinaria": "Hola, quiero agendar una cita para mi mascota."}
+
+
+def giro_label(p):
+    if p["giro"] == "dentista":
+        return "Consultorio dental"
+    return next((g for g in ("Hospital Veterinario", "Centro Médico Veterinario") if g in p["nombre"]), "Clínica veterinaria").capitalize()
+
+
+def intro(p):
+    a, b = p["servicios"][0], p["servicios"][1].lower()
+    if p["giro"] == "dentista":
+        return f"{a}, {b} y más. Escríbenos por WhatsApp y te damos tu cita."
+    return f"{a}, {b} y más para tu mascota. Escríbenos por WhatsApp y te decimos cuándo pasar."
+
 
 env = Environment(loader=FileSystemLoader(ROOT / "templates"), autoescape=True)
-landing = env.get_template("landing.html")
+marcas = json.loads((ROOT / "marcas.json").read_text(encoding="utf-8"))
 prospectos = json.loads((ROOT / "prospectos.json").read_text(encoding="utf-8"))
 mensajes = json.loads((ROOT / "mensajes.json").read_text(encoding="utf-8"))
 
 ETIQUETAS = [("m1", "Mensaje 1"), ("m2", "Mensaje 2"), ("m3", "Mensaje 3"), ("seg", "Seguimiento (48 h)")]
 filas, txt = [], []
 for i, p in enumerate(prospectos, 1):
-    zona = "San Andrés Cholula" if "San Andrés Cholula" in p["direccion"] else "Tlaxcalancingo"
-    base = TEMAS[p["giro"]]
-    t = {**base, "h1": base["h1"].format(zona=zona),
-         "sub": base["sub"].format(servicios=f"{p['servicios'][0]}, {p['servicios'][1].lower()}")}
-    wa_base = f"https://wa.me/{p['whatsapp_num']}?text="
-    html = landing.render(
-        p=p, t=t, zona=zona, wa_base=wa_base, wa_cita=wa_base + quote(t["cita"]),
-        horario=p["horario"].split(", "),
-        maps_url="https://www.google.com/maps/search/?api=1&query=" + quote(f"{p['nombre']}, {p['direccion']}"),
+    m = marcas[p["slug"]]
+    nom = p["nombre"].split(" | ")[0]
+    corto = re.sub(r"^(Dra\. |Hospital Veterinario |Consultorio (Dental |Dentista )?)", "", nom)
+    *ini, fin = nom.split(" ")
+    html = env.get_template(f"layouts/{m['layout']}.html").render(
+        p={**p, "nombre": nom}, m=m, fq={"display": FUENTES[m["display"]], "sans": FUENTES[m["sans"]]},
+        wa=f"https://wa.me/{p['whatsapp_num']}?text={quote(CITA[p['giro']])}",
+        tel=f"tel:+52{p['whatsapp_num'][3:]}",
+        maps="https://www.google.com/maps/search/?api=1&query=" + quote(f"{nom}, {p['direccion']}"),
+        horas=[tuple(h.split(" ", 1)) for h in p["horario"].split(", ")],
+        giro_label=giro_label(p), intro=intro(p), mono=corto[0],
+        titulo=" ".join(ini) + f" <em>{fin}</em>",
     )
     out = ROOT / "demos" / p["slug"] / "index.html"
     out.parent.mkdir(parents=True, exist_ok=True)
