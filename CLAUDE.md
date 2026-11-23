@@ -22,7 +22,7 @@ El panel lleva `noindex`, pero GitHub Pages es público: cualquiera con el link 
 
 ## Agregar un prospecto
 1. Añadir el objeto a `prospectos.json` (mismo formato, `whatsapp_num` con 521 + 10 dígitos).
-2. Añadir sus 4 mensajes a `mensajes.json` (cortos, dato real de su perfil, sin guiones largos ni tono de vendedor).
+2. Añadir sus 4 mensajes a `mensajes.json` (cortos, dato real de su perfil, sin mencionar la ciudad, sin guiones largos ni tono de vendedor).
 3. `python3 build.py` y publicar.
 
 ## Skills usadas

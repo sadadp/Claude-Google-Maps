@@ -1,18 +1,18 @@
 {
   "dra-genesis-sanchez": {
-    "m1": "Hola, Dra. Genesis, ¿qué tal? ¿Cómo está? Oiga, estaba viendo su perfil en Google aquí por Tlaxcalancingo y qué buenas reseñas tiene, 4.8 con 143 opiniones.",
+    "m1": "Hola, Dra. Genesis, ¿qué tal? ¿Cómo está? Oiga, estaba viendo su perfil en Google y qué buenas reseñas tiene, 4.8 con 143 opiniones.",
     "m2": "Me tomé unos minutos y le armé una muestra de cómo se vería su página en el celular, con botón directo a su WhatsApp para que le agenden: {link}",
     "m3": "Si le late, se la dejo publicada con su código QR por $700 pago único, lista en 48 hrs. ¿Cómo la ve?",
     "seg": "Hola, Dra., ¿pudo ver la página que le mandé? Si quiere le cambio colores o algo, sin compromiso."
   },
   "dra-saira-ortega": {
-    "m1": "Hola, Dra. Saira, ¿qué tal? Estaba viendo perfiles de consultorios por Tlaxcalancingo y el suyo trae 5.0 en Google, se nota que sus pacientes salen contentos.",
+    "m1": "Hola, Dra. Saira, ¿qué tal? Estaba viendo perfiles de consultorios y el suyo trae 5.0 en Google, se nota que sus pacientes salen contentos.",
     "m2": "Le preparé una demo rápida de cómo se vería su página en celular, con sus servicios y un botón para que le escriban directo al WhatsApp: {link}",
     "m3": "Si le gusta, se la publico con su código QR por $700 pago único y queda en 48 hrs. ¿Qué dice?",
     "seg": "Dra. Saira, nomás para saber si alcanzó a ver la demo. Si algo no le late, lo cambio sin problema."
   },
   "dental-fix-puebla": {
-    "m1": "Hola, ¿qué tal? ¿Cómo están? Oigan, vi su perfil de Dental Fix aquí en San Andrés Cholula y traen 5.0 en Google, muy bien.",
+    "m1": "Hola, ¿qué tal? ¿Cómo están? Oigan, vi su perfil de Dental Fix y traen 5.0 en Google, muy bien.",
     "m2": "Me tomé unos minutos y les armé una demo de cómo se vería su página en el celular, con botón directo a su WhatsApp: {link}",
     "m3": "Si les late, se las dejo publicada con su código QR por $700 pago único, lista en 48 hrs. ¿Cómo la ven?",
     "seg": "Hola de nuevo, ¿alcanzaron a ver la demo? Cualquier cambio que quieran se los hago, sin compromiso."
@@ -24,49 +24,49 @@
     "seg": "Dra. Rubí, ¿pudo verla? Si prefiere otros colores o quitar algo, me dice y lo ajusto."
   },
   "dentista-valeria-victoria": {
-    "m1": "Hola, Dra. Valeria, ¿qué tal? Oiga, vi su consultorio en Google aquí en San Andrés Cholula, 78 reseñas y promedio de 5.0, eso no se ve diario.",
+    "m1": "Hola, Dra. Valeria, ¿qué tal? Oiga, vi su consultorio en Google, 78 reseñas y promedio de 5.0, eso no se ve diario.",
     "m2": "Me tomé unos minutos para armarle una muestra de su página en celular, con botón directo a su WhatsApp para citas: {link}",
     "m3": "Si le gusta, se la publico con su código QR por $700 pago único, lista en 48 hrs. ¿Qué le parece?",
     "seg": "Hola, Dra., ¿alcanzó a ver la página? Sin presión, nomás quería saber qué le pareció."
   },
   "consultorio-dental-deza": {
-    "m1": "Hola, ¿cómo están? Oigan, vi el perfil de Consultorio Dental DEZA aquí en Tlaxcalancingo, 4.9 con 45 reseñas, se ve que tratan bien a la gente.",
+    "m1": "Hola, ¿cómo están? Oigan, vi el perfil de Consultorio Dental DEZA, 4.9 con 45 reseñas, se ve que tratan bien a la gente.",
     "m2": "Les armé una demo de cómo se vería su página en el celular, con botón para que les agenden directo por WhatsApp: {link}",
     "m3": "Si les late, se las dejo publicada con su código QR por $700 pago único y queda en 48 hrs. ¿Cómo la ven?",
     "seg": "¿Qué tal? ¿Pudieron ver la demo que les mandé? Si quieren algún cambio, me dicen."
   },
   "smilexperts-puebla": {
-    "m1": "Hola, ¿qué tal? Estaba viendo su perfil de SmileXperts aquí en Tlaxcalancingo, 4.9 en Google y un montón de servicios, de ortodoncia a implantes.",
+    "m1": "Hola, ¿qué tal? Estaba viendo su perfil de SmileXperts, 4.9 en Google y un montón de servicios, de ortodoncia a implantes.",
     "m2": "Me tomé unos minutos y les armé una demo de su página en celular, con sus servicios y botón directo a WhatsApp: {link}",
     "m3": "Si les gusta, se las publico con su código QR por $700 pago único, lista en 48 hrs. ¿Cómo la ven?",
     "seg": "Hola, nomás para saber si alcanzaron a ver la demo. Si algo no les convence, lo cambio."
   },
   "nusa-veterinaria": {
-    "m1": "Hola, ¿cómo están? Oigan, vi su perfil de NUSA aquí en San Andrés Cholula, 164 reseñas y abiertos 24 horas entre semana, eso la gente lo agradece mucho.",
+    "m1": "Hola, ¿cómo están? Oigan, vi su perfil de NUSA, 164 reseñas y abiertos 24 horas entre semana, eso la gente lo agradece mucho.",
     "m2": "Les armé una demo de cómo se vería su página en celular, con botón para que los dueños de mascotas les escriban directo por WhatsApp: {link}",
     "m3": "Si les late, se las dejo publicada con su código QR por $700 pago único, en 48 hrs. ¿Cómo la ven?",
     "seg": "¿Qué tal? ¿Alcanzaron a ver la página de NUSA? Si quieren le muevo algo, sin compromiso."
   },
   "hospital-veterinario-koala": {
-    "m1": "Hola, ¿qué tal? Vi su perfil del Hospital Veterinario Koala aquí en Tlaxcalancingo, 296 reseñas en Google, mucha gente los conoce.",
+    "m1": "Hola, ¿qué tal? Vi su perfil del Hospital Veterinario Koala, 296 reseñas en Google, mucha gente los conoce.",
     "m2": "Me tomé unos minutos para armarles una demo de su página en celular, con botón directo a su WhatsApp para citas: {link}",
     "m3": "Si les gusta, se las dejo publicada con su código QR por $700 pago único, lista en 48 hrs. ¿Cómo la ven?",
     "seg": "Hola, ¿pudieron ver la demo de Koala? Cualquier cosa que quieran cambiar, me avisan."
   },
   "paraiso-animal-veterinaria": {
-    "m1": "Hola, ¿cómo están? Oigan, estaba viendo su perfil de Paraíso Animal aquí en Tlaxcalancingo, 4.6 con 288 reseñas, qué buena fama tienen.",
+    "m1": "Hola, ¿cómo están? Oigan, estaba viendo su perfil de Paraíso Animal, 4.6 con 288 reseñas, qué buena fama tienen.",
     "m2": "Les armé una muestra de cómo se vería su página en el celular, con botón directo a su WhatsApp: {link}",
     "m3": "Si les late, se las publico con su código QR por $700 pago único y queda en 48 hrs. ¿Cómo la ven?",
     "seg": "¿Qué tal? Nomás para saber si vieron la demo. Si quieren otro color o texto, lo cambio."
   },
   "reino-animal-cholula": {
-    "m1": "Hola, ¿qué tal? Vi su perfil de Reino Animal aquí en San Andrés Cholula, 267 reseñas y además tienen estética canina, qué completo.",
+    "m1": "Hola, ¿qué tal? Vi su perfil de Reino Animal, 267 reseñas y además tienen estética canina, qué completo.",
     "m2": "Me tomé unos minutos y les armé una demo de su página en celular, con botón para que les agenden por WhatsApp: {link}",
     "m3": "Si les gusta, se las dejo publicada con su código QR por $700 pago único, lista en 48 hrs. ¿Cómo la ven?",
     "seg": "Hola, ¿alcanzaron a ver la demo? Sin presión, me dicen si les sirve."
   },
   "pirsch-veterinaria-las-torres": {
-    "m1": "Hola, ¿cómo están? Oigan, vi su perfil de Pirsch Las Torres aquí en San Andrés Cholula, 4.5 en Google y abren hasta en domingo, eso se agradece.",
+    "m1": "Hola, ¿cómo están? Oigan, vi su perfil de Pirsch Las Torres, 4.5 en Google y abren hasta en domingo, eso se agradece.",
     "m2": "Les armé una demo de cómo se vería su página en el celular, con botón directo a su WhatsApp: {link}",
     "m3": "Si les late, se las publico con su código QR por $700 pago único, lista en 48 hrs. ¿Cómo la ven?",
     "seg": "¿Qué tal? ¿Pudieron ver la página que les mandé? Si quieren algún cambio, con gusto."
