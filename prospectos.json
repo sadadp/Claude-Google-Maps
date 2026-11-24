@@ -1,14 +1,376 @@
 [
-  {"slug":"dra-genesis-sanchez","nombre":"Dra. Genesis Sanchez","giro":"dentista","telefono_display":"+52 221 271 6745","whatsapp_num":"5212212716745","direccion":"Blvrd Periférico 3507, Tlaxcalancingo, San Bernardino Tlaxcalancingo, Pue.","horario":"Lun-Vie 9:00-19:00, Sáb 9:00-16:00","calificacion":"4.8","resenas":143,"servicios":["Estética dental","Odontopediatría","Urgencias dentales","Valoración general"]},
-  {"slug":"dra-saira-ortega","nombre":"Dra. Saira Ortega | Dentista","giro":"dentista","telefono_display":"+52 222 492 6647","whatsapp_num":"5212224926647","direccion":"Anillo Perif. Ecológico 3507, Tlaxcalancingo, Pue.","horario":"Lun-Vie 9:00-21:00, Sáb 9:00-18:00, Dom 9:00-13:00","calificacion":"5.0","resenas":18,"servicios":["Ortodoncia","Implantes dentales","Limpieza y estética dental","Urgencias y cirugía oral"]},
-  {"slug":"dental-fix-puebla","nombre":"Dental Fix Puebla","giro":"dentista","telefono_display":"+52 220 157 7029","whatsapp_num":"5212201577029","direccion":"Antiguo Camino Real a Cholula 6661-5B, San Andrés Cholula, Pue.","horario":"Lun-Vie 10:00-20:00, Sáb 10:00-14:00","calificacion":"5.0","resenas":19,"servicios":["Odontología general","Limpieza dental","Resinas y restauración","Valoración sin dolor"]},
-  {"slug":"dra-rubi-arellano","nombre":"Dra. Rubí Arellano | Dentista","giro":"dentista","telefono_display":"+52 222 670 7474","whatsapp_num":"5212226707474","direccion":"Torres Médicas Angelópolis, Consultorio 631, Tlaxcalancingo, Pue.","horario":"Lun-Vie 10:00-19:30, Sáb 10:00-14:00","calificacion":"5.0","resenas":26,"servicios":["Odontología infantil","Ortodoncia","Cirugía maxilofacial","Estética dental"]},
-  {"slug":"dentista-valeria-victoria","nombre":"Consultorio Dentista Valeria Victoria","giro":"dentista","telefono_display":"+52 222 402 2806","whatsapp_num":"5212224022806","direccion":"Av. Periférico Ecológico 3505, San Andrés Cholula, Pue.","horario":"Lun-Vie 8:00-20:00, Sáb 8:00-15:00, Dom 11:00-14:00","calificacion":"5.0","resenas":78,"servicios":["Prevención bucal","Restauración dental","Estética dental","Atención infantil y urgencias"]},
-  {"slug":"consultorio-dental-deza","nombre":"Consultorio Dental DEZA","giro":"dentista","telefono_display":"+52 222 599 7535","whatsapp_num":"5212225997535","direccion":"Emiliano Zapata 254-L.3, Tlaxcalancingo, Pue.","horario":"Lun-Sáb 9:00-19:00","calificacion":"4.9","resenas":45,"servicios":["Odontología general","Extracción de muelas del juicio","Limpieza dental","Atención personalizada"]},
-  {"slug":"smilexperts-puebla","nombre":"SmileXperts","giro":"dentista","telefono_display":"+52 227 182 1480","whatsapp_num":"5212271821480","direccion":"Anillo Perif. Ecológico 3507, Tlaxcalancingo, Pue.","horario":"Lun-Sáb 8:00-20:00","calificacion":"4.9","resenas":37,"servicios":["Ortodoncia y endodoncia","Implantes dentales","Periodoncia","Odontopediatría"]},
-  {"slug":"nusa-veterinaria","nombre":"NUSA Centro Médico Veterinario","giro":"veterinaria","telefono_display":"+52 221 564 2208","whatsapp_num":"5212215642208","direccion":"Carretera Federal a Atlixco 5402, Plaza Terreus Loc. 22, San Andrés Cholula, Pue.","horario":"Lun-Vie 24 horas, Sáb 0:00-20:30, Dom 8:00-23:30","calificacion":"4.5","resenas":164,"servicios":["Consultas y medicina interna","Cirugías y esterilizaciones","Vacunación y desparasitación","Alimento especializado"]},
-  {"slug":"hospital-veterinario-koala","nombre":"Hospital Veterinario Koala","giro":"veterinaria","telefono_display":"+52 221 109 7480","whatsapp_num":"5212211097480","direccion":"Privada Colorines 5409, Tlaxcalancingo, Pue.","horario":"Lun-Vie 9:00-19:30, Sáb 9:00-18:30, Dom 10:00-16:00","calificacion":"4.2","resenas":296,"servicios":["Consulta y laboratorio","Cirugía veterinaria y rayos X","Vacunación y desparasitación","Hospitalización"]},
-  {"slug":"paraiso-animal-veterinaria","nombre":"Hospital Veterinario Paraíso Animal","giro":"veterinaria","telefono_display":"+52 222 227 7522","whatsapp_num":"5212222277522","direccion":"Alejandra 4501-int. 2, Tlaxcalancingo, Pue.","horario":"Lun-Sáb 10:00-19:00","calificacion":"4.6","resenas":288,"servicios":["Atención médica veterinaria","Cirugía y diagnóstico","Vacunación preventiva","Cuidado de pequeñas especies"]},
-  {"slug":"reino-animal-cholula","nombre":"Reino Animal","giro":"veterinaria","telefono_display":"+52 222 225 1705","whatsapp_num":"5212222251705","direccion":"Blvd. Atlixco 3507-Loc 2, San Andrés Cholula, Pue.","horario":"Lun-Vie 10:00-19:00, Sáb 9:00-18:00, Dom 10:00-17:00","calificacion":"4.4","resenas":267,"servicios":["Consulta veterinaria","Estética canina","Vacunación y prevención","Accesorios y cuidado"]},
-  {"slug":"pirsch-veterinaria-las-torres","nombre":"Pirsch Veterinaria Las Torres","giro":"veterinaria","telefono_display":"+52 222 242 7197","whatsapp_num":"5212222427197","direccion":"Av. Las Torres 802-Loc 9, San Andrés Cholula, Pue.","horario":"Lun-Vie 10:00-19:00, Sáb 10:00-18:00, Dom 10:00-17:00","calificacion":"4.5","resenas":95,"servicios":["Servicios médicos veterinarios","Cirugías y vacunas","Estética para mascotas","Alimento y accesorios"]}
+ {
+  "slug": "dra-genesis-sanchez",
+  "nombre": "Dra. Genesis Sanchez",
+  "giro": "dentista",
+  "telefono_display": "+52 221 271 6745",
+  "whatsapp_num": "5212212716745",
+  "direccion": "Blvrd Periférico 3507, Tlaxcalancingo, San Bernardino Tlaxcalancingo, Pue.",
+  "horario": "Lun-Vie 9:00-19:00, Sáb 9:00-16:00",
+  "calificacion": "4.8",
+  "resenas": 143,
+  "servicios": [
+   "Estética dental",
+   "Odontopediatría",
+   "Urgencias dentales",
+   "Valoración general"
+  ]
+ },
+ {
+  "slug": "dra-saira-ortega",
+  "nombre": "Dra. Saira Ortega | Dentista",
+  "giro": "dentista",
+  "telefono_display": "+52 222 492 6647",
+  "whatsapp_num": "5212224926647",
+  "direccion": "Anillo Perif. Ecológico 3507, Tlaxcalancingo, Pue.",
+  "horario": "Lun-Vie 9:00-21:00, Sáb 9:00-18:00, Dom 9:00-13:00",
+  "calificacion": "5.0",
+  "resenas": 18,
+  "servicios": [
+   "Ortodoncia",
+   "Implantes dentales",
+   "Limpieza y estética dental",
+   "Urgencias y cirugía oral"
+  ]
+ },
+ {
+  "slug": "dental-fix-puebla",
+  "nombre": "Dental Fix Puebla",
+  "giro": "dentista",
+  "telefono_display": "+52 220 157 7029",
+  "whatsapp_num": "5212201577029",
+  "direccion": "Antiguo Camino Real a Cholula 6661-5B, San Andrés Cholula, Pue.",
+  "horario": "Lun-Vie 10:00-20:00, Sáb 10:00-14:00",
+  "calificacion": "5.0",
+  "resenas": 19,
+  "servicios": [
+   "Odontología general",
+   "Limpieza dental",
+   "Resinas y restauración",
+   "Valoración sin dolor"
+  ]
+ },
+ {
+  "slug": "dra-rubi-arellano",
+  "nombre": "Dra. Rubí Arellano | Dentista",
+  "giro": "dentista",
+  "telefono_display": "+52 222 670 7474",
+  "whatsapp_num": "5212226707474",
+  "direccion": "Torres Médicas Angelópolis, Consultorio 631, Tlaxcalancingo, Pue.",
+  "horario": "Lun-Vie 10:00-19:30, Sáb 10:00-14:00",
+  "calificacion": "5.0",
+  "resenas": 26,
+  "servicios": [
+   "Odontología infantil",
+   "Ortodoncia",
+   "Cirugía maxilofacial",
+   "Estética dental"
+  ]
+ },
+ {
+  "slug": "dentista-valeria-victoria",
+  "nombre": "Consultorio Dentista Valeria Victoria",
+  "giro": "dentista",
+  "telefono_display": "+52 222 402 2806",
+  "whatsapp_num": "5212224022806",
+  "direccion": "Av. Periférico Ecológico 3505, San Andrés Cholula, Pue.",
+  "horario": "Lun-Vie 8:00-20:00, Sáb 8:00-15:00, Dom 11:00-14:00",
+  "calificacion": "5.0",
+  "resenas": 78,
+  "servicios": [
+   "Prevención bucal",
+   "Restauración dental",
+   "Estética dental",
+   "Atención infantil y urgencias"
+  ]
+ },
+ {
+  "slug": "consultorio-dental-deza",
+  "nombre": "Consultorio Dental DEZA",
+  "giro": "dentista",
+  "telefono_display": "+52 222 599 7535",
+  "whatsapp_num": "5212225997535",
+  "direccion": "Emiliano Zapata 254-L.3, Tlaxcalancingo, Pue.",
+  "horario": "Lun-Sáb 9:00-19:00",
+  "calificacion": "4.9",
+  "resenas": 45,
+  "servicios": [
+   "Odontología general",
+   "Extracción de muelas del juicio",
+   "Limpieza dental",
+   "Atención personalizada"
+  ]
+ },
+ {
+  "slug": "smilexperts-puebla",
+  "nombre": "SmileXperts",
+  "giro": "dentista",
+  "telefono_display": "+52 227 182 1480",
+  "whatsapp_num": "5212271821480",
+  "direccion": "Anillo Perif. Ecológico 3507, Tlaxcalancingo, Pue.",
+  "horario": "Lun-Sáb 8:00-20:00",
+  "calificacion": "4.9",
+  "resenas": 37,
+  "servicios": [
+   "Ortodoncia y endodoncia",
+   "Implantes dentales",
+   "Periodoncia",
+   "Odontopediatría"
+  ]
+ },
+ {
+  "slug": "nusa-veterinaria",
+  "nombre": "NUSA Centro Médico Veterinario",
+  "giro": "veterinaria",
+  "telefono_display": "+52 221 564 2208",
+  "whatsapp_num": "5212215642208",
+  "direccion": "Carretera Federal a Atlixco 5402, Plaza Terreus Loc. 22, San Andrés Cholula, Pue.",
+  "horario": "Lun-Vie 24 horas, Sáb 0:00-20:30, Dom 8:00-23:30",
+  "calificacion": "4.5",
+  "resenas": 164,
+  "servicios": [
+   "Consultas y medicina interna",
+   "Cirugías y esterilizaciones",
+   "Vacunación y desparasitación",
+   "Alimento especializado"
+  ]
+ },
+ {
+  "slug": "hospital-veterinario-koala",
+  "nombre": "Hospital Veterinario Koala",
+  "giro": "veterinaria",
+  "telefono_display": "+52 221 109 7480",
+  "whatsapp_num": "5212211097480",
+  "direccion": "Privada Colorines 5409, Tlaxcalancingo, Pue.",
+  "horario": "Lun-Vie 9:00-19:30, Sáb 9:00-18:30, Dom 10:00-16:00",
+  "calificacion": "4.2",
+  "resenas": 296,
+  "servicios": [
+   "Consulta y laboratorio",
+   "Cirugía veterinaria y rayos X",
+   "Vacunación y desparasitación",
+   "Hospitalización"
+  ]
+ },
+ {
+  "slug": "paraiso-animal-veterinaria",
+  "nombre": "Hospital Veterinario Paraíso Animal",
+  "giro": "veterinaria",
+  "telefono_display": "+52 222 227 7522",
+  "whatsapp_num": "5212222277522",
+  "direccion": "Alejandra 4501-int. 2, Tlaxcalancingo, Pue.",
+  "horario": "Lun-Sáb 10:00-19:00",
+  "calificacion": "4.6",
+  "resenas": 288,
+  "servicios": [
+   "Atención médica veterinaria",
+   "Cirugía y diagnóstico",
+   "Vacunación preventiva",
+   "Cuidado de pequeñas especies"
+  ]
+ },
+ {
+  "slug": "reino-animal-cholula",
+  "nombre": "Reino Animal",
+  "giro": "veterinaria",
+  "telefono_display": "+52 222 225 1705",
+  "whatsapp_num": "5212222251705",
+  "direccion": "Blvd. Atlixco 3507-Loc 2, San Andrés Cholula, Pue.",
+  "horario": "Lun-Vie 10:00-19:00, Sáb 9:00-18:00, Dom 10:00-17:00",
+  "calificacion": "4.4",
+  "resenas": 267,
+  "servicios": [
+   "Consulta veterinaria",
+   "Estética canina",
+   "Vacunación y prevención",
+   "Accesorios y cuidado"
+  ]
+ },
+ {
+  "slug": "pirsch-veterinaria-las-torres",
+  "nombre": "Pirsch Veterinaria Las Torres",
+  "giro": "veterinaria",
+  "telefono_display": "+52 222 242 7197",
+  "whatsapp_num": "5212222427197",
+  "direccion": "Av. Las Torres 802-Loc 9, San Andrés Cholula, Pue.",
+  "horario": "Lun-Vie 10:00-19:00, Sáb 10:00-18:00, Dom 10:00-17:00",
+  "calificacion": "4.5",
+  "resenas": 95,
+  "servicios": [
+   "Servicios médicos veterinarios",
+   "Cirugías y vacunas",
+   "Estética para mascotas",
+   "Alimento y accesorios"
+  ]
+ },
+ {
+  "slug": "gioo-barber-shop",
+  "nombre": "GioO barber shop 101",
+  "giro": "barberia",
+  "telefono_display": "+52 222 512 3379",
+  "whatsapp_num": "5212225123379",
+  "direccion": "C. 3 Nte. 3, San Miguel, Cholula, Puebla",
+  "horario": "Mar-Vie 11:00-21:00, Sáb 10:00-19:00, Dom 11:00-24:00",
+  "calificacion": "4.9",
+  "resenas": 131,
+  "items": [
+   "Corte clásico y fade",
+   "Arreglo y ritual de barba",
+   "Corte infantil",
+   "Paquete corte + barba"
+  ]
+ },
+ {
+  "slug": "caballero-aguila-barber",
+  "nombre": "Caballero Aguila MX Barbershop",
+  "giro": "barberia",
+  "telefono_display": "+52 221 370 0655",
+  "whatsapp_num": "5212213700655",
+  "direccion": "Av. 17 Pte. 718, Sta Maria Xixitla, Cholula, Puebla",
+  "horario": "Mar-Sáb 11:00-20:30, Dom 12:00-18:00",
+  "calificacion": "5.0",
+  "resenas": 261,
+  "items": [
+   "Fade de precisión",
+   "Delineado de barba a navaja",
+   "Mascarilla exfoliante",
+   "Asesoría de imagen"
+  ]
+ },
+ {
+  "slug": "boys-barber-cholula",
+  "nombre": "BOY'S BARBER",
+  "giro": "barberia",
+  "telefono_display": "+52 220 175 3417",
+  "whatsapp_num": "5212201753417",
+  "direccion": "Antiguo Camino Real a Cholula 4816-Loc 2, Cholula, Puebla",
+  "horario": "Lun-Vie 10:00-21:00, Sáb 9:00-21:00, Dom 11:00-21:00",
+  "calificacion": "5.0",
+  "resenas": 86,
+  "items": [
+   "Corte caballero y dama",
+   "Afeitado tradicional",
+   "Fade y diseño",
+   "Atención con o sin cita"
+  ]
+ },
+ {
+  "slug": "por-la-manana-cafe",
+  "nombre": "Por La Mañana",
+  "giro": "restaurante",
+  "telefono_display": "+52 221 571 1404",
+  "whatsapp_num": "5212215711404",
+  "direccion": "Av. Morelos 201, Centro, Cholula, Puebla",
+  "horario": "Lun-Dom 8:30-14:30",
+  "calificacion": "4.8",
+  "resenas": 1478,
+  "items": [
+   "Brioche Fusion",
+   "Chilaquiles Verdes con Pollo",
+   "Café Lotus ($90)",
+   "Pistache & Chocolate ($85)"
+  ]
+ },
+ {
+  "slug": "coco-y-banana-cholula",
+  "nombre": "Coco & Banana Cholula",
+  "giro": "restaurante",
+  "telefono_display": "+52 221 658 0214",
+  "whatsapp_num": "5212216580214",
+  "direccion": "Calle 14 Ote 1451, Cholula, Puebla",
+  "horario": "Lun-Dom 8:00-14:30",
+  "calificacion": "4.8",
+  "resenas": 1837,
+  "items": [
+   "Hot Cakes Coco & Banana",
+   "Avo Ovo Toast",
+   "Enfrijoladas Santas",
+   "Coconut Taro Cloud ($75)"
+  ]
+ },
+ {
+  "slug": "cafe-quintal-cholula",
+  "nombre": "Café Quintal Cholula",
+  "giro": "restaurante",
+  "telefono_display": "+52 222 699 5328",
+  "whatsapp_num": "5212226995328",
+  "direccion": "Av. Maximino A. Camacho 16, Cholula, Puebla",
+  "horario": "Lun-Sáb 12:00-21:30",
+  "calificacion": "4.7",
+  "resenas": 101,
+  "items": [
+   "Café de grano recién tostado",
+   "Toast Capresse ($150)",
+   "Postre artesanal del día",
+   "Barra de espresso"
+  ]
+ },
+ {
+  "slug": "amalia-cholula",
+  "nombre": "Amalia Cholula",
+  "giro": "restaurante",
+  "telefono_display": "+52 221 657 0852",
+  "whatsapp_num": "5212216570852",
+  "direccion": "Av. Morelos 201, Centro, Cholula, Puebla",
+  "horario": "Lun-Dom 8:30-14:30",
+  "calificacion": "4.8",
+  "resenas": 2934,
+  "items": [
+   "Chilaquiles Tatemados con Chicharrón",
+   "Huevos Árabes",
+   "Avocado Toast con Huevo Pochado",
+   "Cold Brew & Matcha Latte"
+  ]
+ },
+ {
+  "slug": "bolt-fitness-cholula",
+  "nombre": "Bolt Fitness Cholula",
+  "giro": "gimnasio",
+  "telefono_display": "+52 222 888 4898",
+  "whatsapp_num": "5212228884898",
+  "direccion": "Calle 9 Sur 110 Plaza Lazcarro, Cholula, Puebla",
+  "horario": "Lun-Vie 6:00-22:00, Sáb-Dom 7:00-15:00",
+  "calificacion": "4.3",
+  "resenas": 260,
+  "items": [
+   "Área de pesas y cardio",
+   "Clases grupales de Yoga",
+   "Entrenamiento funcional",
+   "Asesoría en piso"
+  ]
+ },
+ {
+  "slug": "fitpod-cholula",
+  "nombre": "FitPod Cholula",
+  "giro": "gimnasio",
+  "telefono_display": "+52 56 5432 6245",
+  "whatsapp_num": "5215654326245",
+  "direccion": "C. 11 Pte. 304, Sta Maria Xixitla, Cholula, Puebla",
+  "horario": "Lun-Jue 5:30-23:00, Vie 6:00-22:00, Sáb-Dom 7:00-16:00",
+  "calificacion": "4.7",
+  "resenas": 40,
+  "items": [
+   "Entrenamiento personalizado",
+   "Equipo de última generación",
+   "Coaches certificados",
+   "Estacionamiento gratis"
+  ]
+ },
+ {
+  "slug": "golden-gym-cholula",
+  "nombre": "Golden GYM Cholula",
+  "giro": "gimnasio",
+  "telefono_display": "+52 222 296 9689",
+  "whatsapp_num": "5212222969689",
+  "direccion": "Av. 12 Pte. 908, Cholula, Puebla",
+  "horario": "Lun-Vie 6:00-23:00, Sáb 7:00-17:00, Dom 8:00-15:00",
+  "calificacion": "4.3",
+  "resenas": 117,
+  "items": [
+   "Peso libre completo",
+   "Aparatos de fuerza",
+   "Cardio y acondicionamiento",
+   "Horarios amplios desde 6 AM"
+  ]
+ }
 ]

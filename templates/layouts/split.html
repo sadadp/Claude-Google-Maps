@@ -25,12 +25,12 @@
     <div><p class="lab">{{ giro_label }}</p><h1>{{ p.nombre }}</h1></div>
     <div>
       <div class="rate"><span>★ {{ p.calificacion }} en Google</span><span>{{ p.resenas }} reseñas</span></div>
-      <a class="btn" href="{{ wa }}">{% include 'wa.svg' %}Agendar por WhatsApp</a>
+      <a class="btn" href="{{ wa }}">{% include 'wa.svg' %}{{ g.btn }}</a>
     </div>
   </aside>
   <main class="main">
     <section><p class="lead">{{ intro }}</p></section>
-    <section><h2 class="lab">Servicios</h2>{{ k.servicios(p) }}</section>
+    <section><h2 class="lab">{{ g.sec }}</h2>{{ k.servicios(items) }}</section>
     <section><h2 class="lab">Horario</h2>{{ k.horario(horas) }}</section>
     <section><h2 class="lab">Ubicación</h2><p class="addr">{{ p.direccion }}</p>
       <a class="lnk" href="{{ maps }}" target="_blank" rel="noopener">Abrir en Google Maps</a> &nbsp;·&nbsp; <a class="lnk" href="{{ tel }}">{{ p.telefono_display }}</a></section>

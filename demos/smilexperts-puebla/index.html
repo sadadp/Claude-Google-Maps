@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#FFFFFF;--ink:#0D1B1E;--acc:#008C95;--d:'Space Grotesk',Georgia,serif;--s:'Inter',system-ui,sans-serif;
+:root{--bg:#FFFFFF;--ink:#0D1B1E;--acc:#008C95;--on:#FFFFFF;--d:'Space Grotesk',Georgia,serif;--s:'Inter',system-ui,sans-serif;
 --line:color-mix(in srgb,var(--ink) 14%,transparent);--mute:color-mix(in srgb,var(--ink) 60%,transparent)}
 *{box-sizing:border-box;margin:0;padding:0}
 html{-webkit-text-size-adjust:100%}
@@ -19,13 +19,15 @@ a{color:inherit}
 .wrap{width:calc(100% - 44px);max-width:1088px;margin-left:auto;margin-right:auto}
 @media(min-width:768px){.wrap{width:calc(100% - 112px)}}
 .lab{font:500 11px/1.2 var(--s);letter-spacing:.16em;text-transform:uppercase;color:var(--mute)}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--acc);color:var(--bg);text-decoration:none;font:600 15px/1 var(--s);padding:17px 24px;transition:opacity .2s}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--acc);color:var(--on);text-decoration:none;font:600 15px/1 var(--s);padding:17px 24px;transition:opacity .2s}
 .btn:hover{opacity:.88}.btn svg{width:18px;height:18px;flex:none}
 .lnk{font-weight:600;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:5px}
 .lnk:hover{color:var(--acc)}
 .svc{list-style:none;counter-reset:s}
 .svc li{display:flex;gap:22px;align-items:baseline;padding:22px 0;border-top:1px solid var(--line)}
 .svc li:last-child{border-bottom:1px solid var(--line)}
+.svc li i{flex:1;align-self:center;border-bottom:1px dotted color-mix(in srgb,var(--ink) 40%,transparent);min-width:24px}
+.svc li b{font-weight:500;font-variant-numeric:tabular-nums}
 .svc li::before{counter-increment:s;content:counter(s,decimal-leading-zero);font:500 12px var(--s);color:var(--acc);min-width:22px}
 .hours{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
 .hours td{padding:15px 0;border-top:1px solid var(--line);vertical-align:top}
@@ -70,7 +72,7 @@ a{color:inherit}
   </aside>
   <main class="main">
     <section><p class="lead">Ortodoncia y endodoncia, implantes dentales y más. Escríbenos por WhatsApp y te damos tu cita.</p></section>
-    <section><h2 class="lab">Servicios</h2><ol class="svc "><li>Ortodoncia y endodoncia</li><li>Implantes dentales</li><li>Periodoncia</li><li>Odontopediatría</li></ol></section>
+    <section><h2 class="lab">Servicios</h2><ol class="svc "><li><span>Ortodoncia y endodoncia</span></li><li><span>Implantes dentales</span></li><li><span>Periodoncia</span></li><li><span>Odontopediatría</span></li></ol></section>
     <section><h2 class="lab">Horario</h2><table class="hours"><tr><td>Lun-Sáb</td><td>8:00-20:00</td></tr></table></section>
     <section><h2 class="lab">Ubicación</h2><p class="addr">Anillo Perif. Ecológico 3507, Tlaxcalancingo, Pue.</p>
       <a class="lnk" href="https://www.google.com/maps/search/?api=1&amp;query=SmileXperts%2C%20Anillo%20Perif.%20Ecol%C3%B3gico%203507%2C%20Tlaxcalancingo%2C%20Pue." target="_blank" rel="noopener">Abrir en Google Maps</a> &nbsp;·&nbsp; <a class="lnk" href="tel:+522271821480">+52 227 182 1480</a></section>

@@ -16,7 +16,7 @@
 @media(min-width:900px){.meta{grid-template-columns:1.2fr 1fr auto;align-items:end}.sec{grid-template-columns:1fr 2fr;gap:56px}}
 {% endblock %}
 {% block body %}
-<header class="wrap top"><b>{{ p.nombre }}</b><a class="lnk" href="{{ wa }}">Agendar cita</a></header>
+<header class="wrap top"><b>{{ p.nombre }}</b><a class="lnk" href="{{ wa }}">WhatsApp</a></header>
 <main class="wrap">
   <section class="hero">
     <p class="lab">{{ giro_label }}</p>
@@ -24,10 +24,10 @@
     <div class="meta">
       <p>{{ intro }}</p>
       <div class="rate">{{ p.calificacion }}<small>{{ p.resenas }} reseñas en Google Maps</small></div>
-      <a class="btn" href="{{ wa }}">{% include 'wa.svg' %}Agendar por WhatsApp</a>
+      <a class="btn" href="{{ wa }}">{% include 'wa.svg' %}{{ g.btn }}</a>
     </div>
   </section>
-  <section class="sec"><div><p class="lab">Servicios</p><h2>Lo que atendemos</h2></div>{{ k.servicios(p) }}</section>
+  <section class="sec"><div><p class="lab">{{ g.sec }}</p><h2>{{ g.h2 }}</h2></div>{{ k.servicios(items) }}</section>
   <section class="sec">
     <div><p class="lab">Horario</p><h2>Cuándo venir</h2></div>
     <div>{{ k.horario(horas) }}

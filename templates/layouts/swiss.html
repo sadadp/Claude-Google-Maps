@@ -18,7 +18,7 @@ body{font-size:15px}
 .hrs{margin-top:72px;display:grid;gap:20px}
 .hrs h2{font:700 clamp(32px,5vw,56px)/1 var(--d);letter-spacing:-.03em;text-transform:uppercase}
 .hours td{font:500 clamp(17px,2vw,22px) var(--d);padding:18px 0}
-.cta{display:block;margin-top:88px;background:var(--acc);color:var(--bg);text-decoration:none;padding:40px 22px}
+.cta{display:block;margin-top:88px;background:var(--acc);color:var(--on);text-decoration:none;padding:40px 22px}
 .cta b{display:block;font:800 clamp(34px,6vw,76px)/.95 var(--d);letter-spacing:-.04em;text-transform:uppercase}
 .cta span{display:block;margin-top:18px;font-weight:500}
 .addr{display:grid;gap:8px;padding:32px 0;border-bottom:1px solid var(--line)}
@@ -39,12 +39,12 @@ body{font-size:15px}
     <div class="big">
       <div><p class="lab">Calificación</p><div class="num">{{ p.calificacion }}</div></div>
       <div><p class="lab">Opiniones</p><div class="num">{{ p.resenas }}</div></div>
-      <div><div><p class="txt">{{ intro }}</p><br><a class="btn" href="{{ wa }}">{% include 'wa.svg' %}Agendar por WhatsApp</a></div></div>
+      <div><div><p class="txt">{{ intro }}</p><br><a class="btn" href="{{ wa }}">{% include 'wa.svg' %}{{ g.btn }}</a></div></div>
     </div>
   </section>
-  <section class="grid4">{% for s in p.servicios %}<div><span>{{ '%02d'|format(loop.index) }}</span><h3>{{ s }}</h3></div>{% endfor %}</section>
+  <section class="grid4">{% for s, precio in items %}<div><span>{{ '%02d'|format(loop.index) }}</span><h3>{{ s }}</h3></div>{% endfor %}</section>
   <section class="hrs"><h2>Horario</h2>{{ k.horario(horas) }}</section>
-  <a class="cta" href="{{ wa }}"><b>Agenda tu cita →</b><span>Escríbenos por WhatsApp. Te respondemos con horario disponible.</span></a>
+  <a class="cta" href="{{ wa }}"><b>{{ g.cta }}</b><span>Escríbenos por WhatsApp y te respondemos.</span></a>
   <section class="addr"><p class="lab">Dirección</p><p>{{ p.direccion }}</p><a class="lnk" href="{{ maps }}" target="_blank" rel="noopener">Abrir en Google Maps</a></section>
 </main>
 {{ k.pie(p) }}

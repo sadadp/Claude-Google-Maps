@@ -24,8 +24,8 @@
     <h1>{{ p.nombre }}</h1>
     <div class="row"><span><b>{{ giro_label }}</b></span><span>★ {{ p.calificacion }} · {{ p.resenas }} reseñas en Google</span><a href="{{ tel }}">{{ p.telefono_display }}</a></div>
   </header>
-  <section class="part"><h2>i.</h2><div><p class="intro">{{ intro }}</p><br><div class="sign"><a class="btn" href="{{ wa }}">{% include 'wa.svg' %}Agendar por WhatsApp</a></div></div></section>
-  <section class="part"><h2>ii. Servicios</h2>{{ k.servicios(p) }}</section>
+  <section class="part"><h2>i.</h2><div><p class="intro">{{ intro }}</p><br><div class="sign"><a class="btn" href="{{ wa }}">{% include 'wa.svg' %}{{ g.btn }}</a></div></div></section>
+  <section class="part"><h2>ii. {{ g.sec }}</h2>{{ k.servicios(items) }}</section>
   <section class="part"><h2>iii. Horario</h2>
     <table class="hours dots">{% for d, h in horas %}<tr><td>{{ d }}</td><td></td><td>{{ h }}</td></tr>{% endfor %}</table></section>
   <section class="part"><h2>iv. Ubicación</h2><div><p style="font-size:18px;max-width:32ch;margin-bottom:16px">{{ p.direccion }}</p><a class="lnk" href="{{ maps }}" target="_blank" rel="noopener">Abrir en Google Maps</a></div></section>

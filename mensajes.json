@@ -1,74 +1,134 @@
 {
-  "dra-genesis-sanchez": {
-    "m1": "Hola, Dra. Genesis, ¿qué tal? ¿Cómo está? Oiga, estaba viendo su perfil en Google y qué buenas reseñas tiene, 4.8 con 143 opiniones.",
-    "m2": "Me tomé unos minutos y le armé una muestra de cómo se vería su página en el celular, con botón directo a su WhatsApp para que le agenden: {link}",
-    "m3": "Si le late, se la dejo publicada con su código QR por $700 pago único, lista en 48 hrs. ¿Cómo la ve?",
-    "seg": "Hola, Dra., ¿pudo ver la página que le mandé? Si quiere le cambio colores o algo, sin compromiso."
-  },
-  "dra-saira-ortega": {
-    "m1": "Hola, Dra. Saira, ¿qué tal? Estaba viendo perfiles de consultorios y el suyo trae 5.0 en Google, se nota que sus pacientes salen contentos.",
-    "m2": "Le preparé una demo rápida de cómo se vería su página en celular, con sus servicios y un botón para que le escriban directo al WhatsApp: {link}",
-    "m3": "Si le gusta, se la publico con su código QR por $700 pago único y queda en 48 hrs. ¿Qué dice?",
-    "seg": "Dra. Saira, nomás para saber si alcanzó a ver la demo. Si algo no le late, lo cambio sin problema."
-  },
-  "dental-fix-puebla": {
-    "m1": "Hola, ¿qué tal? ¿Cómo están? Oigan, vi su perfil de Dental Fix y traen 5.0 en Google, muy bien.",
-    "m2": "Me tomé unos minutos y les armé una demo de cómo se vería su página en el celular, con botón directo a su WhatsApp: {link}",
-    "m3": "Si les late, se las dejo publicada con su código QR por $700 pago único, lista en 48 hrs. ¿Cómo la ven?",
-    "seg": "Hola de nuevo, ¿alcanzaron a ver la demo? Cualquier cambio que quieran se los hago, sin compromiso."
-  },
-  "dra-rubi-arellano": {
-    "m1": "Hola, Dra. Rubí, ¿cómo está? Estaba viendo su perfil de Torres Médicas Angelópolis y tiene 5.0 con 26 reseñas, qué bien habla la gente de usted.",
-    "m2": "Le hice una demo de cómo se vería su propia página en celular, con botón para que le agenden por WhatsApp: {link}",
-    "m3": "Si le late, se la dejo publicada con su código QR por $700 pago único, en 48 hrs. ¿Cómo la ve?",
-    "seg": "Dra. Rubí, ¿pudo verla? Si prefiere otros colores o quitar algo, me dice y lo ajusto."
-  },
-  "dentista-valeria-victoria": {
-    "m1": "Hola, Dra. Valeria, ¿qué tal? Oiga, vi su consultorio en Google, 78 reseñas y promedio de 5.0, eso no se ve diario.",
-    "m2": "Me tomé unos minutos para armarle una muestra de su página en celular, con botón directo a su WhatsApp para citas: {link}",
-    "m3": "Si le gusta, se la publico con su código QR por $700 pago único, lista en 48 hrs. ¿Qué le parece?",
-    "seg": "Hola, Dra., ¿alcanzó a ver la página? Sin presión, nomás quería saber qué le pareció."
-  },
-  "consultorio-dental-deza": {
-    "m1": "Hola, ¿cómo están? Oigan, vi el perfil de Consultorio Dental DEZA, 4.9 con 45 reseñas, se ve que tratan bien a la gente.",
-    "m2": "Les armé una demo de cómo se vería su página en el celular, con botón para que les agenden directo por WhatsApp: {link}",
-    "m3": "Si les late, se las dejo publicada con su código QR por $700 pago único y queda en 48 hrs. ¿Cómo la ven?",
-    "seg": "¿Qué tal? ¿Pudieron ver la demo que les mandé? Si quieren algún cambio, me dicen."
-  },
-  "smilexperts-puebla": {
-    "m1": "Hola, ¿qué tal? Estaba viendo su perfil de SmileXperts, 4.9 en Google y un montón de servicios, de ortodoncia a implantes.",
-    "m2": "Me tomé unos minutos y les armé una demo de su página en celular, con sus servicios y botón directo a WhatsApp: {link}",
-    "m3": "Si les gusta, se las publico con su código QR por $700 pago único, lista en 48 hrs. ¿Cómo la ven?",
-    "seg": "Hola, nomás para saber si alcanzaron a ver la demo. Si algo no les convence, lo cambio."
-  },
-  "nusa-veterinaria": {
-    "m1": "Hola, ¿cómo están? Oigan, vi su perfil de NUSA, 164 reseñas y abiertos 24 horas entre semana, eso la gente lo agradece mucho.",
-    "m2": "Les armé una demo de cómo se vería su página en celular, con botón para que los dueños de mascotas les escriban directo por WhatsApp: {link}",
-    "m3": "Si les late, se las dejo publicada con su código QR por $700 pago único, en 48 hrs. ¿Cómo la ven?",
-    "seg": "¿Qué tal? ¿Alcanzaron a ver la página de NUSA? Si quieren le muevo algo, sin compromiso."
-  },
-  "hospital-veterinario-koala": {
-    "m1": "Hola, ¿qué tal? Vi su perfil del Hospital Veterinario Koala, 296 reseñas en Google, mucha gente los conoce.",
-    "m2": "Me tomé unos minutos para armarles una demo de su página en celular, con botón directo a su WhatsApp para citas: {link}",
-    "m3": "Si les gusta, se las dejo publicada con su código QR por $700 pago único, lista en 48 hrs. ¿Cómo la ven?",
-    "seg": "Hola, ¿pudieron ver la demo de Koala? Cualquier cosa que quieran cambiar, me avisan."
-  },
-  "paraiso-animal-veterinaria": {
-    "m1": "Hola, ¿cómo están? Oigan, estaba viendo su perfil de Paraíso Animal, 4.6 con 288 reseñas, qué buena fama tienen.",
-    "m2": "Les armé una muestra de cómo se vería su página en el celular, con botón directo a su WhatsApp: {link}",
-    "m3": "Si les late, se las publico con su código QR por $700 pago único y queda en 48 hrs. ¿Cómo la ven?",
-    "seg": "¿Qué tal? Nomás para saber si vieron la demo. Si quieren otro color o texto, lo cambio."
-  },
-  "reino-animal-cholula": {
-    "m1": "Hola, ¿qué tal? Vi su perfil de Reino Animal, 267 reseñas y además tienen estética canina, qué completo.",
-    "m2": "Me tomé unos minutos y les armé una demo de su página en celular, con botón para que les agenden por WhatsApp: {link}",
-    "m3": "Si les gusta, se las dejo publicada con su código QR por $700 pago único, lista en 48 hrs. ¿Cómo la ven?",
-    "seg": "Hola, ¿alcanzaron a ver la demo? Sin presión, me dicen si les sirve."
-  },
-  "pirsch-veterinaria-las-torres": {
-    "m1": "Hola, ¿cómo están? Oigan, vi su perfil de Pirsch Las Torres, 4.5 en Google y abren hasta en domingo, eso se agradece.",
-    "m2": "Les armé una demo de cómo se vería su página en el celular, con botón directo a su WhatsApp: {link}",
-    "m3": "Si les late, se las publico con su código QR por $700 pago único, lista en 48 hrs. ¿Cómo la ven?",
-    "seg": "¿Qué tal? ¿Pudieron ver la página que les mandé? Si quieren algún cambio, con gusto."
-  }
+ "dra-genesis-sanchez": {
+  "m1": "Hola, Dra. Genesis, ¿qué tal? ¿Cómo está? Oiga, estaba viendo su perfil en Google y qué buenas reseñas tiene, 4.8 con 143 opiniones.",
+  "m2": "Me tomé unos minutos y le armé una muestra de cómo se vería su página en el celular, con botón directo a su WhatsApp para que le agenden: {link}",
+  "m3": "Si le late, se la dejo publicada con su código QR para imprimir o subir a Instagram por $700 pago único, lista en 48 hrs. El dominio va aparte. ¿Cómo la ve?",
+  "seg": "Hola, Dra., ¿pudo ver la página que le mandé? Si quiere le cambio colores o algo, sin compromiso."
+ },
+ "dra-saira-ortega": {
+  "m1": "Hola, Dra. Saira, ¿qué tal? Estaba viendo perfiles de consultorios y el suyo trae 5.0 en Google, se nota que sus pacientes salen contentos.",
+  "m2": "Le preparé una demo rápida de cómo se vería su página en celular, con sus servicios y un botón para que le escriban directo al WhatsApp: {link}",
+  "m3": "Si le gusta, se la publico con su código QR para imprimir o subir a Instagram por $700 pago único y queda en 48 hrs. El dominio va aparte. ¿Qué dice?",
+  "seg": "Dra. Saira, nomás para saber si alcanzó a ver la demo. Si algo no le late, lo cambio sin problema."
+ },
+ "dental-fix-puebla": {
+  "m1": "Hola, ¿qué tal? ¿Cómo están? Oigan, vi su perfil de Dental Fix y traen 5.0 en Google, muy bien.",
+  "m2": "Me tomé unos minutos y les armé una demo de cómo se vería su página en el celular, con botón directo a su WhatsApp: {link}",
+  "m3": "Si les late, se las dejo publicada con su código QR para imprimir o subir a Instagram por $700 pago único, lista en 48 hrs. El dominio va aparte. ¿Cómo la ven?",
+  "seg": "Hola de nuevo, ¿alcanzaron a ver la demo? Cualquier cambio que quieran se los hago, sin compromiso."
+ },
+ "dra-rubi-arellano": {
+  "m1": "Hola, Dra. Rubí, ¿cómo está? Estaba viendo su perfil de Torres Médicas Angelópolis y tiene 5.0 con 26 reseñas, qué bien habla la gente de usted.",
+  "m2": "Le hice una demo de cómo se vería su propia página en celular, con botón para que le agenden por WhatsApp: {link}",
+  "m3": "Si le late, se la dejo publicada con su código QR para imprimir o subir a Instagram por $700 pago único, en 48 hrs. El dominio va aparte. ¿Cómo la ve?",
+  "seg": "Dra. Rubí, ¿pudo verla? Si prefiere otros colores o quitar algo, me dice y lo ajusto."
+ },
+ "dentista-valeria-victoria": {
+  "m1": "Hola, Dra. Valeria, ¿qué tal? Oiga, vi su consultorio en Google, 78 reseñas y promedio de 5.0, eso no se ve diario.",
+  "m2": "Me tomé unos minutos para armarle una muestra de su página en celular, con botón directo a su WhatsApp para citas: {link}",
+  "m3": "Si le gusta, se la publico con su código QR para imprimir o subir a Instagram por $700 pago único, lista en 48 hrs. El dominio va aparte. ¿Qué le parece?",
+  "seg": "Hola, Dra., ¿alcanzó a ver la página? Sin presión, nomás quería saber qué le pareció."
+ },
+ "consultorio-dental-deza": {
+  "m1": "Hola, ¿cómo están? Oigan, vi el perfil de Consultorio Dental DEZA, 4.9 con 45 reseñas, se ve que tratan bien a la gente.",
+  "m2": "Les armé una demo de cómo se vería su página en el celular, con botón para que les agenden directo por WhatsApp: {link}",
+  "m3": "Si les late, se las dejo publicada con su código QR para imprimir o subir a Instagram por $700 pago único y queda en 48 hrs. El dominio va aparte. ¿Cómo la ven?",
+  "seg": "¿Qué tal? ¿Pudieron ver la demo que les mandé? Si quieren algún cambio, me dicen."
+ },
+ "smilexperts-puebla": {
+  "m1": "Hola, ¿qué tal? Estaba viendo su perfil de SmileXperts, 4.9 en Google y un montón de servicios, de ortodoncia a implantes.",
+  "m2": "Me tomé unos minutos y les armé una demo de su página en celular, con sus servicios y botón directo a WhatsApp: {link}",
+  "m3": "Si les gusta, se las publico con su código QR para imprimir o subir a Instagram por $700 pago único, lista en 48 hrs. El dominio va aparte. ¿Cómo la ven?",
+  "seg": "Hola, nomás para saber si alcanzaron a ver la demo. Si algo no les convence, lo cambio."
+ },
+ "nusa-veterinaria": {
+  "m1": "Hola, ¿cómo están? Oigan, vi su perfil de NUSA, 164 reseñas y abiertos 24 horas entre semana, eso la gente lo agradece mucho.",
+  "m2": "Les armé una demo de cómo se vería su página en celular, con botón para que los dueños de mascotas les escriban directo por WhatsApp: {link}",
+  "m3": "Si les late, se las dejo publicada con su código QR para imprimir o subir a Instagram por $700 pago único, en 48 hrs. El dominio va aparte. ¿Cómo la ven?",
+  "seg": "¿Qué tal? ¿Alcanzaron a ver la página de NUSA? Si quieren le muevo algo, sin compromiso."
+ },
+ "hospital-veterinario-koala": {
+  "m1": "Hola, ¿qué tal? Vi su perfil del Hospital Veterinario Koala, 296 reseñas en Google, mucha gente los conoce.",
+  "m2": "Me tomé unos minutos para armarles una demo de su página en celular, con botón directo a su WhatsApp para citas: {link}",
+  "m3": "Si les gusta, se las dejo publicada con su código QR para imprimir o subir a Instagram por $700 pago único, lista en 48 hrs. El dominio va aparte. ¿Cómo la ven?",
+  "seg": "Hola, ¿pudieron ver la demo de Koala? Cualquier cosa que quieran cambiar, me avisan."
+ },
+ "paraiso-animal-veterinaria": {
+  "m1": "Hola, ¿cómo están? Oigan, estaba viendo su perfil de Paraíso Animal, 4.6 con 288 reseñas, qué buena fama tienen.",
+  "m2": "Les armé una muestra de cómo se vería su página en el celular, con botón directo a su WhatsApp: {link}",
+  "m3": "Si les late, se las publico con su código QR para imprimir o subir a Instagram por $700 pago único y queda en 48 hrs. El dominio va aparte. ¿Cómo la ven?",
+  "seg": "¿Qué tal? Nomás para saber si vieron la demo. Si quieren otro color o texto, lo cambio."
+ },
+ "reino-animal-cholula": {
+  "m1": "Hola, ¿qué tal? Vi su perfil de Reino Animal, 267 reseñas y además tienen estética canina, qué completo.",
+  "m2": "Me tomé unos minutos y les armé una demo de su página en celular, con botón para que les agenden por WhatsApp: {link}",
+  "m3": "Si les gusta, se las dejo publicada con su código QR para imprimir o subir a Instagram por $700 pago único, lista en 48 hrs. El dominio va aparte. ¿Cómo la ven?",
+  "seg": "Hola, ¿alcanzaron a ver la demo? Sin presión, me dicen si les sirve."
+ },
+ "pirsch-veterinaria-las-torres": {
+  "m1": "Hola, ¿cómo están? Oigan, vi su perfil de Pirsch Las Torres, 4.5 en Google y abren hasta en domingo, eso se agradece.",
+  "m2": "Les armé una demo de cómo se vería su página en el celular, con botón directo a su WhatsApp: {link}",
+  "m3": "Si les late, se las publico con su código QR para imprimir o subir a Instagram por $700 pago único, lista en 48 hrs. El dominio va aparte. ¿Cómo la ven?",
+  "seg": "¿Qué tal? ¿Pudieron ver la página que les mandé? Si quieren algún cambio, con gusto."
+ },
+ "gioo-barber-shop": {
+  "m1": "¡Qué onda! ¿Cómo están? Oigan, vi su perfil de GioO en Google, 4.9 con 131 reseñas, se ve que la gente sale contenta con su corte.",
+  "m2": "Me tomé unos minutos y les armé una demo de cómo se vería su página en el celular, con sus servicios y botón directo a su WhatsApp para apartar lugar: {link}",
+  "m3": "Si les late, se las dejo publicada con su código QR para imprimir o subir a Instagram por $700 pago único, lista en 48 hrs. El dominio va aparte. ¿Cómo la ven?",
+  "seg": "¿Qué tal? ¿Alcanzaron a ver la página? Si quieren otro estilo, se los ajusto sin compromiso."
+ },
+ "caballero-aguila-barber": {
+  "m1": "Hola, ¿qué tal? Oigan, estaba viendo su perfil de Caballero Águila, 5.0 con 261 reseñas, eso está difícil de lograr.",
+  "m2": "Les armé una demo de su página en celular, con sus servicios y un botón para que les aparten cita por WhatsApp: {link}",
+  "m3": "Si les gusta, se las publico con código QR para imprimir o para Instagram por $700 pago único, lista en 48 hrs. El dominio va aparte. ¿Qué dicen?",
+  "seg": "Hola, nomás para saber si vieron la demo. Cualquier cambio, me dicen."
+ },
+ "boys-barber-cholula": {
+  "m1": "Hola, ¿cómo están? Vi su perfil de BOY'S BARBER, 5.0 con 86 reseñas y atienden con o sin cita, eso se agradece.",
+  "m2": "Me tomé unos minutos para armarles una muestra de su página en el celular, con botón directo a su WhatsApp: {link}",
+  "m3": "Si les late, se las dejo publicada con su QR para imprimir o para Instagram por $700 pago único, lista en 48 hrs. El dominio va aparte. ¿Cómo la ven?",
+  "seg": "¿Qué tal? ¿Pudieron ver la página? Sin presión, me dicen si les sirve."
+ },
+ "por-la-manana-cafe": {
+  "m1": "Hola, ¿qué tal? Oigan, vi su perfil de Por La Mañana, casi 1,500 reseñas con 4.8, y ese Brioche Fusion se ve buenísimo.",
+  "m2": "Les armé una demo de cómo se vería su página en el celular, con parte de su menú y botón directo a su WhatsApp: {link}",
+  "m3": "Si les gusta, se las publico con un código QR para la mesa o para Instagram por $700 pago único, lista en 48 hrs. El dominio va aparte. ¿Cómo la ven?",
+  "seg": "Hola, ¿alcanzaron a ver la demo? Si quieren agregar más platillos, se los pongo."
+ },
+ "coco-y-banana-cholula": {
+  "m1": "Hola, ¿cómo están? Vi su perfil de Coco & Banana, 1,837 reseñas con 4.8, y esos Hot Cakes Coco & Banana tienen pinta de ser el favorito.",
+  "m2": "Me tomé unos minutos y les armé una muestra de su página en celular, con algo de su menú y botón directo a WhatsApp: {link}",
+  "m3": "Si les late, se las dejo publicada con su QR para la mesa o para Instagram por $700 pago único, lista en 48 hrs. El dominio va aparte. ¿Qué dicen?",
+  "seg": "¿Qué tal? ¿Pudieron ver la página? Si quieren cambiar platillos o colores, me dicen."
+ },
+ "cafe-quintal-cholula": {
+  "m1": "Hola, ¿qué tal? Oigan, vi su perfil de Café Quintal, 4.7 en Google y café de grano recién tostado, de lo que más se antoja.",
+  "m2": "Les armé una demo de cómo se vería su página en el celular, con parte de su carta y un botón directo a su WhatsApp: {link}",
+  "m3": "Si les gusta, se las publico con un código QR para la barra o para Instagram por $700 pago único, lista en 48 hrs. El dominio va aparte. ¿Cómo la ven?",
+  "seg": "Hola, nomás para saber si vieron la demo. Si quieren algo distinto, lo ajusto sin compromiso."
+ },
+ "amalia-cholula": {
+  "m1": "Hola, ¿cómo están? Vi su perfil de Amalia, ¡2,934 reseñas con 4.8! Y esos chilaquiles tatemados con chicharrón se ven de otro nivel.",
+  "m2": "Me tomé unos minutos para armarles una muestra de su página en el celular, con algo de su menú y botón directo a WhatsApp: {link}",
+  "m3": "Si les late, se las dejo publicada con su QR para la mesa o para Instagram por $700 pago único, lista en 48 hrs. El dominio va aparte. ¿Qué dicen?",
+  "seg": "¿Qué tal? ¿Alcanzaron a ver la página? Si quieren poner más del menú, con gusto."
+ },
+ "bolt-fitness-cholula": {
+  "m1": "Hola, ¿qué tal? Oigan, vi su perfil de Bolt Fitness, 260 reseñas y abren desde las 6 de la mañana, eso a mucha gente le acomoda.",
+  "m2": "Les armé una demo de cómo se vería su página en el celular, con horarios, clases y botón directo a su WhatsApp: {link}",
+  "m3": "Si les gusta, se las publico con un código QR para imprimir o para Instagram por $700 pago único, lista en 48 hrs. El dominio va aparte. ¿Cómo la ven?",
+  "seg": "Hola, ¿pudieron ver la demo? Si quieren otro color o agregar algo, me dicen."
+ },
+ "fitpod-cholula": {
+  "m1": "Hola, ¿cómo están? Vi su perfil de FitPod, 4.7 en Google y abren desde las 5:30, eso está muy bien para los madrugadores.",
+  "m2": "Me tomé unos minutos y les armé una muestra de su página en celular, con sus horarios y botón directo a WhatsApp: {link}",
+  "m3": "Si les late, se las dejo publicada con su QR para imprimir o para Instagram por $700 pago único, lista en 48 hrs. El dominio va aparte. ¿Qué dicen?",
+  "seg": "¿Qué tal? ¿Alcanzaron a ver la página? Sin compromiso, me dicen si les late."
+ },
+ "golden-gym-cholula": {
+  "m1": "Hola, ¿qué tal? Oigan, vi su perfil de Golden GYM, 117 reseñas y abiertos hasta las 11 de la noche entre semana, qué buen horario.",
+  "m2": "Les armé una demo de cómo se vería su página en el celular, con su horario y botón directo a su WhatsApp: {link}",
+  "m3": "Si les gusta, se las publico con un código QR para imprimir o para Instagram por $700 pago único, lista en 48 hrs. El dominio va aparte. ¿Cómo la ven?",
+  "seg": "Hola, nomás para saber si vieron la demo. Cualquier ajuste, se los hago."
+ }
 }

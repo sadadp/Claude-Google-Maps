@@ -20,20 +20,37 @@ FUENTES = {  # parámetros de Google Fonts por familia
     "DM Sans": "DM+Sans:wght@400;500;700",
     "Plus Jakarta Sans": "Plus+Jakarta+Sans:wght@400;500;600",
 }
-CITA = {"dentista": "Hola, me gustaría agendar una cita.", "veterinaria": "Hola, quiero agendar una cita para mi mascota."}
+# Textos por giro: cita prellenada, botón, títulos de sección e intro (solo con datos reales del negocio)
+GIROS = {
+    "dentista": dict(cita="Hola, me gustaría agendar una cita.", btn="Agendar por WhatsApp", sec="Servicios",
+                     h2="Lo que atendemos", cta="Agenda tu cita →", intro="{a}, {b} y más. Escríbenos por WhatsApp y te damos tu cita."),
+    "veterinaria": dict(cita="Hola, quiero agendar una cita para mi mascota.", btn="Agendar por WhatsApp", sec="Servicios",
+                        h2="Lo que atendemos", cta="Agenda tu cita →", intro="{a}, {b} y más para tu mascota. Escríbenos por WhatsApp y te decimos cuándo pasar."),
+    "barberia": dict(cita="Hola, quiero apartar un lugar para corte.", btn="Apartar lugar por WhatsApp", sec="Servicios",
+                     h2="En la silla", cta="Aparta tu lugar →", intro="{a}, {b} y más. Escríbenos por WhatsApp y te apartamos lugar."),
+    "restaurante": dict(cita="Hola, quisiera información.", btn="Escribir por WhatsApp", sec="De la carta",
+                        h2="Para pedir", cta="Escríbenos →", intro="{a}, {b} y más. Escríbenos por WhatsApp para cualquier duda."),
+    "gimnasio": dict(cita="Hola, quiero informes para ir a conocer el gym.", btn="Pedir informes por WhatsApp", sec="En el gym",
+                     h2="Lo que hay", cta="Ven a conocernos →", intro="{a}, {b} y más. Escríbenos por WhatsApp y te damos informes."),
+}
+ETIQ_GIRO = {"dentista": "Consultorio dental", "barberia": "Barbería", "restaurante": "Café y cocina", "gimnasio": "Gimnasio"}
 
 
 def giro_label(p):
-    if p["giro"] == "dentista":
-        return "Consultorio dental"
+    if p["giro"] in ETIQ_GIRO:
+        return ETIQ_GIRO[p["giro"]]
     return next((g for g in ("Hospital Veterinario", "Centro Médico Veterinario") if g in p["nombre"]), "Clínica veterinaria").capitalize()
 
 
 def intro(p):
-    a, b = p["servicios"][0], p["servicios"][1].lower()
-    if p["giro"] == "dentista":
-        return f"{a}, {b} y más. Escríbenos por WhatsApp y te damos tu cita."
-    return f"{a}, {b} y más para tu mascota. Escríbenos por WhatsApp y te decimos cuándo pasar."
+    a, b = (item(x)[0] for x in p["servicios"][:2])
+    return GIROS[p["giro"]]["intro"].format(a=a, b=b if p["giro"] == "restaurante" else b.lower())
+
+
+def item(x):
+    """'Café Lotus ($90)' -> ('Café Lotus', '$90'); sin precio -> (x, '')"""
+    m = re.match(r"(.*?)\s*\((\$\d[\d,]*)\)$", x)
+    return (m[1], m[2]) if m else (x, "")
 
 
 env = Environment(loader=FileSystemLoader(ROOT / "templates"), autoescape=True)
@@ -44,17 +61,19 @@ mensajes = json.loads((ROOT / "mensajes.json").read_text(encoding="utf-8"))
 ETIQUETAS = [("m1", "Mensaje 1"), ("m2", "Mensaje 2"), ("m3", "Mensaje 3"), ("seg", "Seguimiento (48 h)")]
 filas, txt = [], []
 for i, p in enumerate(prospectos, 1):
+    p = {**p, "servicios": p.get("servicios") or p["items"]}
+    g = GIROS[p["giro"]]
     m = marcas[p["slug"]]
     nom = p["nombre"].split(" | ")[0]
     corto = re.sub(r"^(Dra\. |Hospital Veterinario |Consultorio (Dental |Dentista )?)", "", nom)
     *ini, fin = nom.split(" ")
     html = env.get_template(f"layouts/{m['layout']}.html").render(
         p={**p, "nombre": nom}, m=m, fq={"display": FUENTES[m["display"]], "sans": FUENTES[m["sans"]]},
-        wa=f"https://wa.me/{p['whatsapp_num']}?text={quote(CITA[p['giro']])}",
+        wa=f"https://wa.me/{p['whatsapp_num']}?text={quote(g['cita'])}",
         tel=f"tel:+52{p['whatsapp_num'][3:]}",
         maps="https://www.google.com/maps/search/?api=1&query=" + quote(f"{nom}, {p['direccion']}"),
         horas=[tuple(h.split(" ", 1)) for h in p["horario"].split(", ")],
-        giro_label=giro_label(p), intro=intro(p), mono=corto[0],
+        giro_label=giro_label(p), intro=intro(p), g=g, items=[item(x) for x in p["servicios"]], mono=corto[0],
         titulo=" ".join(ini) + f" <em>{fin}</em>",
     )
     out = ROOT / "demos" / p["slug"] / "index.html"
